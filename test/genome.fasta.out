@@ -1,0 +1,826 @@
+   SW   perc perc perc  query     position in query        matching                                          repeat              position in repeat
+score   div. del. ins.  sequence  begin  end      (left)   repeat                                            class/family     begin   end    (left)   ID
+
+ 2624    0.0  0.0  0.0  chr12       8935   9222 (990778) + DTHm_OsP39_Susu-like_Chr12_8935-9222              Unknown                1    288    (0)    1  
+ 1916   16.1  3.4  8.2  chr12       9987  10459 (989541) + DTI_MERMITE18C                                    Unknown                2    453 (1020)    2  
+ 3468    5.7  0.0  0.5  chr12      10694  11115 (988885) + DTC_ENSPM7_OS                                     Unknown            10535  10954    (0)    3  
+ 1634   16.0  6.6  3.6  chr12      11149  11525 (988475) C DTI_MERMITE18D_DNA/DNA                            Unknown           (1101)    390      3    4 *
+ 1723   12.2  4.2  1.9  chr12      11234  11532 (988468) + DTMm_OsM80_Chr1_8668316-8669068                   Unknown              462    753    (0)    5  
+ 2304   13.8  0.6  1.3  chr12      13693  14356 (985644) + DTX_g_OSTE27_GLAt5_DNA                            Unknown                1    966    (3)    6  
+  783    9.0  0.0  4.1  chr12      14651  14777 (985223) C DTHm_OsP9_Chr9_9898058-9898693                    Unknown              (0)    636    515    7  
+ 6294    4.1  1.2  0.3  chr12      14779  15518 (984482) + DTMm_OsM50_Chr5_23658730-23659476                 Unknown                1    747    (0)    8  
+ 1246   11.5  2.9  0.5  chr12      15511  15719 (984281) C DTHm_OsP9_Chr4_29196750-29197075                  Unknown            (112)    214      1    9 *
+  332   35.0  3.9  0.5  chr12      15868  16045 (983955) C DTC_O_DNATE1559_DNATE/EnSPm                       Unknown              (1)   6172   5989   10  
+  628   19.0  1.7  0.8  chr12      16581  16697 (983303) C RLG_MC_Truncated_LTR1125_LTR/Gypsy                Unknown              (0)    118      1   11  
+  646   22.6  7.0  0.6  chr12      16703  16858 (983142) C DHH_Bar_HELITRON381095_HELITRON                   Unknown           (3662)   4090   3925   12  
+  519   18.9  3.7  6.1  chr12      16951  17085 (982915) C DHH_Bar_HELITRON381095_HELITRON                   Unknown           (3791)   3961   3830   13  
+ 1087   25.2  2.9  3.6  chr12      17112  17420 (982580) C RLC_O_Complete_WT261_LTR/Copia                    Unknown             (22)   3306   3000   14  
+  573    3.0  1.5  0.0  chr12      17915  17981 (982019) + BRN_ORSgRGRR_693666_Ribosomal                     Unknown             4206   4273 (4230)   15  
+  276   11.6  0.0  2.3  chr12      18366  18409 (981591) + DTMm_OsM88_Chr10_23016234-23016601                Unknown               74    116  (252)   16  
+ 1286   12.7  5.4  4.3  chr12      18534  18812 (981188) C DTAm_Osh10_Akan-like_Chr5_2504720-2505467         Unknown              (3)    745    464   17  
+ 2400    6.1  4.0  0.6  chr12      19937  20267 (979733) C DTHm_OsP44_Chr3_8929535-8929905                   Unknown              (2)    369      1   18  
+ 5734    0.8  0.0  0.0  chr12      20302  20933 (979067) C DTAm_Osh59_Chr7_24191298-24191930                 Unknown              (1)    632      1   19  
+ 1260   11.9  1.1  3.1  chr12      20938  21322 (978678) C DTX_MC_Incomplete_DNA_TE7382_DNATE/UnClassified   Unknown             (24)    527      2   20  
+  422   19.1  6.9  0.8  chr12      21219  21334 (978666) + DTT_TNR11_DNA/Mariner                             Unknown              628    750   (61)   21 *
+ 1022   18.7  0.4  4.4  chr12      22551  22808 (977192) + DTMm_OsM53_Chr5_6927008-6927300                   Unknown               46    293    (0)   22  
+ 2805    0.0  0.0  0.0  chr12      23252  23572 (976428) + DTHm_OsP9_Chr11_24853-25173                       Unknown                1    321    (0)   23  
+ 3390    0.0  0.0  0.0  chr12      23905  24282 (975718) + DTI_ORSgTEMT00800007                              Unknown                1    378    (0)   24  
+ 1906    7.9  0.0  0.0  chr12      26606  26870 (973130) + DTTm_OsT15_stowaway11_OS_Chr10_20261571-20262122  Unknown              155    419  (133)   25  
+ 1002   22.1  7.5  6.2  chr12      27198  27586 (972414) + DTCm_OsC6_Chr3_6846250-6846862                    Unknown                1    398  (731)   26  
+  300   22.8  9.4  8.0  chr12      27799  28169 (971831) C DTCm_OsC6_Chr9_7477831-7478624                    Unknown            (229)    565    190   27 *
+  704   24.9  9.2  9.2  chr12      27838  28302 (971698) + DTCm_OsC6_Chr4_634489-635226                      Unknown              274    738    (0)   28  
+ 1863   19.8  3.7  0.8  chr12      28374  28757 (971243) C DTAm_Osh59_Chr12_7771865-7772391                  Unknown             (82)    445      1   29  
+  810   11.7  0.8  0.0  chr12      30073  30198 (969802) C RSU_SINE03_OS_SINE                                Unknown             (10)    350    232   30 *
+ 1972    8.6  0.0  0.0  chr12      30185  30462 (969538) + DTTm_OsT15_stowaway11_OS_Chr1_28122818-28123374   Unknown              125    402  (155)   31  
+ 1131    7.3  0.0  0.0  chr12      30466  30616 (969384) C RSU_SINE03_OS_SINE                                Unknown            (209)    151      1   30  
+  571   21.1 12.1  0.9  chr12      30996  31177 (968823) + DHH_Niv_HELITRONS3315_HELITRON                    Unknown             2167   2336    (1)   32  
+  266   17.6  1.4  2.9  chr12      31187  31256 (968744) + DTTm_OsT2_stowaway36_OS_Chr12_7542489-7542761     Unknown              205    273    (0)   33  
+ 2230    7.3  0.6  3.2  chr12      31588  31911 (968089) + DTHm_OsP39_Susu-like_Chr6_13493636-13494229       Unknown               53    368  (226)   34  
+  486   15.1  4.7  0.0  chr12      31921  32006 (967994) + DTI_ORSgOTOT00000560                              Unknown              129    218  (210)   35  
+  626    5.6  2.2  2.2  chr12      32022  32112 (967888) C DTX_ORSiTETNOOT00133                              Unknown            (300)   6988   6898   36  
+ 2131    8.0  3.6  0.8  chr12      32196  32661 (967339) + DTI_g_DNATE_GLA_DNA                               Unknown                1    550    (0)   37  
+  686   13.8  8.4  4.0  chr12      32788  32953 (967047) C DTX_ORSiTETNOOT00133                              Unknown            (381)   6907   6735   36  
+  287   10.5  3.3  5.1  chr12      33490  33549 (966451) C DTX_ORSiTETNOOT00133                              Unknown           (1008)   6280   6222   36  
+  788   22.0  0.0  1.1  chr12      33604  33787 (966213) + DTA_ZhAT2_ZM_DNA/hAT                              Unknown             3146   3327  (234)   38 *
+ 1100    9.9  0.0  1.2  chr12      33642  33814 (966186) C DTX_ORSiTETNOOT00133                              Unknown           (1201)   6087   5917   39  
+  258   24.4  2.5  3.4  chr12      33843  33961 (966039) + DTA_ZhAT2_ZM_DNA/hAT                              Unknown             3444   3561    (0)   38 *
+  645    8.1  0.0  0.0  chr12      33876  33962 (966038) C DTX_ORSiTETNOOT00133                              Unknown           (1365)   5923   5837   40  
+  514   19.8  2.8 11.0  chr12      34412  34587 (965413) C RLC_RC/22_LTR/COPIA1                              Unknown           (4856)   1377   1215   41  
+  278   17.0  1.9  0.0  chr12      34719  34771 (965229) + RLC_RC/22_LTR/COPIA1                              Unknown             1323   1376 (4857)   42  
+  425   13.9  2.4  3.7  chr12      38218  38299 (961701) + DTTm_OsT37_adh-typeB-like_Chr12_7331916-7331996   Unknown                1     81    (0)   43  
+  258   10.8  0.0  0.0  chr12      38267  38303 (961697) + DTI_g_MITE1435_MITE                               Unknown              207    243    (0)   44 *
+  325   20.3  4.7  0.0  chr12      43067  43130 (956870) C DTI_pun_MITE_119_MITE                             Unknown              (1)     88     22   45  
+ 1000   23.5  0.6  0.8  chr12      43186  43452 (956548) C RIL_g_LINE1-4_tract1_LINE/LINE                    Unknown              (6)    633    418   46  
+  584   19.5  0.0  6.5  chr12      43463  43610 (956390) C RIL_g_LINE1-4_tract1_LINE/LINE                    Unknown            (175)    464    326   47  
+48254    0.4  0.0  0.0  chr12      44351  49551 (950449) + RLC_ORSiTERTOOT_829897_LTR/unclassified           Unknown                1   5200    (0)   48  
+  386   20.8  3.7 14.4  chr12      49563  49776 (950224) C DTMm_OsM34_Chr11_951502-952294                    Unknown             (17)    776    537   49 *
+  916   30.5  5.9  4.8  chr12      49759  50248 (949752) C DTMm_OsM34_Chr6_24764713-24765486                 Unknown            (279)    495      1   50  
+ 1873   22.8  0.3  0.5  chr12      50949  51318 (948682) + RLG_SMART_barthii_Retro44                         LTR/Ty3-gypsy        119    487 (1822)   51  
+  973   26.2  2.4  0.8  chr12      51324  51569 (948431) + RLX_SMART_merid_Retro                             LTR/unclassified     539    788 (1496)   52  
+  319   17.6  0.0  1.6  chr12      51592  51653 (948347) + RLG_MB_Truncated_LTR2782_LTR/SZ-7                 Unknown              362    417   (56)   53  
+  275   26.2  0.0  4.8  chr12      51599  51686 (948314) C RLG_MC_Truncated_LTR3913_LTR/BAJIE                Unknown             (29)    113     30   54 *
+ 9697   16.1  4.1  2.6  chr12      52137  54988 (945012) + RLG_Niv_Truncated2356_LTR/Gypsy/J                 Unknown               14   3439  (695)   55  
+  482   26.2  2.8  5.2  chr12      55076  55292 (944708) + DTTm_OsT44_TREP219_Chr3_33390493-33390723         Unknown                1    212   (19)   56  
+ 1830   11.4  6.5  0.3  chr12      55500  55806 (944194) + DTI_g_MITE968_MITE                                Unknown                1    326    (0)   57  
+ 2263   12.7  0.1  2.4  chr12      56043  56446 (943554) + DTI_Bar_MITE1858_MITE                             Unknown                1    334    (0)   58  
+ 2532    1.0  0.0  0.0  chr12      56469  56764 (943236) + DTTm_OsT22_stowaway8_OS_Chr11_60384-60679         Unknown                1    296    (0)   59  
+  252   17.3  2.3 12.8  chr12      57229  57314 (942686) C RSU_ORSgOTOT000_709636_Unclassified/unclassified  Unknown              (1)    247    170   60  
+ 1458    0.0  0.0  0.0  chr12      57390  57544 (942456) + DTTm_OsT37_adh-typeB-like_Chr12_57390-57544       Unknown                1    155    (0)   61  
+  272   18.6  0.0  1.7  chr12      57492  57551 (942449) C DTHm_OsP46_Ditaila_Chr10_11978624-11978996        Unknown            (289)     84     26   62 *
+  279   35.4  1.3  3.3  chr12      58220  58374 (941626) C DTC_pun_InComplete_DNATE_142_DNA/EnSPm            Unknown            (532)   1163   1012   63  
+  356   25.1  1.4  8.0  chr12      59186  59332 (940668) + RIX_pun_CASINA_PUNt_DNA_TE/unclassified           Unknown                1    138    (2)   64 *
+  829    9.8  0.0  1.6  chr12      59320  59443 (940557) C RSU_SINE03_OS_SINE                                Unknown              (2)    358    237   65  
+ 2147    4.3  0.0  0.0  chr12      59445  59700 (940300) + DTI_STOWAWAY14_OS                                 Unknown                3    258    (0)   66  
+ 1753    8.7  0.0  0.0  chr12      59701  59931 (940069) C RSU_SINE03_OS_SINE                                Unknown            (120)    240     10   65  
+  275    5.4  1.4  0.0  chr12      60104  60177 (939823) C RLG_244                                           Unknown          (14175)   1941   1867   67 *
+  352   16.3  4.3  0.0  chr12      60113  60204 (939796) + RIX_Penelope-13_HM_LINE/Penelope                  Unknown              242    337 (2708)   68  
+  706   20.7  3.5  6.6  chr12      61086  61287 (938713) C DTMm_OsM69_Chr8_1249644-1250006                   Unknown              (0)    363    168   69  
+  895   14.6  2.4  3.7  chr12      61309  61472 (938528) + DTMm_OsM69_Chr8_1249644-1250006                   Unknown              195    356    (7)   70  
+  434   26.1 11.3  7.8  chr12      61542  61815 (938185) C RLC_SC-6_LTR                                      Unknown            (134)    283      1   71  
+  372   12.5  3.1  0.0  chr12      62667  62730 (937270) C DTI_g_OSTE27_GLAt1_DNA/unclassified               Unknown            (176)     66      1   72  
+  270   16.5  4.8  6.0  chr12      62773  62856 (937144) C DTI_ORSgOTOT000_755043_Unclassified/unclassified  Unknown             (49)    376    294   73 *
+  474   20.4  9.0  9.4  chr12      62801  63085 (936915) + DTI_ORSgOTOT00000040                              Unknown               51    330  (224)   74  
+ 1987   13.8  6.5  1.5  chr12      64369  64844 (935156) C DTHm_OsP7_Ndna1tna-OS_Chr12_7162632-7162970       Unknown              (0)    339     18   75  
+  291    7.9  0.0  0.0  chr12      64846  64883 (935117) + DTHm_OsP7_Ndna1tna-OS_Chr7_21662166-21662497      Unknown              295    332    (0)   76  
+ 1045   14.4  6.2  3.0  chr12      66409  66666 (933334) + DTTm_OsT35_adh-typeA-like_Chr1_14014613-14014872  Unknown                1    259    (1)   77  
+  672   30.6  6.4  0.4  chr12      66850  67069 (932931) C DTI_ORSiTETNOOT00122                              Unknown            (100)   1768   1536   78  
+  260   14.0  3.5  1.7  chr12      67370  67427 (932573) C DTMm_OsM88_Chr7_21763867-21764419                 Unknown            (245)    308    250   79  
+ 1951   18.6  0.8  1.9  chr12      67428  67795 (932205) C RLG_g_Truncated_LTR365_LTR/Gypsy                  Unknown              (0)    479    116   80  
+  888   12.0  1.2  2.5  chr12      67792  67954 (932046) + RLG_ORSiTERTOOT_799387_LTR                        Unknown             2144   2304 (2262)   81 *
+ 1042    6.4  0.0  0.0  chr12      67801  67941 (932059) C DTHm_OsP48_Gaigin-like_Chr4_25826067-25826213     Unknown              (6)    141      1   82  
+ 2598   20.5  3.1  4.5  chr12      67956  68649 (931351) + RLG_pun_Truncated_LTR_295_LTR/Gypsy               Unknown              293    886    (1)   83 *
+ 3210   22.1  4.6  2.2  chr12      68003  68963 (931037) C RLG_Niv_Truncated2386_LTR/ATLANTYS                Unknown            (387)    751      1   84  
+  943   19.8  1.7  7.8  chr12      68963  69192 (930808) + DTMm_OsM88_Chr1_35529369-35530070                 Unknown              475    691   (11)   85 *
+  441   30.4  4.8  3.2  chr12      69452  69753 (930247) + DTM_MDR2                                          Unknown                8    314 (7086)   86  
+  797   19.1  0.7  1.3  chr12      71339  71492 (928508) C RLG_O_Truncated4568_LTR/SZ-7                      Unknown              (1)    193     41   87  
+ 3193   29.5  3.1  2.0  chr12      72678  73850 (926150) C RIL_LINE-6_OS_LINE/Non-LTRRetrotransposon         Unknown              (1)   4885   3701   88  
+  321   20.7  1.1  1.1  chr12      75604  75691 (924309) C DTI_g_MITE1435_MITE                               Unknown              (0)    243    156   89 *
+ 1584    9.0  3.1  0.1  chr12      75613  75858 (924142) + DTI_Bar_MITE1585_MITE                             Unknown                1    256   (16)   90  
+  279   20.3  0.0  1.4  chr12      76085  76159 (923841) C DTC_EnSpm-N1_DR_DNA/EnSpm                         Unknown            (485)   2045   1972   91  
+  284   12.3 12.1  1.4  chr12      76437  76502 (923498) + DTTm_OsT23_Chr10_5518557-5518644                  Unknown               16     88    (0)   92  
+ 2147    6.3  0.0  1.5  chr12      76503  76775 (923225) + DTHm_OsP56_Inditto_Chr7_18220741-18221267         Unknown              177    445   (82)   93 *
+ 3314    9.7  2.5  3.4  chr12      76775  77254 (922746) + DTI_ORSgTEMT00900860                              Unknown                3    478    (1)   94  
+  310   26.2  3.0  2.0  chr12      77805  77905 (922095) + DTMm_OsM79_Chr10_10025269-10025857                Unknown              438    539   (50)   95  
+ 5396   22.0  1.9  2.2  chr12      78422  79717 (920283) + DTM_SETARIA1b                                     Unknown                1   1293    (0)   96  
+  829   17.5  1.6  6.3  chr12      79734  79977 (920023) + DTI_ORSgOTOT00000154                              Unknown                1    136    (0)   97  
+  512   18.2  0.0 10.7  chr12      79955  80089 (919911) C DTI_BR_MITE228_MITE                               Unknown             (83)    134     13   98 *
+  929   22.9  1.5  5.7  chr12      82604  82915 (917085) C DTI_ORSgOTOT000_732536_Unclassified/unclassified  Unknown            (370)    292      2   99  
+ 1411   17.5  0.8  0.4  chr12      83330  83570 (916430) C DTHm_OsP2_Wanderer-like_Chr2_24178075-24178316    Unknown              (0)    242      1  100  
+ 1355   10.3  2.8  5.2  chr12      84351  84565 (915435) + DTI_EXPLORER                                      Unknown                1    210    (0)  101  
+  538   12.5  5.7  0.9  chr12      86123  86227 (913773) C DTTm_OsT18_Chr2_20664674-20664926                 Unknown              (0)    253    144  102 *
+ 2052    4.6  1.2  0.6  chr12      86190  86485 (913515) + DTI_ORSgTEMT_661777_MITE                          Unknown                1    510   (69)  103  
+  467   15.6  6.3  1.7  chr12      86471  86581 (913419) C DTTm_OsT18_Chr2_2958430-2958611                   Unknown             (64)    118      3  104 *
+ 3507   12.6  0.2  2.8  chr12      86868  87414 (912586) C DTMm_OsM8_Chr6_3240296-3240829                    Unknown              (1)    533      1  105  
+  729   26.8  2.1  1.0  chr12      88848  89037 (910963) C DTMm_OsM96_Cloud3_Chr5_13838994-13839521          Unknown              (0)    528    337  106  
+  476   16.7  0.8  6.1  chr12      89038  89158 (910842) + DTA_ZhAT2_ZM_DNA/hAT                              Unknown                1    115 (3446)  107  
+  316   27.2  1.3  4.7  chr12      89039  89192 (910808) C DTA_g_Complete_DNA_TE32_DNA/hAT                   Unknown            (918)   1357   1209  108 *
+  252   15.6  0.0  2.2  chr12      89688  89733 (910267) C DTMm_OsM96_Cloud3_Chr5_19889133-19889508          Unknown            (184)    192    148  109  
+ 1742   10.5  0.4  4.0  chr12      90364  90622 (909378) + RLG_SMART_minuta_RetroS3                          Unknown                1    250  (483)  110  
+ 1076   21.1  2.8  5.8  chr12      91170  91451 (908549) + DTI_MERMITEH                                      Unknown              988   1261   (46)  111  
+ 1089   23.9  5.6  1.2  chr12      91456  91775 (908225) + DTI_MERMITEH                                      Unknown                2    361 (1453)  112  
+ 1145   19.1  3.9  0.4  chr12      91780  92010 (907990) + DTI_MERMITEH                                      Unknown             1068   1306    (1)  112  
+  745   19.7 13.7  0.0  chr12      95234  95416 (904584) C DTMm_OsM15_Oste17_Chr7_1702677-1703401            Unknown              (1)    724    517  113  
+  664   22.8  5.2 10.6  chr12      95235  95523 (904477) + DTMm_OsM15_Oste17_Chr3_14378538-14379219          Unknown                3    277  (405)  114 *
+  382   22.5  3.5  2.6  chr12      97447  97560 (902440) C RLG_BR_Truncated616_LTR/Gypsy/U                   Unknown            (607)   2209   2095  115  
+  322   24.1  4.0 10.2  chr12     103072 103247 (896753) C DTMm_OsM55_Chr5_9193490-9194215                   Unknown             (67)    659    494  116 *
+ 1008    8.3  1.9  0.0  chr12     103081 103237 (896763) + DTHm_OsP41_Unique_Chr11_107278-107437             Unknown                1    160    (0)  117  
+  499   22.8  4.0  2.3  chr12     103793 103918 (896082) C DTHm_OsP36_Chr12_9528373-9528508                  Unknown              (4)    132      5  118  
+  301   26.3  0.0  1.3  chr12     104002 104078 (895922) + DTMm_OsM50_Chr2_21941198-21941545                 Unknown               30    105  (243)  119  
+  695   18.4  7.9  0.0  chr12     114748 114899 (885101) C DTHm_OsP2_Wanderer-like_Chr4_29799451-29799691    Unknown              (0)    241     78  120 *
+ 1943    2.5  1.3  0.0  chr12     114896 115130 (884870) + DTTm_OsT7_adh-2-like_Chr11_119110-119347          Unknown                1    238    (0)  121  
+  657   11.2 14.6  0.2  chr12     119600 119748 (880252) C DTHm_OsP48_Gaigin-like_Chr4_26625796-26626017     Unknown              (5)    219      5  122  
+  567   23.1  1.4  2.1  chr12     119969 120114 (879886) + DTI_O_MITE3433_MITE                               Unknown               54    198   (37)  123  
+  431   16.8 18.8  0.6  chr12     122210 122347 (877653) C DTAm_Osh38_Chr8_23266894-23267077                 Unknown              (0)    184     22  124  
+  283   18.4 13.5  3.8  chr12     123930 124025 (875975) C RLC_SMART_japonica_RetroS7                        Unknown           (1535)    223    119  125  
+ 1575   21.0  5.9  7.9  chr12     141636 142525 (857475) + DTAm_Osh67_Delay_Chr10_22724907-22725702          Unknown                1    796    (0)  126  
+10995    6.4  1.3  0.6  chr12     143147 144520 (855480) C RLG_RG/42_LTR/Gypsy/U                             Unknown           (1643)   1384      1  127  
+  806   16.5  1.0  8.4  chr12     144900 145114 (854886) + DTHm_OsP18_Ditto-lake_Chr2_24131148-24131526      Unknown               27    311   (68)  128 *
+ 1069    9.3  0.7  0.0  chr12     144933 145083 (854917) C DTI_ORSgTEMT_717204_MITE                          Unknown              (0)    225     74  129  
+  599   21.7 12.0  0.9  chr12     145439 145638 (854362) C DTHm_OsP2_Wanderer-like_Chr2_17305445-17305693    Unknown              (0)    249     28  130  
+  365   19.1 22.6  0.0  chr12     146018 146101 (853899) C DTMm_OsM25_Chr9_19589883-19590011                 Unknown              (1)    128     26  131  
+  357   27.6  6.6  0.0  chr12     146995 147146 (852854) C RLG_BR_Truncated616_LTR/Gypsy/U                   Unknown            (967)   1849   1688  132  
+  566   29.1  2.6  3.5  chr12     148432 148659 (851341) + RIL_g_LINE_11_LINE/LINE                           Unknown              418    643 (3678)  133  
+ 4449    0.0  0.0  0.0  chr12     148872 149382 (850618) + DTI_ORSgTETNOOT00092                              Unknown                1    511    (0)  134  
+  366   29.6  1.1  7.6  chr12     149531 149713 (850287) C RIL_LINE1-8_SBi                                   Unknown           (1100)   5549   5378  135  
+  771   18.7  8.6  0.0  chr12     150349 150535 (849465) + DTH_HarbN10_39562_1.Sorghum                       Unknown             6327   6529   (63)  136 *
+ 2576    7.1  2.7  0.3  chr12     150380 150717 (849283) C DTHm_OsP6_OLO24_Chr2_8638619-8638966              Unknown              (0)    348      3  137  
+ 1835   14.0  7.2  3.1  chr12     152431 152807 (847193) + RLG_ORSiTERTOOT00141                              Unknown             1252   1643 (5082)  138  
+ 1711   22.8  7.3  5.9  chr12     152434 153973 (846027) C RLG_ORSiTERTOOT00141                              Unknown              (0)   2759      1  139 *
+ 1811   15.1  5.3  2.7  chr12     153638 153997 (846003) + RLG_ORSiTERTOOT00141                              Unknown             2332   2700 (4025)  138  
+28781    2.9  1.9  1.0  chr12     156151 159698 (840302) C DTA_ORSiTETNOOT00138                              Unknown             (33)   3636      2  140  
+ 2047    0.0  0.0  0.0  chr12     160768 160989 (839011) + DTHm_OsP2_Wanderer-like_Chr12_160768-160989       Unknown                1    222    (0)  141  
+  262   13.2  0.0  0.0  chr12     162629 162666 (837334) + DHH_Helitron-N9_SBi                               Unknown             2356   2393    (0)  142  
+ 1863   23.6  1.5  5.2  chr12     162676 163131 (836869) C RLG_O_Complete_WT4364_LTR/GYPSY1                  Unknown             (85)   6872   6433  143  
+ 1896    3.9  1.7  0.4  chr12     163471 163700 (836300) C DTI_Rufi_HelchangdDNA98_DNA/                      Unknown           (3995)    234      2  144  
+ 1917   16.9  5.4  2.2  chr12     164331 164718 (835282) C DTI_MERMITE18B                                    Unknown            (906)    400      1  145  
+  274   13.2  0.0 11.6  chr12     166680 166756 (833244) + DTA_DNA2-5_DR_DNA/hAT                             Unknown              270    338 (1484)  146  
+  305   19.0  0.8  0.3  chr12     167189 167297 (832703) + RIJ_RTAg4_LINE/Non-LTRRetrotransposon             Unknown             1709   1797 (5275)  147  
+ 1349    3.0  0.7  0.6  chr12     172102 172276 (827724) + DTTm_OsT37_adh-typeB-like_Chr12_172102-172247     Unknown                1    256   (46)  148  
+  435    9.5  4.8  0.0  chr12     172395 172457 (827543) C DTTm_OsT35_adh-typeA-like_Chr2_3723701-3724028    Unknown            (163)    165    100  149  
+  912   19.4  3.2  3.5  chr12     173444 173678 (826322) C DTMm_OsM69_Chr5_22862505-22863033                 Unknown              (0)    784    323  150  
+  996   14.3  2.4  6.0  chr12     174273 174480 (825520) C DTMm_OsM69_Chr5_22862505-22863033                 Unknown            (328)    201      1  151  
+  719   14.5  0.0 11.4  chr12     175365 175520 (824480) + DTHm_OsP14_Ditto-like_Chr10_20952243-20952479     Unknown               49    188   (49)  152 *
+  917   10.9  7.4  0.4  chr12     175514 175679 (824321) + DTHm_OsP14_Ditto-like_Chr10_11691629-11691873     Unknown               89    245    (0)  153  
+  580   11.6  0.0  1.1  chr12     175832 175927 (824073) + DTM_SETARIA2_DNA/DNA                              Unknown                1     95 (1047)  154 *
+ 1283   19.1  3.0  1.1  chr12     175927 176239 (823761) C DTM_ORSiTETN00300002                              Unknown             (79)   1181    927  155  
+ 1988    9.0  0.0  0.0  chr12     177071 177326 (822674) + RLG_Niv_Solo3114_LTR/BAJIE                        Unknown                1    256  (436)  156  
+ 5126   11.2  0.2  0.3  chr12     177327 178053 (821947) + RLG_Rufi_SOLO24_LTR559_LTR/ATLANTYS               Unknown                1    693  (980)  157  
+  899   28.3  6.7  0.8  chr12     178074 178438 (821562) + RIL_RILN8_OS                                      Unknown             2782   3120 (1965)  158 *
+ 2251   32.6  3.8  4.2  chr12     178430 180164 (819836) + RIX_pun_LINE_no_MITE_399_MITE                     Unknown             2636   4363  (188)  159  
+ 2073   28.3  0.2  1.6  chr12     179881 180400 (819600) C RLG_Rufi_Complete13_WT564_LTR/ATLANTYS            Unknown            (369)   1646   1134  160 *
+ 5816   11.9  0.0  0.1  chr12     180394 181217 (818783) + RLG_Niv_Truncated2024_LTR/ATLANTYS                Unknown               75    897    (0)  161  
+64724   14.7  0.6  0.7  chr12     181362 192541 (807459) + RLG_ATLANTYS-I_OS                                 Unknown                1  10580  (144)  162  
+ 1039   14.9  3.8  3.0  chr12     192801 193035 (806965) C DTT_pun_InComplete_DNATE_315_DNA/unclassified     Unknown             (23)    572    336  163  
+ 2010   22.0  5.6  6.1  chr12     193039 194652 (805348) + RLG_SZ-67LTR                                      Unknown                1   1832 (2124)  164  
+14708    7.3  0.5  0.8  chr12     194691 196560 (803440) + RLG_ORSiTERT00200145                              Unknown             1166   3031 (9207)  165  
+  445    9.4  4.6  2.2  chr12     196539 196625 (803375) + DTX_O_DNATE5454_DNATE/Unclassified                Unknown              153    241  (210)  166 *
+ 1046   10.1  8.0  0.0  chr12     196570 196768 (803232) C DTC_Niv_InComplete_DNATE1273_DNATE/unclassified   Unknown            (184)    326    112  167 *
+ 2257    7.8  0.0  0.0  chr12     196767 197062 (802938) + DTI_g_STOWAWAY11_GLA_MITE                         Unknown                1    296    (2)  168  
+ 1536    6.1  0.5  0.0  chr12     197069 197264 (802736) C DTI_g_STOWAWAY11_GLA_MITE                         Unknown             (72)    226     30  169  
+10815   11.3  0.1  0.3  chr12     197265 198775 (801225) C RLG_Bar_SOLO_WT775_LTR/ATLANTYS                   Unknown              (0)   1509      1  170  
+  275    7.7  0.0  0.0  chr12     198771 198809 (801191) C DTTm_OsT15_stowaway11_OS_Chr4_27339258-27339579   Unknown            (283)     39      1  171 *
+  485   15.1  1.6  0.0  chr12     198793 198890 (801110) C DTC_Niv_InComplete_DNATE1273_DNATE/unclassified   Unknown            (533)    111      1  172  
+ 2703    3.8  0.0  0.0  chr12     198947 199264 (800736) + RLC_CPR1_LTR                                      Unknown                1    318 (1684)  173  
+10510   11.8  0.4  0.5  chr12     199265 200775 (799225) C RLG_Bar_SOLO_WT725_LTR/ATLANTYS                   Unknown              (0)   1510      1  174 *
+14158    4.8  0.2  0.4  chr12     200775 202467 (797533) + RLC_CPR1_LTR                                      Unknown              313   2002    (0)  173  
+ 1253    7.3  1.4  1.1  chr12     202500 202684 (797316) + DTMm_OsM89_adh_typeG-like_Chr2_4169617-4170212    Unknown               59    406  (190)  175  
+  819   18.0  1.1  1.7  chr12     202533 202707 (797293) C DTTm_OsT20_adh-tyleD_Chr2_4431428-4431714         Unknown             (81)    206     33  176 *
+  926   26.5  4.3  4.3  chr12     202750 203053 (796947) C DTI_ORSgTEMT_758027_MITE                          Unknown              (2)    483    180  177 *
+ 2243    0.0  0.0  0.0  chr12     202751 202997 (797003) + DTHm_OsP18_Ditto-lake_Chr12_202751-202997         Unknown                1    247    (0)  178  
+  398   24.8  1.0  2.0  chr12     209633 209735 (790265) + DTC_CACTA-Q                                       Unknown              100    201 (2067)  179  
+  825   18.9  1.6  3.9  chr12     209737 209918 (790082) C DTHm_OsP26_adh-typeM-like_Chr1_8278722-8278940    Unknown             (36)    183      6  180  
+  828   16.9  3.8  3.8  chr12     210259 210498 (789502) + DTTm_OsT22_stowaway8_OS_Chr3_32098194-32098460    Unknown               11    250   (17)  181  
+ 1125   14.8  2.9  2.4  chr12     210658 210864 (789136) C DTI_EXPLORER                                      Unknown              (0)    210      3  182  
+ 1266   10.1  0.3  1.8  chr12     210865 211069 (788931) + DTTm_OsT38_adh-typeB-like_Chr7_28567333-28567593  Unknown               90    310    (0)  183  
+  896   18.0 10.4  1.4  chr12     211300 211523 (788477) C DTHm_OsP18_Ditto-lake_Chr5_9447522-9447749        Unknown              (4)    224      1  184  
+  334   16.1  0.0 10.1  chr12     211460 211535 (788465) + DTMm_OsM57_Chr4_32811948-32812591                 Unknown              295    363  (281)  185 *
+  423   25.6 11.2  2.9  chr12     212138 212298 (787702) + RSU_OsSN2-2_SINE                                  Unknown               13    186  (102)  186  
+  279   17.6  6.4  5.1  chr12     212732 212809 (787191) C DTTm_OsT19_Chr1_12231784-12232027                 Unknown             (21)    223    145  187 *
+ 1383    0.0  0.0  0.0  chr12     212740 212887 (787113) + DTTm_OsT36_Chr12_212740-212887                    Unknown                1    148    (0)  188 *
+ 1398   14.7  6.8  2.4  chr12     212872 213108 (786892) + DTI_pun_MITE_412_MITE                             Unknown               63    309    (1)  189  
+ 1913    8.6  0.4  0.4  chr12     213287 213553 (786447) C DTTm_OsP34_Youren-like_Chr3_13723372-13723920     Unknown             (13)    283     17  190  
+  305   18.8  0.4  9.2  chr12     213599 213689 (786311) C DTTm_OsT14_adh-typeLChr9_20264927-20265011        Unknown              (0)     80      1  191  
+  319   24.1  0.0  0.0  chr12     213796 213853 (786147) C DTMm_OsM24_Chr11_4015969-4016124                  Unknown             (74)     82     25  192  
+  651   27.9 11.7  0.4  chr12     214389 214593 (785407) C RSU_OsSN2_SINE                                    Unknown             (50)    240     13  193  
+ 1129   13.9  0.6  0.1  chr12     214772 214958 (785042) + DTHm_OsP17_Coward_Chr4_29856135-29856460          Unknown               54    234   (92)  194 *
+ 1166    7.1  0.7  0.0  chr12     214793 214947 (785053) C DTTm_OsM112_Crackle-like_Chr1_6779676-6780228     Unknown              (6)    164      9  195  
+  890   20.7  1.0  0.0  chr12     215730 215932 (784068) C DTHm_OsP8_Explorer-like_Chr1_35798436-35798656    Unknown             (16)    205      1  196  
+ 1048   12.0  0.0  0.0  chr12     216159 216312 (783688) + DTMm_OsM13_Tnr2A_Chr8_26337647-26337830           Unknown                1    184    (0)  197  
+ 1054    9.2  1.1  1.3  chr12     217580 217759 (782241) C DTHm_OsP41_Unique_Chr12_13302140-13302288         Unknown              (2)    147      1  198  
+  376   21.9 10.7  0.9  chr12     217992 218163 (781837) + DTTm_OsT30_Chr9_15019505-15019719                 Unknown               15    212   (19)  199  
+  400   24.1  4.9  2.7  chr12     218507 218689 (781311) + DTHm_OsP8_Explorer-like_Chr12_3655064-3655283     Unknown                6    192   (28)  200 *
+  480   21.4  1.3  2.7  chr12     218529 218677 (781323) C DTHm_OsP8_Explorer-like_Chr9_9140119-9140345      Unknown             (40)    187     41  201  
+ 1806    0.0  0.0  0.0  chr12     219002 219194 (780806) + DTAm_Osh48_Chr12_219002-219194                    Unknown                1    193    (0)  202  
+  692    8.4  0.7  2.6  chr12     228182 228443 (771557) C DTT_Mariner-31_HM_DNA/Mariner                     Unknown           (2715)   1003    842  203 *
+  812   12.2  0.5  5.3  chr12     228211 228426 (771574) + DTT_DNA-2-12_DR_DNA/DNA                           Unknown              774    979 (3707)  204  
+  653   21.9  5.6  5.0  chr12     229301 229497 (770503) C DTC_EnSpm_Sb_39765_2.Sorghum                      Unknown            (948)    630    433  205 *
+ 2316   11.7  0.9  0.3  chr12     229326 229667 (770333) + DTHm_OsP6_OLO24_Chr2_11870700-11871046            Unknown                1    344    (3)  206  
+ 2291   10.8  2.2  2.3  chr12     229651 230024 (769976) + DTHm_OsP6_OLO24_Chr2_8638619-8638966              Unknown               13    348    (0)  207 *
+  753   17.4  7.2  6.2  chr12     230348 230555 (769445) + DTMm_OsM27_Chr11_11232016-11232381                Unknown              157    366    (0)  208  
+ 3480    0.0  0.0  0.0  chr12     230848 231255 (768745) C DTI_ORSgTEMT01800003                              Unknown              (0)    408      1  209  
+  360   26.0  7.0  6.5  chr12     230890 231301 (768699) + DTMm_OsM89_adh_typeG-like_Chr6_2730483-2731021    Unknown               66    479   (60)  210 *
+  493   16.4  4.5  1.7  chr12     231783 231894 (768106) C DTHm_OsP8_Explorer-like_Chr2_832127-832349        Unknown            (108)    115      1  211  
+  361   17.8 14.4  0.0  chr12     232567 232656 (767344) + DTTm_OsT45_Chr1_30213922-30214024                 Unknown                1    103    (0)  212  
+  299   18.1  4.0  6.1  chr12     232908 233007 (766993) C DTX_MC_Incomplete_DNA_TE7382_DNATE/UnClassified   Unknown            (281)    270    173  213  
+ 2470    6.3  4.1  0.0  chr12     233237 233555 (766445) C DTM_MUDRN4_OS_DNA/MuDR                            Unknown              (0)    332      1  214  
+  379   16.3  0.0  3.8  chr12     233483 233565 (766435) + DTMm_OsM2_Mudrn4_OS_Chr7_24485562-24485897        Unknown              256    335    (1)  215 *
+  691   21.7  8.0  3.4  chr12     233782 233981 (766019) C DTI_ORSiTETNOOT_777370_DNA/unclassified           Unknown             (99)   1715   1507  216  
+ 3087    0.0  0.0  0.0  chr12     234701 235042 (764958) + DTMm_OsM16_adh-5-like_Chr12_234701-235042         Unknown                1    342    (0)  217  
+  420   28.4  5.2  0.0  chr12     235390 235523 (764477) C DTMm_OsM88_Chr4_16886009-16886601                 Unknown            (452)    141      1  218  
+  839   26.9  6.2  5.7  chr12     235703 236208 (763792) C DTCm_OsC7_Chr3_18474678-18474969                  Unknown            (140)   1022     17  219  
+  525   16.7  9.6  6.0  chr12     236198 236556 (763444) + DTCm_OsC7_Chr10_12118862-12119476                 Unknown              175    428  (187)  220 *
+  354   23.4  9.4 10.4  chr12     236619 236842 (763158) C DTCm_OsC7_Chr4_35105373-35105956                  Unknown            (362)    222      1  221  
+  704   12.4  6.2  0.0  chr12     237419 237548 (762452) + DTTm_OsT20_adh-tyleD_Chr1_29288424-29288549       Unknown                1    197   (54)  222  
+  447   14.6 14.7  4.0  chr12     237428 237563 (762437) C DTTm_OsT43_Snabo-like_Chr3_20263756-20264112      Unknown            (117)    240     91  223 *
+  768    9.5  2.4  0.8  chr12     238017 238141 (761859) + DTHm_OsP2_Wanderer-like_Chr1_29658833-29659173    Unknown              147    259   (82)  224  
+ 7336    6.9  0.5  2.1  chr12     238676 239627 (760373) C RLG_SZ-29LTR                                      Unknown              (0)   1393    457  225  
+ 3798   10.5  2.3  1.0  chr12     239627 240194 (759806) + DTAm_Osh56_JouzhenA_Chr5_7154561-7155135          Unknown                1    575    (0)  226 *
+ 3768    6.2  0.2  0.2  chr12     240194 240658 (759342) + RLG_g_SOLO75_LTR711_LTR/Gypsy                     Unknown              889   1353    (0)  227 *
+  623   22.2  0.8  0.6  chr12     241315 241504 (758496) + DTHm_OsP2_Wanderer-like_Chr4_20977142-20977386    Unknown                6    196   (45)  228  
+  260    5.1  7.7  0.0  chr12     244478 244516 (755484) + RSU_ORSiTEMT01100035                              Unknown              202    243  (257)  229 *
+ 2209    0.0  0.0  0.0  chr12     244483 244741 (755259) + DTTm_OsT35_adh-typeA-like_Chr11_228989-229247     Unknown                1    259    (0)  230  
+ 1345   15.5  2.3  2.3  chr12     247137 247394 (752606) + DTI_ORSgTEMT_713929_MITE                          Unknown                1    258   (22)  231  
+  309   15.8  4.9  0.0  chr12     247432 247513 (752487) + DTI_EXPLORER                                      Unknown               93    178   (32)  232  
+  271   22.2  1.2  1.2  chr12     247642 247723 (752277) C DTHm_OsP2_Wanderer-like_Chr9_6052243-6052480      Unknown             (54)    184    103  233  
+ 3090    0.0  0.0  0.0  chr12     248011 248346 (751654) + DTHm_OsP7_Ndna1tna-OS_Chr12_248011-248346         Unknown                1    336    (0)  234  
+ 1161   12.4  3.0  0.0  chr12     260897 261065 (738935) + DTM_CLOUD-7                                       Unknown              320    493    (2)  235  
+  662   12.3  0.8  2.4  chr12     261166 261182 (738818) + DTI_g_OSTE27_GLAt3_DNA/unclassified               Unknown               31     45  (539)  236  
+ 4344    9.7  0.5  1.0  chr12     261183 262009 (737991) C DTI_g_DNATE_GLA_DNA                               Unknown              (0)    550      1  237  
+  874   11.3  3.2  3.2  chr12     263576 263772 (736228) C DTTm_OsT20_adh-tyleD_Chr8_23614943-23615068       Unknown             (17)    274      1  238  
+  347    4.9  0.0  0.0  chr12     266816 266856 (733144) + DTAm_Osh43_TypeU4_Chr2_23679740-23680520          Unknown               69    109  (672)  239  
+  891   22.9  1.1  0.0  chr12     269324 269498 (730502) + DTI_Bar_MITE2289_MITE                             Unknown                3    179   (40)  240  
+ 1258   11.2  0.0  0.6  chr12     270701 270879 (729121) + RIL_LINE1-8_OS                                    Unknown             6701   6878  (223)  241  
+11066   10.0  0.5  0.1  chr12     270880 272386 (727614) + RLG_SZ-19LTR_LTR/LTR                              Unknown                1   1513    (0)  242  
+  910   13.7  2.9  9.6  chr12     272388 272597 (727403) + RIL_OSLINE1-4_LINE/L1                             Unknown             4582   4778    (1)  243  
+ 5070   10.0  1.4  1.0  chr12     272996 273954 (726046) + DHH_g_Hel17_HELITRON                              Unknown                1   1537    (0)  244  
+ 9204   28.0  1.1  0.9  chr12     276580 279539 (720461) + RIL_LINE-6_OS_LINE/Non-LTRRetrotransposon         Unknown             1880   4886    (0)  245  
+ 1168   14.6  4.6  4.3  chr12     281613 281858 (718142) + DTHm_OsP16_F569_Chr1_42096549-42096731            Unknown                5    214    (5)  246  
+ 2373    4.2  2.1  0.0  chr12     281971 282254 (717746) + RLG_Rufi_Truncated189_LTR/RIRE5                   Unknown              388    677    (0)  247  
+39873    6.1  0.5  0.5  chr12     282564 287820 (712180) + RLC_RC/9_Copia/L                                  Unknown                1   5641  (837)  248  
+ 2345    6.7  0.7  1.0  chr12     288124 288641 (711359) + RLC_Niv_Truncated1785_LTR/Copia/L                 Unknown              252   1077    (0)  249  
+  282    6.4  0.0  0.0  chr12     291026 291072 (708928) + DTX_OSTE27                                        Unknown              207    253  (716)  250 *
+  470   25.6  3.6  2.4  chr12     291052 291219 (708781) C DTMm_OsM32_Oste19_Chr6_4640274-4640575            Unknown             (54)    248     79  251 *
+ 1396    0.0  0.0  0.0  chr12     291069 291217 (708783) + DTTm_OsT37_adh-typeB-like_Chr12_291069-291217     Unknown                1    149    (0)  252 *
+ 2872   11.1  4.8  3.8  chr12     291216 291910 (708090) + DTX_OSTE27                                        Unknown              250    969    (0)  253  
+  722   17.6  1.8  5.6  chr12     291991 292158 (707842) C RLG_MB_Truncated_LTR1877_LTR/ATLANTYS             Unknown            (412)    162      1  254 *
+ 7902    8.7  1.2  0.5  chr12     292008 293072 (706928) + RLG_Bar_SOLO_WT718_LTR/ATLANTYS                   Unknown              383   1455    (0)  255  
+  647   10.7 15.9  0.7  chr12     295076 295207 (704793) C DTTm_OsT36_Chr2_32148502-32148795                 Unknown             (73)    221     70  256 *
+  837    7.7  0.8  0.0  chr12     295087 295203 (704797) + DTHm_OsP48_Gaigin-like_Chr7_17247379-17247652     Unknown               82    199   (75)  257  
+ 1297   29.4  1.4  2.6  chr12     304571 305083 (694917) C RIL_RILN8_OS                                      Unknown              (1)   5084   4578  258  
+  778   12.8  8.6  0.0  chr12     305140 305256 (694744) C RSU_OsSN2_SINE                                    Unknown            (160)    130      4  259  
+  557    7.4  1.2  3.7  chr12     305425 305508 (694492) + DTTm_OsT14_adh-typeLChr11_290370-290451           Unknown                1     82    (0)  260  
+ 1603    0.0  0.0  0.0  chr12     305666 305840 (694160) + DTTm_OsT37_adh-typeB-like_Chr12_305666-305840     Unknown                1    175    (0)  261  
+  808   19.3  2.4 10.1  chr12     309812 310024 (689976) + DTAm_Osh72_Chr4_25636922-25637689                 Unknown              331    528  (240)  262  
+ 1249   12.5  0.2  1.1  chr12     310026 310218 (689782) C RSU_OsSN3_SINE                                    Unknown              (0)    183      2  263  
+  563    6.9  0.0  0.0  chr12     311217 311288 (688712) + BTN_Zea_mays_chr6.trna132-ProTGG                  Unknown                1     72    (0)  264  
+  888   13.3  0.0  0.0  chr12     317771 317920 (682080) C DTHm_OsP41_Unique_Chr12_15334348-15334504         Unknown              (7)    150      1  265  
+  269   10.3  9.5  8.0  chr12     318731 318804 (681196) C DTI_g_U17_Unclassified/unclassified               Unknown             (19)    113     39  266  
+  282   26.1  7.3  1.4  chr12     318814 318921 (681079) + DTI_MERMITEH                                      Unknown             1155   1234   (73)  267 *
+ 1921   13.4  5.7  0.6  chr12     318915 319245 (680755) C RSU_SINE03_OS_SINE                                Unknown             (12)    348      1  268  
+ 2015    4.1  0.8  0.9  chr12     320658 320938 (679062) + DTTm_OsT38_adh-typeB-like_Chr12_320708-320938     Unknown                1    336  (418)  269  
+ 2077    8.1 10.0  0.3  chr12     321694 322002 (677998) C DTHm_OsP7_Ndna1tna-OS_Chr11_27188070-27188408     Unknown              (0)    339      1  270  
+  271   30.0  8.3  2.8  chr12     327913 328080 (671920) C DTH_HarbN10_39562_1.Sorghum                       Unknown           (1717)   4875   4699  271 *
+ 3200    0.0  0.0  0.0  chr12     327934 328279 (671721) + DTHm_OsP6_OLO24_Chr12_327934-328279               Unknown                1    346    (0)  272  
+ 1064    9.8  1.4  1.8  chr12     328989 329192 (670808) + DTI_ORSgTEMT_656462_MITE                          Unknown                1    308   (63)  273  
+ 1604    5.2  5.6  0.8  chr12     332137 332387 (667613) + DTTm_OsT35_adh-typeA-like_Chr11_315880-316143     Unknown                2    264    (0)  274  
+ 2298    0.0  0.0  0.0  chr12     332722 332982 (667018) + DTTm_OsT22_stowaway8_OS_Chr12_332722-332982       Unknown                1    261    (0)  275  
+ 1414   11.9  5.2  1.4  chr12     333090 333336 (666664) + DTI_ORSgTEMT00900507                              Unknown                1    232   (18)  276  
+ 1929    6.4  1.4  1.0  chr12     333588 333868 (666132) + DTMm_OsM89_adh_typeG-like_Chr12_22695737-22696501 Unknown              382    632  (133)  277  
+  314   28.6  7.9  6.5  chr12     338073 338390 (661610) + DTHm_OsP3_Castaway-like_Chr4_22941849-22942200    Unknown               28    349    (3)  278  
+  907   11.1  1.1  5.7  chr12     339666 339872 (660128) C RSU_ORSiTEMT01100036                              Unknown            (121)    508    171  279  
+ 1305   15.3  1.1  1.5  chr12     342616 342881 (657119) C DTI_g_MITE1613_MITE                               Unknown              (1)    313     49  280  
+  646   25.7  2.6  4.5  chr12     343484 343711 (656289) + DTAm_Osh35_Chr11_19708951-19709196                Unknown                9    232   (14)  281  
+  803   18.6  6.1  4.0  chr12     348800 348995 (651005) + DTMm_OsM89_adh_typeG-like_Chr2_4169617-4170212    Unknown              209    408  (188)  282 *
+ 1020    8.5  8.7  1.0  chr12     348827 349013 (650987) C DTMm_OsM89_adh_typeG-like_Chr2_4169617-4170212    Unknown            (190)    406    144  283  
+  546   21.5  0.0  3.9  chr12     356534 356720 (643280) + DTI_Rufi_MITE2067_MITE                            Unknown               14    279   (91)  284 *
+ 1231    7.6  0.0  0.0  chr12     356553 356709 (643291) C DTI_g_MITE787_MITE                                Unknown              (0)    175     19  285  
+  299   16.4  0.0  7.3  chr12     358470 358528 (641472) C RLG_g_SOLO88_LLTR571_LTR/Gypsy                    Unknown            (448)   3123   3069  286 *
+ 1051   15.1  3.0  1.0  chr12     358507 358721 (641279) + DTHm_OsP17_Coward_Chr12_13757783-13757974         Unknown                1    291   (63)  287 *
+ 6758   18.2  2.6  2.0  chr12     358719 360280 (639720) C RLG_MB_Truncated_LTR1233_LTR/RETROSAT3            Unknown             (50)   3043   1424  288  
+ 1139   24.8  0.2  0.7  chr12     360281 360600 (639400) + RLG_g_Truncated_LTR786_LTR/Gypsy                  Unknown                1    279 (1303)  289  
+10352    8.9  0.6  1.0  chr12     360605 362016 (637984) C RLG_g_Truncated_LTR313_LTR/Gypsy                  Unknown              (0)   1406      1  290  
+ 3175   12.7  0.2  2.0  chr12     361585 362081 (637919) + RLG_pun_Complete_LTR_54_1759_LTR/Gypsy            Unknown             3262   3749    (0)  291 *
+  452   24.8  0.1  1.7  chr12     362081 362205 (637795) + RLG_g_Truncated_LTR748_LTR/Gypsy                  Unknown              287    491  (522)  292 *
+ 2928   11.2  4.4  4.2  chr12     362239 362713 (637287) + DTA_JINHUA                                        Unknown                2    477    (2)  293 *
+ 3045    5.8  5.2  0.2  chr12     362267 362666 (637334) C DTAm_Osh60_Jinhua_Chr3_33248152-33248714          Unknown             (32)    531    112  294  
+  409   22.4  0.7  6.9  chr12     362712 362850 (637150) + RLG_Atlantys-2-I_OS                               Unknown             6284   6414 (4369)  295  
+ 1312   31.2  3.6  4.5  chr12     363245 364339 (635661) C RLG_gnl_TREP_TREP3220                             Unknown           (1309)   5052   3968  296 *
+ 3183   29.4  4.3  4.6  chr12     364311 366497 (633503) C RLG_O_Complete66_LTR4796_LTR                      Unknown           (8910)   4012   1731  297  
+  288   20.1  5.8  5.7  chr12     366532 366696 (633304) + DTCm_OsC7_Chr8_4747170-4747812                    Unknown              326    423  (220)  298  
+ 1707    8.8  1.5  0.0  chr12     366715 366974 (633026) + DTC_CACTA-Q                                       Unknown             1167   1430  (838)  299  
+  706   22.3  4.3  4.0  chr12     366737 367012 (632988) C DTC_ENSPM-N1_ZM_DNA/EnSpm                         Unknown            (486)   1056    780  300 *
+ 1438    6.8  0.0  0.6  chr12     368287 368464 (631536) C RLG_SMART_offici_RetroS3                          Unknown            (553)    177      1  301  
+  289   23.3  0.0  0.0  chr12     368514 368573 (631427) C RIL_LINE1-7_OS_LINE/L1                            Unknown            (487)   6819   6760  302  
+ 1983    0.0  0.0  0.0  chr12     368663 368908 (631092) + DTTm_OsT35_adh-typeA-like_Chr12_368663-368908     Unknown                1    246    (0)  303  
+ 6397    0.0  0.0  0.0  chr12     368993 369683 (630317) + DTAm_Osh56_JouzhenA_Chr12_368993-369683           Unknown                1    691    (0)  304  
+  831   15.8 12.7  0.5  chr12     369683 369848 (630152) C DTAm_Osh56_JouzhenA_Chr8_13509103-13509873        Unknown             (66)    705    520  305 *
+13498   17.3  4.7  4.6  chr12     370111 373208 (626792) + RLG_g_SOLOWT625_LTR/Gypsy                         Unknown                1   3101    (0)  306  
+ 1132    0.0  0.0  0.0  chr12     373759 373883 (626117) + DTTm_OsT36_Chr12_373759-373883                    Unknown                1    125    (0)  307  
+  311   26.8  4.1  4.9  chr12     376329 376473 (623527) C DTH_DNA-3-1_SBi                                   Unknown              (0)    509    366  308  
+  250   26.2 12.9  4.0  chr12     378411 378573 (621427) C DTH_HARB-6_SBi                                    Unknown           (5318)    177      1  309  
+  285   17.9  0.0  4.5  chr12     379030 379099 (620901) C DTMm_OsM89_adh_typeG-like_Chr7_15714803-15715535  Unknown            (414)    319    253  310  
+ 1690   21.7  2.2  2.4  chr12     379649 380063 (619937) + RLG_Niv_Truncated2386_LTR/ATLANTYS                Unknown                1    414  (321)  311  
+ 1497   24.3  9.0  5.7  chr12     379657 380298 (619702) C RLG_O_Truncated2949_LTR/Gypsy/U                   Unknown              (6)    811    150  312 *
+ 4950   15.2  0.9  3.1  chr12     380299 381188 (618812) C RLC_ORSiTETNOOT_778618_DNA/unclassified           Unknown            (864)   2206   1336  313  
+ 2192   13.6  3.1  3.2  chr12     381190 381624 (618376) C RLG_Niv_Truncated1646_LTR/Gypsy                   Unknown              (0)    661    132  314  
+40982    3.6  0.9  1.1  chr12     382002 387973 (612027) C DTC_ORSgTETN00200001                              Unknown            (236)  10758   3778  315  
+38671    6.6  1.8  2.3  chr12     387992 394097 (605903) C DTC_ORSgTETN00200002                              Unknown           (5201)   5793      1  315  
+  728   10.6  0.8  0.5  chr12     394360 394509 (605491) C DTTm_OsT20_adh-tyleD_Chr2_25964516-25964811       Unknown             (88)    208     97  316  
+ 1894    6.6  1.2  0.0  chr12     394593 394835 (605165) + DTHm_OsP2_Wanderer-like_Chr6_5444159-5444404      Unknown                1    246    (0)  317  
+12639    8.6  1.2  1.4  chr12     397494 399163 (600837) C RLG_Bar_Complete6_LTR796_LTR/GYpsy/O              Unknown              (0)   4002   2336  318  
+ 9433   10.7  0.8  0.8  chr12     399153 400739 (599261) + RLG_Atlantys-2-I_OS                               Unknown             8246  10476  (307)  319 *
+ 5744   12.0  0.2  0.9  chr12     400740 401598 (598402) + RLC_O_SOLO_WT573_LTR/Copia/Tcgs                   Unknown                1    853    (3)  320 *
+11249    6.1  0.4  0.2  chr12     400865 402253 (597747) C RLC_ORSiTERTOOT00275                              Unknown            (192)  11804  10413  321  
+ 3243   18.0  1.9  0.3  chr12     402252 402338 (597662) C RLG_gnl_TREP_TREP3220                             Unknown           (5067)   1294   1199  322 *
+ 4017   22.1  3.9  2.9  chr12     402339 403515 (596485) + RLG_Rufi_Solo394_LTR                              Unknown                1    890    (0)  323 *
+ 4667   12.7  0.3  0.9  chr12     402827 403516 (596484) C RLG_gnl_TREP_TREP3220                             Unknown            (297)   6064   5379  324  
+  257   17.1  0.0  0.0  chr12     404623 404663 (595337) C RLE_PRIMA4_I_Endogenous_Retrovirus_Homo_sapiens   Unknown           (6573)   1697   1657  325  
+ 1819   18.8  8.5  4.7  chr12     406776 407327 (592673) C DTM_MUDRN3_OS_DNA/MuDR                            Unknown              (0)    903    332  326  
+ 1085   11.1  0.6  1.7  chr12     408901 409074 (590926) C DTM_MUDRN3_OS_DNA/MuDR                            Unknown            (731)    172      1  326  
+ 1826    5.0  0.0  0.4  chr12     409148 409388 (590612) + DTAm_Osh65_Chr7_29006239-29006834                 Unknown              142    381  (215)  327  
+ 1184    8.6  0.0  0.0  chr12     409405 409556 (590444) + RSU_OsSN1_SINE                                    Unknown                1    152  (141)  328  
+  474   18.2 10.9  9.7  chr12     409549 409731 (590269) + RSU_OsSN1_SINE                                    Unknown              109    293    (0)  329 *
+  763   15.2  4.4  5.0  chr12     409750 409929 (590071) C DTMm_OsM63_Chr7_14805290-14806082                 Unknown            (289)    504    326  330 *
+ 1350    3.9  0.0  0.0  chr12     409759 409914 (590086) + DTMm_OsM93_Chr1_31399128-31399684                 Unknown              225    380  (177)  331  
+ 1803    6.3  0.0  2.0  chr12     411856 412115 (587885) + DTTm_OsM16_adh-5-like_Chr9_10416070-10416665      Unknown              164    418  (178)  332  
+ 2248    0.0  0.0  0.0  chr12     412796 413042 (586958) + DTHm_OsP18_Ditto-lake_Chr12_412796-413042         Unknown                1    247    (0)  333  
+ 2221   10.5  0.3  0.6  chr12     413125 413458 (586542) + DTHm_OsP7_Ndna1tna-OS_Chr1_10284752-10285090      Unknown                2    334    (5)  334  
+ 1949    7.2  0.8  0.0  chr12     413463 413711 (586289) C DTHm_OsM105_Chr1_9684604-9685374                  Unknown            (191)    580    330  335  
+ 1931   10.1  4.2  0.0  chr12     413464 413749 (586251) + DTI_ORSgTEMT_661562_MITE                          Unknown                1    298  (199)  336 *
+  726   19.2  4.9  3.8  chr12     415341 415611 (584389) C DTI_MC_MITE6535_MITE                              Unknown             (61)    318      1  337  
+  444   22.6 12.7  8.8  chr12     415824 416075 (583925) C DTAm_Osh69_Chr7_1973066-1973799                   Unknown              (0)    734    474  338  
+  501   23.7  6.1  2.9  chr12     416326 416490 (583510) C DTAm_Osh69_Chr11_9423180-9423963                  Unknown            (614)    170      1  339  
+  780   15.5  4.6  1.5  chr12     421732 421927 (578073) + DTTm_OsT38_adh-typeB-like_Chr1_32803685-32803926  Unknown               41    242    (0)  340 *
+ 1057   11.0  0.3  1.4  chr12     421767 421957 (578043) C DTTm_OsT38_adh-typeB-like_Chr2_34498713-34498947  Unknown             (83)    205      1  341  
+ 3043    8.2  0.3  0.0  chr12     423510 423901 (576099) C DTI_ORSgTEMT04200023                              Unknown              (0)    393      1  342  
+  492   20.8  4.7  3.3  chr12     424474 424622 (575378) C RLC_RC/54_LTR/Copia/Lcgs                          Unknown           (4334)   1455   1305  343  
+  300   14.5 10.0  6.1  chr12     424527 424636 (575364) + RLC_O_Complete_WT497_LTR/COPIA1                   Unknown             3346   3459 (1170)  344 *
+  754   25.6  3.9  6.0  chr12     424691 425233 (574767) C DTMm_OsM73_Chr2_31519899-31520596                 Unknown              (2)    699    268  345  
+  432   25.4  5.6  0.0  chr12     425230 425355 (574645) C DTMm_OsM73_Chr5_4892331-4893031                   Unknown            (295)    406    274  346 *
+  599   21.4  4.9  8.4  chr12     425324 425714 (574286) + DTX_OSTE14                                        Unknown              421    883    (2)  347  
+  290   12.4  4.7  0.5  chr12     425915 426040 (573960) C DTTm_OsT20_adh-tyleD_Chr3_28941735-28941884       Unknown             (60)     90     29  348  
+  260   14.0  2.9  3.9  chr12     425968 426071 (573929) + DTTm_OsT20_adh-tyleD_Chr1_42742674-42742878       Unknown               68    170   (35)  349 *
+  570   19.1  9.1  2.6  chr12     427343 427595 (572405) + RLG_TRUNCATOR2_LTR_LTR/LTR                        Unknown               58    326 (2578)  350 *
+  605   24.0  5.3  4.0  chr12     427533 427808 (572192) C RLG_MC_Truncated_LTR1032_LTR/Gypsy                Unknown             (40)    715    345  351  
+  516   17.0 14.2  2.8  chr12     428123 428249 (571751) + RIL_g_LINE_17_LINE/LINE                           Unknown              395    535 (3466)  352  
+ 1518   10.6  0.5  0.5  chr12     430471 430725 (569275) C DTHm_OsP8_Explorer-like_Chr12_3655064-3655283     Unknown             (25)    304      5  353  
+ 1042   12.5  0.4  2.1  chr12     435264 435486 (564514) + DTHm_OsP48_Gaigin-like_Chr2_31622806-31622952     Unknown                1    325   (38)  354  
+  555   27.8  4.5  0.0  chr12     442763 442895 (557105) C DTAm_Osh11_Chr11_10354314-10354475                Unknown              (7)    155     17  355  
+ 1185    2.9  0.7  0.0  chr12     443746 443883 (556117) C RSU_ORSiTEMT01100041                              Unknown              (0)    453    315  356 *
+ 1688    7.2  0.5  1.4  chr12     443865 444193 (555807) C RSU_ORSiTEMT01100041                              Unknown             (34)    337      1  356  
+  645   20.1  3.6  2.2  chr12     445474 445673 (554327) + DTHm_OsP18_Ditto-lake_Chr9_18818819-18819191      Unknown               51    308   (65)  357 *
+  725   15.6  1.5  0.0  chr12     445513 445654 (554346) C DTTm_OsT20_adh-tyleD_Chr8_23894897-23895022       Unknown              (0)    126      1  358  
+  323   14.8  0.0  0.0  chr12     445920 445973 (554027) C DTI_MB_MITE4292_MITE                              Unknown             (10)     54      1  359  
+ 1259    0.0  0.0  0.0  chr12     445984 446121 (553879) + DTTm_OsT37_adh-typeB-like_Chr12_445984-446121     Unknown                1    138    (0)  360  
+ 5971    4.8  0.0  1.5  chr12     446202 446945 (553055) C DTM_CLOUD                                         Unknown              (0)    734      2  361  
+ 1670    5.0  1.8  0.0  chr12     447022 447240 (552760) + DTTm_OsT44_TREP219_Chr11_404296-404518            Unknown                1    223    (0)  362  
+  540   22.8 10.4  6.8  chr12     447529 447768 (552232) C DTHm_OsP2_Wanderer-like_Chr11_7945621-7945868     Unknown              (0)    248      1  363  
+ 2538    5.1  0.3  2.1  chr12     447966 448303 (551697) + DTI_ORSiTETNOOT_775128_DNA                        Unknown                1    332    (0)  364  
+ 1765    8.3  2.0  0.5  chr12     451907 452176 (547824) C DTTm_OsT38_adh-typeB-like_Chr6_21645584-21645829  Unknown            (389)    284      1  365  
+ 1237    9.9  8.8  0.0  chr12     453326 453506 (546494) + DTHm_OsP12_Chr7_3457838-3458034                   Unknown                1    197    (0)  366  
+  552   24.5 10.9 10.1  chr12     453595 454237 (545763) + RLG_O_Complete_WT2359_LTR/BAJIE                   Unknown             3496   3885 (2701)  367  
+  969   20.4  3.7  5.8  chr12     454937 455239 (544761) + RLG_Niv_Complete11_LTR2615_LTR/SZ-50              Unknown             7591   7842    (0)  368  
+  896   11.3  0.7  2.6  chr12     455240 455393 (544607) + DTTm_OsT40_stowaway20_OS_Chr6_24701070-24701336   Unknown              108    258    (9)  369  
+ 2135   15.9  4.5  7.2  chr12     455486 456001 (543999) C DTI_MERMITE18E_DNA/DNA                            Unknown              (2)   1526   1024  370  
+ 2019   16.0  6.7  2.7  chr12     456413 456839 (543161) + DTI_MERMITE18E_DNA/DNA                            Unknown             1147   1527    (1)  371  
+  305   28.5  5.1  4.6  chr12     456684 456878 (543122) C DTI_ORSiTETNOOT00128                              Unknown           (1860)    255     60  372 *
+  915    8.8  0.0  0.0  chr12     456947 457071 (542929) C DTTm_OsT7_adh-2-like_Chr6_30402774-30403038       Unknown              (0)    265    141  373 *
+ 1885    9.6  0.0  0.0  chr12     457067 457317 (542683) C RLG_ORSiTERTOOT00039                              Unknown             (80)    895    645  374  
+  821    8.6  0.0  6.4  chr12     457314 457463 (542537) C DTTm_OsT7_adh-2-like_Chr2_145882-146146           Unknown            (122)    143      3  375 *
+  777   11.3  3.0  2.4  chr12     457795 458098 (541902) C DTM_MuDr-3_HM_DNA/MuDR                            Unknown           (1139)   4733   4489  376  
+ 1552   18.7  5.3  4.1  chr12     458877 459326 (540674) + RLC_RC/31_LTR/OSTONOR1                            Unknown              818   1441 (4617)  377  
+  449   24.5  1.5  2.6  chr12     459333 459529 (540471) C RLG_MC_HEangedLTR5592_LTR/Gypsy                   Unknown           (8418)    195      1  378 *
+  605   20.2  1.4  8.9  chr12     459377 459593 (540407) + RLG_MB_Truncated_LTR1731_LTR/Gypsy/J              Unknown              102    303    (0)  379  
+  254   10.5  0.0  2.6  chr12     459680 459718 (540282) C DHH_MB_HELITRON3532_HELITRON                      Unknown           (7339)    319    282  380 *
+  414   17.7  0.0  2.0  chr12     459690 459796 (540204) + DTMm_OsM45_Snabo1_Chr7_11013656-11014261          Unknown              294    379  (227)  381 *
+  468   18.2  0.0  0.3  chr12     459717 459821 (540179) C DTTm_OsT20_adh-tyleD_Chr2_26804798-26805004       Unknown             (61)    146     71  382  
+  966   21.8  0.4  2.2  chr12     460282 460511 (539489) + DTHm_OsP2_Wanderer-like_Chr9_1648767-1649002      Unknown               11    236    (0)  383  
+  594   23.4  5.3  2.1  chr12     461013 461200 (538800) C DTTm_OsT1_Chr5_6193143-6193392                    Unknown              (6)    244     51  384 *
+ 1372   19.5  1.0  1.7  chr12     461190 461487 (538513) C DTHm_OsP39_Susu-like_Chr8_11881037-11881598       Unknown            (155)    407    112  385  
+ 1133    0.0  0.0  0.0  chr12     461820 461945 (538055) + DTTm_OsT37_adh-typeB-like_Chr12_461820-461945     Unknown                1    126    (0)  386  
+  882   32.5  1.2  0.3  chr12     471692 472012 (527988) + RIL_LINE-05_OS_LINE/Non-LTRRetrotransposon        Unknown             6297   6620  (119)  387  
+  399    5.3  0.0  0.0  chr12     472404 472459 (527541) + RLC_ORSiTERTOOT00440                              Unknown             4776   4831  (343)  388  
+29837    6.6  0.7  0.5  chr12     472460 477138 (522862) C RLC_g_CompleteWT25_LTR/Copia                      Unknown              (0)   5170      1  389  
+ 4117    0.9  0.0  0.0  chr12     477138 477587 (522413) + RLC_ORSiTERTOOT00440                              Unknown                1    450 (4724)  390 *
+44003    0.0  0.0  0.0  chr12     477602 482333 (517667) + RLC_ORSiTERTOOT00440                              Unknown              443   5174    (0)  390  
+  430   20.9  1.1  1.1  chr12     482992 483083 (516917) + DTC_ENSPM2_OS                                     Unknown             6625   6716 (3864)  391  
+  285    7.7  0.0  0.0  chr12     487272 487310 (512690) C DTMm_OsM79_Chr1_30942844-30943372                 Unknown            (490)     39      1  392 *
+ 1667   17.6  7.9  4.5  chr12     487277 487905 (512095) C DTMm_OsM79_Chr12_7646255-7646848                  Unknown            (185)    858     27  393  
+ 1827   12.7  3.5  3.4  chr12     488892 489229 (510771) C DTMm_OsM79_Chr2_27753518-27754245                 Unknown             (62)    666      1  394  
+ 1741   16.8  7.3  0.0  chr12     492241 492556 (507444) + DTMm_OsM64_Chr9_12003472-12003814                 Unknown                5    343    (0)  395  
+ 1800    7.4  0.8  0.0  chr12     493309 493550 (506450) C DTTm_OsT43_Snabo-like_Chr2_2018356-2018599        Unknown              (0)    244      1  396  
+  821   12.3  1.0  4.2  chr12     493612 493759 (506241) + DTTm_OsT37_adh-typeB-like_Chr12_3040637-3040934   Unknown               55    203   (95)  397  
+ 3080    4.4  0.0  0.0  chr12     497569 497930 (502070) + DTMm_OsM97_Chr8_957787-958149                     Unknown                1    362    (1)  398  
+ 1435   13.7  2.1  0.4  chr12     501295 501529 (498471) C DTTm_OsT43_Snabo-like_Chr11_19535246-19535484     Unknown              (0)    239      1  399  
+ 2250    0.0  0.0  0.0  chr12     501689 501927 (498073) + DTAm_Osh63_Chr12_501689-501927                    Unknown                1    239    (0)  400  
+43229    4.2  1.1  1.1  chr12     502168 512831 (487169) + DTC_ORSgTETN00200001                              Unknown                1  10880  (114)  401  
+ 3483   18.6  3.9  1.3  chr12     513095 513897 (486103) C RLG_RG/156_LTR/Gypsy/U                            Unknown           (4850)   1328     78  402  
+ 1046   11.2  0.9  1.8  chr12     513980 514148 (485852) + DTAm_Osh7_Shikotsu-like_Chr7_23044472-23044696    Unknown                7    161   (64)  403  
+  688   21.4  2.9  4.0  chr12     513992 514166 (485834) C DTAm_Osh7_Shikotsu-like_Chr1_32765187-32765401    Unknown              (3)    212     40  404 *
+  579   23.7  4.4  0.0  chr12     515839 515973 (484027) C RSU_ORSiTERT00400042                              Unknown             (13)    422    282  405  
+  658    8.8  1.0  1.9  chr12     516372 516475 (483525) C DTI_ORSgTEMT_696326_MITE                          Unknown            (311)    106      4  406  
+  643   12.1  0.0  5.6  chr12     516474 516587 (483413) + RLC_ORSiTERTOOT00378                              Unknown             5201   5308   (71)  407 *
+ 8680   11.3  1.0  2.0  chr12     516587 518065 (481935) + DHH_g_Hel34_HELITRON                              Unknown                1   1579    (0)  408  
+  379    8.2  0.0  0.0  chr12     518065 518113 (481887) C DHH_Niv_HELITRONS3322_HELITRON                    Unknown              (5)   1760   1712  409 *
+ 2926   16.4  5.5  3.1  chr12     518072 518859 (481141) + DHH_g_Hel46_HELITRON                              Unknown               13    818 (6452)  410 *
+ 4055   15.2  5.5  3.3  chr12     518163 519392 (480608) C DHH_g_Hel3_HELITRON                               Unknown            (239)   1408      1  411  
+  372   15.2  1.5  0.0  chr12     519341 519406 (480594) + DTC_gnl_TREP_TREP3425                             Unknown             4358   4424 (6841)  412 *
+ 1151    9.9  1.1  0.7  chr12     522902 523096 (476904) C DTI_ORSgTEMT_683470_MITE                          Unknown             (72)    250      1  413  
+14216   24.0  1.9  2.2  chr12     525934 529689 (470311) C RIL_LINE1-24_SBi                                  Unknown             (23)   5297   1552  414  
+  585   17.4  8.9  1.2  chr12     550266 550422 (449578) C DTHm_OsP8_Explorer-like_Chr1_29578795-29579008    Unknown             (43)    171      3  415  
+ 2338    4.0  0.0  0.0  chr12     551860 552131 (447869) + DTHm_OsP15_Chr6_30116259-30116530                 Unknown                1    272    (0)  416  
+ 3557    0.2  0.0  0.8  chr12     555599 555991 (444009) C RSU_p-SINE1-r25                                   Unknown              (0)    390      1  417  
+ 1984   14.4  4.6  0.0  chr12     557745 558071 (441929) + DTHm_OsP7_Ndna1tna-OS_Chr1_28194777-28195119      Unknown                2    343    (0)  418  
+ 1064   11.0  0.4  4.2  chr12     558102 558350 (441650) + DTTm_OsT44_TREP219_Chr3_22094880-22095254         Unknown                1    232  (143)  419  
+  367   22.0  0.0  3.7  chr12     566473 566557 (433443) + DTTm_OsT35_adh-typeA-like_Chr10_4102204-4102575   Unknown               54    135  (237)  420  
+ 1557   21.3  3.1  4.0  chr12     567033 567461 (432539) + DTI_MERMITE18E_DNA/DNA                            Unknown                1    551  (177)  421  
+  318   31.1  2.8  5.7  chr12     567270 567484 (432516) C DTI_MERMITE18C                                    Unknown            (201)   1272   1064  422 *
+ 1554   24.4  6.4  7.8  chr12     567998 568765 (431235) C DTI_MERMITE18E_DNA/DNA                            Unknown            (789)    739      3  423  
+ 2351    9.7  4.6  2.5  chr12     568905 569410 (430590) C DXX_OSTE7                                         Unknown              (0)    837      2  424 *
+ 2480   10.7  0.2  0.2  chr12     568926 569347 (430653) + DTI_ORSgTEMT03600087                              Unknown                2    423   (20)  425  
+ 1660   14.1  2.4  0.0  chr12     569417 569671 (430329) C DTA_pun_InComplete_DNATE_3_DNA/hAT                Unknown              (0)    650    390  426  
+ 4628    2.5  1.3  3.9  chr12     569693 570539 (429461) + DTMm_OsM30_Chr10_5981207-5981995                  Unknown                1    789    (0)  427  
+  515   27.8  3.5  7.8  chr12     570849 571074 (428926) C DTAm_Osh72_Chr1_9053280-9053851                   Unknown            (355)    217      1  428  
+ 3978   11.5  2.5  0.2  chr12     571153 571716 (428284) C RLG_Rufi_SOLO20_LTR704_LTR/SZ-7                   Unknown              (0)    577      1  429  
+  342   16.7  0.0  1.7  chr12     571711 571771 (428229) C DTAm_Osh43_TypeU4_Chr2_23679740-23680520          Unknown             (83)    698    639  430 *
+ 1018    6.2 11.4  0.3  chr12     571726 571894 (428106) + DTMm_OsM89_adh_typeG-like_Chr2_4169617-4170212    Unknown              252    407  (189)  431  
+ 1124   22.1  5.5  3.5  chr12     572345 572523 (427477) C RLG_O_SOLO_WT5346_LTR/RIRE8                       Unknown            (199)   2793   2608  432  
+ 1184   17.4  4.6  0.0  chr12     572524 572741 (427259) + RLG_MB_Truncated_LTR772_LTR/Gypsy                 Unknown                3    230   (39)  433  
+  961   25.1  8.3  1.1  chr12     572926 573217 (426783) C RLG_MC_Truncated_LTR1208_LTR/Gypsy                Unknown              (0)    525      9  434  
+  305   11.7  8.3  0.0  chr12     573637 573696 (426304) + RLC_ORSiTETNOOT_778618_DNA/unclassified           Unknown             3001   3065    (5)  435  
+ 2373    9.0  3.9  0.0  chr12     573971 574305 (425695) + RSU_SINE03_OS_SINE                                Unknown                1    348   (12)  436  
+  254   17.2  5.0  6.1  chr12     574296 574394 (425606) C DHH_g_Hel14_HELITRON                              Unknown            (238)   4307   4210  437 *
+  271   32.1  0.8  0.8  chr12     574630 574761 (425239) C RLG_O_Truncated2163_LTR/Gypsy/J                   Unknown            (626)    729    598  438  
+  667   20.6  5.7 10.4  chr12     575043 575253 (424747) C DHH_Bar_HELITRON381095_HELITRON                   Unknown           (3719)   4033   3832  439  
+  290    5.6  0.0  0.0  chr12     575253 575288 (424712) C DHH_Bar_HELITRON381095_HELITRON                   Unknown            (572)   7180   7145  440 *
+  776   17.2  3.2  0.9  chr12     576190 576361 (423639) + RLG_pun_Truncated_LTR_1020_LTR/Gypsy              Unknown                1    195  (108)  441  
+  329   16.4  7.4  2.4  chr12     576376 576456 (423544) C DHH_MB_HELITRON3532_HELITRON                      Unknown           (7306)    352    268  442  
+ 1476   16.3  3.9  5.7  chr12     576767 577123 (422877) + DTI_MERMITE18B                                    Unknown                1    351  (955)  443  
+  279   23.4  9.9  3.3  chr12     576973 577144 (422856) C DTC_CACTA-L                                       Unknown            (294)    868    686  444 *
+ 1611   14.4  6.3  3.7  chr12     578294 578660 (421340) C DTI_MERMITE18B                                    Unknown            (930)    376      1  445  
+  267   15.5  0.0  0.0  chr12     582582 582639 (417361) + DTI_O_MITE3834_MITE                               Unknown              218    275   (30)  446 *
+  425   19.8  4.0  3.2  chr12     582593 582717 (417283) C DTI_O_MITE3730_MITE                               Unknown            (225)    129      4  447  
+ 1171   23.3  3.8  4.1  chr12     588650 588993 (411007) + DTI_MERMITE18E_DNA/DNA                            Unknown                3    345 (1183)  448  
+ 8294    5.2  0.3  0.6  chr12     589080 590242 (409758) + RLG_ORSiTERTOOT00221                              Unknown                2   1127 (1576)  449  
+30595    3.1  0.8  0.9  chr12     590381 593997 (406003) + RLG_ORSiTERTOOT00221                              Unknown             1377   4979    (0)  450  
+  826   21.9  0.9  7.2  chr12     594137 594341 (405659) + DTMm_OsM19_Chr3_29455249-29455936                 Unknown              521    688    (0)  451  
+  561    6.9  0.0  0.0  chr12     595264 595335 (404665) C BTN_Zea_mays_chr6.trna132-ProTGG                  Unknown              (0)     72      1  452  
+  408   17.5  0.0  0.0  chr12     595670 595749 (404251) C RSU_ORSgOTOT000_660462_Unclassified/unclassified  Unknown              (1)    239    160  453  
+ 1141   11.5  9.2  3.5  chr12     597004 597220 (402780) + DTI_ORSgTEMT_727390_MITE                          Unknown                1    229   (11)  454  
+ 1727    8.4  1.1  0.4  chr12     597416 597679 (402321) + DTTm_OsT22_stowaway8_OS_Chr7_22035568-22035833    Unknown                1    266    (0)  455  
+  354   15.5  1.4  0.0  chr12     598113 598231 (401769) + RLE_ERV19_MD_I_LTR/ERV                            Unknown              262    466 (7511)  456 *
+  391    5.6  1.4  0.0  chr12     598151 598221 (401779) C DTC_EnSpm-7_HM_DNA/EnSpm                          Unknown           (3406)   4033   3962  457  
+ 1691   17.3  2.8  3.0  chr12     599409 599808 (400192) C DTT_g_InComplete_DNA_TE82_DNA/unclassified        Unknown              (0)    571    173  458  
+ 1400   21.9  1.9  3.4  chr12     599503 599862 (400138) + DTX_O_DNATE5450_DNATE/Unclassified                Unknown              138    492   (44)  459 *
+ 1101   13.6  8.5  3.7  chr12     599810 600069 (399931) C DTC_Niv_InComplete_DNATE1273_DNATE/unclassified   Unknown            (238)    272      1  460 *
+  445   20.9  8.1  5.5  chr12     600072 600268 (399732) + DTTm_OsT26_Chr5_20046520-20046774                 Unknown               46    247    (8)  461  
+ 1561    0.0  0.0  0.0  chr12     600402 600566 (399434) + DTAm_Osh11_Chr12_600402-600566                    Unknown                1    165    (0)  462  
+  985   12.9  6.2  4.2  chr12     600975 601216 (398784) + DTTm_OsT35_adh-typeA-like_Chr11_28215226-28215486 Unknown               10    261    (0)  463  
+  572   26.6  9.7  2.7  chr12     604207 604484 (395516) C RIL_OSLINE1-5_LINE/L1                             Unknown              (1)   4687   4391  464  
+ 1907    7.8  0.8  0.0  chr12     605220 605434 (394566) C DTI_ORSgTEMT_626650_MITE                          Unknown            (228)    254     38  465  
+  274    5.9  0.0  0.0  chr12     605435 605468 (394532) + RSU_ORSiTERT004_797243_SINE                       Unknown                1     34  (435)  466  
+  333   24.9 13.6  2.7  chr12     607654 607917 (392083) C DTHm_OsP3_Castaway-like_Chr2_20059012-20059728    Unknown            (289)    428    137  467  
+  469   15.9  0.0  1.1  chr12     608401 608489 (391511) + DTI_ORSiTETNOOT00116                              Unknown              535    622  (894)  468  
+ 1236   24.3 11.4  4.6  chr12     608605 609089 (390911) + DTI_ORSiTETNOOT00109                              Unknown             1009   1472   (99)  469  
+ 1193    5.8  0.0  0.0  chr12     616872 617025 (382975) C DTMm_OsM13_Tnr2A_Chr8_26337647-26337830           Unknown              (0)    184      1  470  
+  309    2.5  0.0  5.0  chr12     617817 617858 (382142) C DTI_Bar_MITE1842_MITE                             Unknown              (0)    247    208  471 *
+  742   18.8  0.3  4.9  chr12     617825 617979 (382021) C DTTm_OsT37_adh-typeB-like_Chr2_12385000-12385148  Unknown              (0)    198     16  472  
+ 1847   10.9  1.1  0.0  chr12     618691 618955 (381045) + DTHm_OsP6_OLO24_Chr5_8878178-8878524              Unknown                4    271   (76)  473  
+  694   10.9  2.4  3.3  chr12     618846 618968 (381032) C DTHm_OsP6_OLO24_Chr11_21876321-21876617           Unknown             (55)    242    121  474 *
+  519   15.3 11.2  4.3  chr12     621358 621522 (378478) + DHH_MB_HELITRON3549_HELITRON                      Unknown             1241   1376  (467)  475  
+  267   30.8  1.1  0.0  chr12     621700 621790 (378210) C DTAm_Osh81_Chr1_9435256-9435808                   Unknown            (461)     92      1  476 *
+ 1667   10.8  2.0  0.3  chr12     621784 622078 (377922) C DTTm_OsM16_adh-5-like_Chr9_10416070-10416665      Unknown            (311)    465    154  477  
+  552   21.0  5.3  3.7  chr12     623020 623207 (376793) C DTC_pun_ENSPM4_PUNt_DNA_TE/unclassified           Unknown              (0)    763    573  478  
+  730    2.8  0.0  0.0  chr12     625417 625507 (374493) + BTN_Zea_mays_chr4.trna76-SerTGA                   Unknown                1     92    (0)  479  
+  416   13.5  0.0 10.7  chr12     625528 625610 (374390) C DTI_MERMITE18B                                    Unknown              (0)   1306   1232  480  
+  761   24.9  9.1  4.5  chr12     625621 626109 (373891) C DTMm_OsM17_Chr8_26592029-26592810                 Unknown             (22)   1284    577  481  
+ 1020   20.0 12.0  5.3  chr12     626641 627131 (372869) C DTMm_OsM17_Chr7_20588864-20589487                 Unknown            (196)    521      1  481  
+  844   14.9  3.7  0.0  chr12     629975 630135 (369865) + DTMm_OsM32_Oste19_Chr2_6940739-6941055            Unknown               36    202  (115)  482 *
+ 1471    9.5  1.8  0.0  chr12     629994 630214 (369786) C DTTm_OsT20_adh-tyleD_Chr11_19654024-19654248      Unknown              (0)    225      1  483  
+  554   14.1  2.1  0.5  chr12     630126 630241 (369759) + DTTm_OsT20_adh-tyleD_Chr3_35881405-35881695       Unknown               44    258   (33)  484 *
+ 2711    6.4  0.3  0.0  chr12     630371 630713 (369287) + DTMm_OsM7_Oste20_Chr1_35219916-35220695           Unknown                1    344  (436)  485  
+  802   12.2 11.2  2.6  chr12     630733 630875 (369125) + DTTm_OsT20_adh-tyleD_Chr1_35383644-35383829       Unknown                1    122   (64)  486 *
+ 2103    9.4  3.8  1.6  chr12     630873 631185 (368815) + DTMm_OsM7_Oste20_Chr1_35219916-35220695           Unknown              461    780    (0)  485  
+  256   21.2  0.0  5.6  chr12     642744 642818 (357182) C DTHm_OsP60_Chr9_21654065-21654221                 Unknown             (51)    106     36  487  
+ 1456    8.3  0.0  5.4  chr12     648396 648611 (351389) C DTI_EXPLORER                                      Unknown              (5)    205      1  488  
+ 1005   21.9  1.3  1.7  chr12     650628 650864 (349136) + DTHm_OsP4_Chr8_16374748-16375007                  Unknown               21    256    (4)  489  
+ 2185    0.0  0.0  0.0  chr12     651312 651549 (348451) + DTHm_OsP2_Wanderer-like_Chr12_651312-651549       Unknown                1    238    (0)  490  
+  893   23.6  0.9  1.8  chr12     652004 652227 (347773) + DTMm_OsM92_Chr6_24211652-24212332                 Unknown                1    222  (459)  491  
+  427   22.1  5.7  5.1  chr12     652703 652921 (347079) C DTMm_OsM92_Chr3_4632735-4633504                   Unknown            (821)    347    106  492 *
+  516   16.7  1.0  2.1  chr12     652825 652922 (347078) + DTMm_OsM92_Chr6_24211652-24212332                 Unknown              480    576  (105)  491 *
+ 2537   12.3  4.7  1.9  chr12     652922 653327 (346673) + DTAm_Osh47_Chr10_15913783-15914373                Unknown                1    417  (174)  493  
+  871    6.2  4.5  3.7  chr12     653426 653558 (346442) + DTAm_Osh47_Chr10_15913783-15914373                Unknown              458    591    (0)  493  
+  694   16.7  0.0  0.0  chr12     653558 653671 (346329) + DTMm_OsM92_Chr11_7045763-7045993                  Unknown              118    231    (0)  494 *
+ 1237    0.0  0.0  0.0  chr12     653965 654102 (345898) + DTMm_OsM11_TeliaChr12_653965-654102               Unknown                1    138    (0)  495  
+ 1728    8.7  0.0  0.0  chr12     654135 654375 (345625) C DTI_g_MITE197_MITE                                Unknown           (1314)    241      1  496  
+  367   14.7 15.6  0.9  chr12     654539 654634 (345366) + DTHm_OsP14_Ditto-like_Chr2_22885874-22886177      Unknown               69    178  (126)  497 *
+  915   16.7  9.9  0.0  chr12     654551 654751 (345249) C DTI_ORSgTEMT01700698                              Unknown            (173)    206      1  498  
+  504   23.9  3.6  1.4  chr12     657929 658068 (341932) + RSU_ORSiTERT00400042                              Unknown              284    426    (9)  499  
+ 4089    0.0  0.0  0.0  chr12     661729 662163 (337837) + RSU_ORSiTERT00400042                              Unknown                1    435    (0)  500  
+ 1002   13.3  0.0  6.9  chr12     663809 663978 (336022) + DTAm_Osh15_Chr9_21086629-21086787                 Unknown                1    159    (0)  501  
+  472   25.7  0.0 10.8  chr12     664606 664749 (335251) + DTM_MC_DNA21_DNA/MuDR                             Unknown               84    213   (12)  502  
+ 1104   22.9  4.9  3.2  chr12     664751 665119 (334881) + DTC_CACTA-N                                       Unknown                1    375  (612)  503  
+  340   30.2 10.1  6.6  chr12     665209 665516 (334484) + DTC_CACTA-L                                       Unknown              707   1024  (138)  504 *
+ 1178   16.9  1.3  2.7  chr12     665403 665627 (334373) C DTI_pun_MITE_826_MITE                             Unknown             (73)    222      1  505  
+  976   25.9  1.5  5.0  chr12     665670 665994 (334006) C DTI_MERMITEB                                      Unknown              (0)   1610   1401  506  
+  488   20.0  8.8  0.7  chr12     666044 666179 (333821) + RSU_ORSiTERT00400042                              Unknown                1    147  (288)  507 *
+  803   15.5  7.6  1.8  chr12     666159 666316 (333684) + RSU_ORSiTERT00400042                              Unknown              268    434    (1)  507  
+ 5248   10.8  3.6  1.7  chr12     666403 667206 (332794) + RLG_RG/95_LTR/Dasheng                             Unknown                1    819 (5947)  508  
+17633   11.6  1.7  1.5  chr12     667799 673132 (326868) + RLG_RG/64_LTR/Dasheng                             Unknown             2268   8180    (0)  509  
+  265    9.3  0.0 13.6  chr12     674505 674554 (325446) C RIL_LINE1-56_SBi                                  Unknown              (0)   7493   7450  510  
+ 2054   13.3  0.6  3.0  chr12     675016 675356 (324644) C RSU_ORMOSIA_SINE                                  Unknown            (149)    333      1  511  
+  503   23.0  5.1  5.8  chr12     676528 676684 (323316) + RSU_ORSiTERT00400042                              Unknown              267    422   (13)  512  
+  319   14.9 10.8  0.0  chr12     681883 681956 (318044) + RSU_p-SINE1-r24                                   Unknown              126    207  (345)  513  
+ 1368   17.2  0.0  0.0  chr12     682555 682763 (317237) C RSU_OsSN2_SINE                                    Unknown              (2)    288     80  514  
+  626   28.2  9.3  6.6  chr12     682765 683205 (316795) + DTC_CACTA-J                                       Unknown                1    452  (707)  515  
+  630   23.5 12.6  6.1  chr12     683462 683787 (316213) C DTCm_OsC7_Chr2_6515579-6516342                    Unknown            (417)    347      2  516  
+  504   16.7  0.0  0.0  chr12     683790 683867 (316133) C RSU_OsSN2_SINE                                    Unknown            (210)     80      3  514  
+  284   21.8  0.0  8.2  chr12     683899 683975 (316025) C DTI_O_MITE3504_MITE                               Unknown              (4)    231    161  517  
+  988    0.0  0.0  0.0  chr12     684606 684710 (315290) + DTMm_OsM24_Chr12_684606-684710                    Unknown                1    105    (0)  518  
+  898   21.3  9.1  3.1  chr12     684776 685017 (314983) + DTI_pun_MITE_826_MITE                             Unknown                1    256   (39)  519  
+  492   27.7  8.7  2.4  chr12     684930 685240 (314760) C DTC_CACTA-N                                       Unknown            (115)    872    543  520 *
+  389   27.8  0.0  0.9  chr12     685546 685654 (314346) C DTI_pun_MITE_702_MITE                             Unknown             (67)    108      1  521  
+  560   24.2  6.0  4.7  chr12     685663 686008 (313992) C DTX_O_DNATE5450_DNATE/Unclassified                Unknown            (238)    381      1  522  
+  254   22.0  3.2  2.1  chr12     687253 687345 (312655) C DTTm_OsT37_adh-typeB-like_Chr10_1793677-1793801   Unknown             (31)     94      1  523  
+  538   14.9  3.7  6.2  chr12     687419 687582 (312418) + DTTm_OsT12_Stowaway48_OS_Chr11_8512918-8513167    Unknown                1    160   (90)  524  
+  557   23.7 11.2  5.9  chr12     687756 687997 (312003) + RLG_OSTE26                                        Unknown              245    498  (107)  525  
+  251   19.0 20.0  1.0  chr12     691027 691111 (308889) C DTTm_OsT23_Chr7_22129623-22129726                 Unknown              (2)    102      2  526  
+ 1266   19.1  6.1 12.3  chr12     693620 694492 (305508) + DTC_ORSiTETN00200005                              Unknown                1    876  (253)  527  
+ 1038    5.5  0.0  0.8  chr12     694497 694624 (305376) + DTC_ORSiTEMT06800001                              Unknown              146    272    (2)  528  
+  337   13.2  2.9 10.3  chr12     694795 694940 (305060) + DTX_DNA-2-3_DR_DNA/DNA                            Unknown             1082   1171  (594)  529  
+  807   24.7  8.5  4.1  chr12     697212 697540 (302460) C DTI_g_DNATE_GLA_DNA                               Unknown              (0)    550    208  530  
+  535   17.7  2.0  2.0  chr12     697547 697693 (302307) + RLG_MB_Truncated_LTR749_LTR/Gypsy                 Unknown               40    156    (3)  531  
+ 1889    7.2  1.9  0.0  chr12     702249 702510 (297490) + DTI_ORSgTEMT_667024_MITE                          Unknown                1    267    (0)  532  
+ 1071    9.7  1.4  0.0  chr12     708242 708386 (291614) C DTTm_OsT37_adh-typeB-like_Chr6_8305319-8305468    Unknown              (3)    147      1  533  
+  399   13.5  3.8  6.5  chr12     708317 708395 (291605) + DTHm_OsP2_Wanderer-like_Chr1_27370371-27370639    Unknown              119    195   (74)  534 *
+  265   22.5  2.7  2.7  chr12     711869 711941 (288059) + RIL_L1-3_ME_LINE/L1                               Unknown             1884   1956  (829)  535 *
+  460    1.5  0.0  0.0  chr12     711894 711958 (288042) C DTX_DNA-N4_DR_DNA/DNA                             Unknown            (320)    722    658  536  
+  705   22.6  9.2  2.2  chr12     714460 714676 (285324) C DTMm_OsM3_Oste24_Chr6_2884610-2885227             Unknown              (0)    618    387  537 *
+18836    2.7  0.4  0.3  chr12     714487 716707 (283293) + DTM_MUDR1_OS                                      Unknown               55   2380 (5672)  538  
+ 4399    5.9  2.0  0.7  chr12     716699 717418 (282582) + DTM_Bar_Complete7_DNATE3136_DNATE/MuDR            Unknown             4243   4805  (248)  539 *
+  396   13.9  0.0 18.3  chr12     721384 721480 (278520) + DTTm_OsP4_Chr3_27381783-27382470                  Unknown               68    149  (264)  540  
+ 1644    8.1  0.9  0.0  chr12     721481 721690 (278310) C RSU_OsSN1_SINE                                    Unknown             (81)    212      1  541  
+  976   12.8  4.7  0.5  chr12     721687 721879 (278121) C DTTm_OsT37_adh-typeB-like_Chr4_13642137-13642375  Unknown             (59)    180      1  542 *
+  715   19.5  3.1  0.8  chr12     724299 724491 (275509) + DTI_ORSgTEMT00901206                              Unknown               75    257  (187)  543 *
+  790   14.7  0.7  0.7  chr12     724323 724459 (275541) C DTHm_OsP18_Ditto-lake_Chr5_24399874-24400134      Unknown            (111)    150     14  544  
+  685   23.8  9.3  5.2  chr12     724731 725329 (274671) C DTM_MB_InComplete_DNATE3577_DNA/MuDR              Unknown            (177)    420     69  545 *
+ 1767   27.5  7.3  5.2  chr12     725328 726027 (273973) C DTM_MB_InComplete_DNATE3582_DNA/MuDR              Unknown             (64)    903    272  546  
+ 1115   19.1  8.0  1.1  chr12     726192 726440 (273560) C DTM_Bar_Complete6_DNATE1140_DNATE/MuDR            Unknown           (7131)    269      4  546  
+ 1631   21.8  6.5  5.2  chr12     728176 728592 (271408) + RLG_RG/176_Gypsy                                  Unknown             4411   4832 (1753)  547  
+ 1144   13.2  0.0  2.9  chr12     728575 728754 (271246) + RLG_RG/176_Gypsy                                  Unknown             4707   4881 (1704)  548 *
+  313   26.1  3.1  5.6  chr12     729393 729601 (270399) + DTHm_OsP8_Explorer-like_Chr2_25550212-25550427    Unknown                5    208    (8)  549 *
+  499   18.7  2.8  6.5  chr12     729446 729588 (270412) C DTI_EXPLORER                                      Unknown             (45)    165     28  550  
+  556   23.7  0.9  0.9  chr12     729648 729762 (270238) C DTAm_Osh11_Chr2_4299202-4299360                   Unknown             (25)    134     20  551  
+  654   14.2  2.6  2.0  chr12     729987 730137 (269863) C DTHm_OsP48_Gaigin-like_Chr12_3419261-3419453      Unknown             (27)    166     15  552 *
+ 1138    6.4  0.0  1.9  chr12     730007 730166 (269834) + RLG_ORSiTERTOOT_799387_LTR                        Unknown             2137   2293 (2273)  553  
+ 1301    2.6  0.8  0.0  chr12     730211 730386 (269614) + DTHm_OsP48_Gaigin-like_Chr12_730217-730363        Unknown                1    250  (125)  554  
+  514    6.5 16.9  0.0  chr12     730757 730855 (269145) + DTHm_OsP27_Chr7_25329461-25329573                 Unknown                1    123  (214)  555  
+  273   17.1  0.3  3.3  chr12     731032 731114 (268886) + RLC_MB_Solo127_LTR/Copia                          Unknown                1     63  (204)  556  
+  925   19.1  1.1  6.5  chr12     731662 731960 (268040) + DTMm_OsM84_Amy_LTP-like_Chr7_21774514-21774865    Unknown                7    280   (72)  557 *
+ 1278   12.3  3.4  2.5  chr12     731837 732069 (267931) C DTMm_OsM84_Amy_LTP-like_Chr5_1792277-1792653      Unknown            (142)    235      1  558  
+  979   14.1  0.6  1.7  chr12     733196 733375 (266625) + DTTm_OsT22_stowaway8_OS_Chr11_21372539-21372790   Unknown                1    178   (74)  559 *
+ 1333   15.0  2.6  0.4  chr12     733364 733597 (266403) C DTHm_OsP2_Wanderer-like_Chr2_21967106-21967344    Unknown              (0)    239      1  560  
+  556   16.0  0.0  1.1  chr12     733586 733680 (266320) + DTTm_OsT22_stowaway8_OS_Chr4_33257964-33258221    Unknown              158    251    (7)  561 *
+  288   25.3  2.1  2.1  chr12     733599 733691 (266309) C DTTm_OsT22_stowaway8_OS_Chr6_4939967-4940338      Unknown            (169)    203    111  562 *
+ 1272    6.0  3.0  0.0  chr12     733931 734097 (265903) + DTMm_OsM61_F804_Chr2_4152455-4152626              Unknown                1    172    (0)  563  
+ 1780    7.2  1.7  0.0  chr12     734403 734638 (265362) + DTTm_OsT39_stowaway49_OS_Chr11_694383-694622      Unknown                1    240    (0)  564  
+  581   18.8  5.7  1.3  chr12     734687 734855 (265145) + DTC_CACTA-O                                       Unknown                1    184  (966)  565  
+ 1178   21.7  5.2 11.0  chr12     735297 735814 (264186) + DTC_CACTA-P                                       Unknown              660   1150    (0)  565  
+ 1490   10.6  0.0  0.4  chr12     737343 737570 (262430) + DTTm_OsT44_TREP219_Chr11_708377-708605            Unknown                1    227    (2)  566  
+  282   25.4 10.9  7.6  chr12     737829 738020 (261980) + DTI_MERMITEJ_DNA/DNA                              Unknown             1004   1201  (297)  567 *
+  672   19.9  8.7  5.3  chr12     737981 738198 (261802) C DTMm_OsM19_Chr8_6153475-6154056                   Unknown            (357)    225      1  568 *
+  856   21.4  2.5  0.0  chr12     738004 738199 (261801) + DTI_MERMITE18E_DNA/DNA                            Unknown             1327   1527    (1)  569  
+  553   15.3  1.0  2.0  chr12     738877 738976 (261024) C DTI_pun_MITE_PUN2_MITE                            Unknown            (153)    109     11  570  
+ 1424   16.1  4.5  7.0  chr12     739870 740243 (259757) C DTC_ENSPM3_OS                                     Unknown            (218)  10619  10297  571 *
+ 6164   24.3  3.5  3.5  chr12     740021 740643 (259357) + DTC_pun_InComplete_DNATE_76_DNA/EnSPm             Unknown              395    729 (1788)  572  
+ 7837   13.7  1.8  1.8  chr12     740644 742199 (257801) C DTC_g_InComplete_DNA_TE16_DNA/EnSPm               Unknown              (0)   1251      1  573  
+  626   15.3  1.2 11.7  chr12     742914 743083 (256917) C DTTm_OsT10_Chr8_10105965-10106243                 Unknown              (0)    279    126  574 *
+ 1922    8.4  1.5  0.4  chr12     742932 743193 (256807) + DTTm_OsP5_adh-typeH-like_Chr4_18841921-18842481   Unknown                7    271    (7)  575  
+ 1752    7.9  0.4  0.8  chr12     743196 743437 (256563) C DTI_Niv_MITE365_MITE                              Unknown             (23)    241      1  576  
+ 1535   12.3  0.4  1.3  chr12     743436 743673 (256327) + DTI_STOWAWAY36_OS                                 Unknown               27    262    (6)  577 *
+  294   26.4  4.6  5.0  chr12     743680 743918 (256082) + DTTm_OsT38_adh-typeB-like_Chr3_10827847-10828084  Unknown                1    238    (0)  578  
+  547   21.4  9.0  0.6  chr12     744154 744308 (255692) + DTHm_OsP18_Ditto-lake_Chr3_1473775-1474027        Unknown                1    168   (85)  579  
+  878   23.7  8.6  1.9  chr12     744476 744720 (255280) C RIL_g_LINE1-4_tract1_LINE/LINE                    Unknown              (0)    639    379  580  
+  778   25.2  5.3  2.3  chr12     744591 744890 (255110) + RIL_g_LINE_7_LINE/LINE                            Unknown              263    571 (4349)  581 *
+  292   15.2  1.4  6.0  chr12     744897 744966 (255034) C DTI_Bar_MITE3032_MITE                             Unknown            (173)     67      1  582  
+  745   16.0  2.0  4.1  chr12     746055 746204 (253796) C DTTm_OsT37_adh-typeB-like_Chr11_22005768-22005915 Unknown              (0)    148      2  583  
+  414   16.3  7.5  1.0  chr12     746128 746220 (253780) + DTHm_OsP46_Ditaila_Chr10_11978624-11978996        Unknown               78    176  (197)  584 *
+  743   18.3  0.0  2.9  chr12     746305 746445 (253555) C DTAm_Osh72_Chr4_25636922-25637689                 Unknown            (240)    528    392  585  
+ 1801    6.7  3.0  0.7  chr12     746752 747004 (252996) + DTI_ORSgTEMT_708668_MITE                          Unknown                1    246    (0)  586  
+  521   18.8  2.8  3.4  chr12     746766 747078 (252922) C DTI_g_MITE1613_MITE                               Unknown              (0)    314     40  587 *
+  273   11.1  1.1 14.3  chr12     747001 747095 (252905) + DTC_ORSgTETN00200002                              Unknown             4702   4785 (2518)  588 *
+  400   32.4  0.9  4.9  chr12     747132 747342 (252658) C DTAm_Osh56_JouzhenA_Chr9_13704381-13705033        Unknown              (2)    651    449  589  
+  351   14.1  4.1  0.7  chr12     747483 747605 (252395) C DTC_EnSpm-1_TA                                    Unknown          (10081)   4661   4591  590  
+  349   14.0  1.8 13.9  chr12     747515 747628 (252372) + DTA_hAT-54_HM_DNA/hAT                             Unknown             4682   4782  (281)  591 *
+ 2122   11.0  4.3  0.9  chr12     747794 748122 (251878) + DTI_ORSgTEMT_628924_MITE                          Unknown               10    349    (0)  592  
+  575   23.3  8.9  3.1  chr12     748286 748559 (251441) C DTC_Niv_InComplete_DNATE1273_DNATE/unclassified   Unknown            (103)    311      1  593  
+  250   26.7  3.2  3.2  chr12     748658 748750 (251250) C DTMm_OsM96_Cloud3_Chr6_30258202-30258884          Unknown              (0)    683    591  594  
+  254    6.7  0.0  0.0  chr12     749094 749123 (250877) C DTI_TYPEU3                                        Unknown              (0)    380    351  595 *
+ 3301    1.2  0.5  0.2  chr12     749101 749489 (250511) + DTMm_OsM54_TypeU3_Chr12_749125-749489             Unknown                1    365    (0)  596  
+  775   11.7  1.5  2.7  chr12     749499 749667 (250333) C DTHm_OsP8_Explorer-like_Chr2_832127-832349        Unknown              (4)    216     54  597  
+  539   16.6  8.9  1.3  chr12     749539 749684 (250316) + DTI_ORSgTEMT_609770_MITE                          Unknown               29    185   (23)  598 *
+ 1639   10.9  1.9  1.4  chr12     749684 750007 (249993) + RSU_OsSN1_SINE                                    Unknown               15    293    (0)  599  
+  264    2.8  0.0  5.6  chr12     750015 750052 (249948) + DTI_ORSgTEMT02200003                              Unknown              154    189   (16)  600  
+  348   21.2  1.2  3.8  chr12     750147 750308 (249692) + DTAm_Osh69_Chr1_16447762-16448318                 Unknown                1    158  (399)  601  
+ 1172    8.1  2.9  0.0  chr12     751579 751750 (248250) + DTI_ORSgTEMT_717204_MITE                          Unknown               49    225    (0)  602  
+  394   16.1  0.5  3.2  chr12     751669 751771 (248229) C DTI_g_MITE76_MITE                                 Unknown              (0)     83      8  603 *
+ 1766   11.2  3.9  0.9  chr12     752566 752870 (247130) C DTHm_OsP46_Ditaila_Chr3_24647730-24648402         Unknown             (20)    603    267  604 *
+ 1869    5.9  0.0  0.0  chr12     752593 752831 (247169) + DTAm_Osh65_Chr7_29006239-29006834                 Unknown              142    380  (216)  605  
+  516    8.9  2.6  1.2  chr12     753672 753833 (246167) + DTTm_OsT20_adh-tyleD_Chr4_7153742-7153973         Unknown              100    210   (22)  606  
+ 1057   18.8  3.1  0.0  chr12     754506 754729 (245271) + DTHm_OsP2_Wanderer-like_Chr4_29799451-29799691    Unknown                1    231   (10)  607  
+  892   10.3  0.8  1.7  chr12     755614 755779 (244221) C DTI_ORSgTEMT01600820                              Unknown              (0)    240     77  608 *
+ 1037   16.1  2.5  1.5  chr12     755753 756046 (243954) + DTI_g_MITE844_MITE                                Unknown               38    243    (0)  609 *
+ 1070    6.9  0.1  0.9  chr12     755905 756063 (243937) C DTTm_OsT38_adh-typeB-like_Chr2_34498713-34498947  Unknown             (94)    141      1  610  
+ 1412   15.6  0.8  1.5  chr12     756771 757031 (242969) + DTTm_OsT12_Stowaway48_OS_Chr9_440500-440758       Unknown                1    259    (0)  611  
+ 4118    8.6  3.5  0.3  chr12     757153 757726 (242274) + DTAm_Osh56_JouzhenA_Chr3_21721865-21722456        Unknown                1    592    (0)  612  
+  680   21.5  1.7  7.6  chr12     757795 757975 (242025) C DTHm_OsP18_Ditto-lake_Chr6_7557516-7558043        Unknown            (143)    385    215  613 *
+ 2244    3.4  0.4  1.3  chr12     757816 758108 (241892) + DTHm_OsP18_Ditto-lake_Chr12_757816-758064         Unknown                1    278  (205)  614  
+  477   24.1  4.7 10.0  chr12     758414 758666 (241334) + DTTm_OsT41_Chr3_6609682-6609922                   Unknown                1    241    (0)  615  
+ 2596    7.5  2.3  0.0  chr12     758923 759272 (240728) + DTHm_1_OsP39_Susu-like_Chr2_4841944-4842575       Unknown                1    351    (6)  616  
+ 1610   14.3  2.6  6.4  chr12     759415 759753 (240247) C DTTm_OsT38_adh-typeB-like_Chr7_23622536-23622855  Unknown              (0)    320      1  617  
+ 1345   16.3  2.3  3.6  chr12     760420 760725 (239275) C DTI_Niv_MITE10_MITE                               Unknown            (110)    308      7  618 *
+ 1744    7.8  1.5  1.5  chr12     760473 760732 (239268) + DTI_g_MITE473_MITE                                Unknown                1    260    (0)  619  
+  952   19.5  5.9  4.3  chr12     760727 761047 (238953) C DTI_TYPEU2_DNA/DNA                                Unknown             (56)    326      1  620 *
+  251   25.0  1.7  0.0  chr12     761569 761628 (238372) + DTI_pun_MITE_871_MITE                             Unknown                1     61   (22)  621  
+ 1422   15.8  5.2  2.5  chr12     761689 762107 (237893) C DTI_pun_MITE_58_MITE                              Unknown              (0)    531      1  622  
+ 2224    0.0  0.0  0.0  chr12     762608 762846 (237154) + DTHm_OsP2_Wanderer-like_Chr12_762608-762846       Unknown                1    239    (0)  623  
+ 1624   21.9  3.6  0.5  chr12     764451 764809 (235191) + RLC_O_Complete55_LTR278_LTR/Copia                 Unknown                1    370 (2206)  624  
+ 1568   16.8  3.9  0.8  chr12     764890 765147 (234853) C RLC_LTR10_OS_LTR/LTR                              Unknown            (342)    266      1  625  
+ 2818   17.6  4.6  2.3  chr12     768301 769001 (230999) C DTM_pun_InComplete_DNATE_193_DNA/MuDR             Unknown             (46)   1596    925  626 *
+ 7077   13.2  0.9  0.3  chr12     768900 769993 (230007) + DTM_O_DNATE4077_DNATE/MUDR                        Unknown              563   1663  (470)  627  
+ 2895   16.8  0.0  2.6  chr12     769999 770612 (229388) + DTM_O_DNATE4116_DNATE/MUDR                        Unknown              738   1258    (3)  628  
+ 1928   22.9  2.5  4.6  chr12     770589 771188 (228812) + DTM_MC_Incomplete_DNA_TE6882_DNATE/MUDR           Unknown              330    917    (0)  628 *
+ 9681   16.7  1.4  1.0  chr12     771199 772920 (227080) C DTM_MC_Complete_DNA_TE_46810_DNATE/MUDR           Unknown           (2928)   2375    647  629  
+  561   23.6  1.1  1.7  chr12     773339 773515 (226485) C DTM_pun_InComplete_DNATE_226_DNA/MuDR             Unknown            (742)    366    191  630 *
+ 1843   17.8  1.6  6.0  chr12     773373 773809 (226191) + DTM_MUDR1_OS                                      Unknown             7630   8048    (4)  631  
+ 1804   20.2  5.7  2.6  chr12     773829 774341 (225659) + DTI_MERMITE18E_DNA/DNA                            Unknown                2    529  (999)  632  
+  361   26.3 10.0  6.9  chr12     774987 775538 (224462) C DTI_MERMITE18D_DNA/DNA                            Unknown            (857)    634     67  633 *
+ 1600   20.0  4.0  7.3  chr12     775071 775594 (224406) + DTI_MERMITE18E_DNA/DNA                            Unknown             1019   1526    (2)  632  
+ 1158    6.7  0.0  0.0  chr12     775978 776126 (223874) + DTHm_OsP48_Gaigin-like_Chr12_27370334-27370623    Unknown               60    208   (82)  634  
+  263   12.8  0.0  0.0  chr12     777013 777051 (222949) + RSU_ORSiTEMT01100035                              Unknown              205    243  (257)  635 *
+ 1992    6.1  0.0  0.4  chr12     777017 777278 (222722) C DTHm_OsP52_ID-4_Chr8_20122527-20123068            Unknown            (185)    357     97  636  
+  389   26.0  4.9  5.3  chr12     777062 777305 (222695) + DTAm_Osh25_Chr8_6260944-6261580                   Unknown              121    363  (274)  637 *
+ 1333   10.9  3.8  0.9  chr12     787707 787919 (212081) + DTI_pun_EXPLORER_PUNt_MITE                        Unknown                2    220    (0)  638  
+ 2854    0.0  0.0  0.0  chr12     790819 791129 (208871) + DTHm_OsP32_StolaB_Chr12_790819-791129             Unknown                1    311    (0)  639  
+  599   17.5  7.2  0.0  chr12     791467 791632 (208368) C DTI_ORSgTEMT00101216                              Unknown             (15)    243     66  640  
+  360   16.8  1.1  0.0  chr12     791550 791644 (208356) + DTTm_OsT6_stowaway10_OS_Chr9_454584-454898        Unknown              162    257   (58)  641 *
+ 1027   14.8  1.2  9.8  chr12     791643 791897 (208103) C DTI_ORSgTEMT01601226                              Unknown              (0)    235      1  642  
+ 1569   10.8  1.2  0.0  chr12     791900 792139 (207861) C DTTm_OsT37_adh-typeB-like_Chr12_25445744-25445986 Unknown              (0)    243      1  643  
+ 1053   13.1  0.0  0.0  chr12     792171 792338 (207662) C DTTm_OsT16_Chr4_22692154-22692397                 Unknown             (22)    222     55  644  
+  254    8.3  0.0  0.0  chr12     792420 792455 (207545) + DTTm_OsT16_Chr5_6577900-6578159                   Unknown              218    253    (7)  645 *
+ 1351   12.3  1.2  3.4  chr12     792436 792692 (207308) C DTHm_OsP18_Ditto-lake_Chr4_16718846-16719103      Unknown            (208)    269     29  646 *
+ 2173    8.6  0.0  0.0  chr12     792690 792980 (207020) C DTHm_OsT5_adh-4-like_Chr12_8379019-8379615        Unknown              (4)    298      8  647  
+ 1451   20.2  0.0  0.3  chr12     793476 793859 (206141) C DTM_MuDr-3_HM_DNA/MuDR                            Unknown           (3747)   4643   4285  648  
+  461   30.8  0.8  2.3  chr12     793748 793880 (206120) + DTC_TRSiTETN00200023                              Unknown             2281   2411 (2685)  649 *
+  590   24.2  2.8  7.8  chr12     796847 797101 (202899) + DTI_ORSgTEMT_699070_MITE                          Unknown               30    272  (288)  650 *
+  591   26.4  1.8  5.9  chr12     796857 797085 (202915) C DTHm_OsP3_Castaway-like_Chr10_13746055-13746409   Unknown             (36)    319    100  651  
+  685   20.5  8.5  6.0  chr12     797407 797666 (202334) + DTMm_OsM84_Amy_LTP-like_Chr5_19252093-19252438    Unknown                2    267   (79)  652  
+ 2992   20.4  0.3  1.3  chr12     798722 799340 (200660) C RLG_MC_Truncated_LTR1623_LTR/SZ-42                Unknown             (53)    497      1  653  
+  623   23.7  1.4  3.7  chr12     799446 799623 (200377) C DTMm_OsM79_Chr10_10025269-10025857                Unknown              (0)    589    440  654  
+  965   23.5  7.2  6.7  chr12     799813 800241 (199759) + DTI_MERMITE18B                                    Unknown                1    431  (875)  655  
+ 1104   25.6  4.6  4.3  chr12     800848 801214 (198786) C DTI_MERMITE18B                                    Unknown            (937)    369      2  656  
+  602   14.3  9.1  6.8  chr12     805249 805391 (194609) C DTHm_OsP7_Ndna1tna-OS_Chr8_26402816-26403141      Unknown              (8)    318    173  657 *
+ 2159   11.9  0.3  0.0  chr12     805269 805586 (194414) + DTI_ORSgTEMT_635429_MITE                          Unknown               13    331    (2)  658  
+ 1064   16.9  6.6  0.8  chr12     805683 805926 (194074) + DTTm_OsT6_stowaway10_OS_Chr2_19789685-19789945    Unknown                4    261    (0)  659  
+ 2236   17.7  0.9  5.6  chr12     805935 806401 (193599) + DTMm_OsM86_Chr5_15003356-15003954                 Unknown                1    446    (0)  660  
+ 2099    0.0  0.0  0.0  chr12     806630 806852 (193148) + DTHm_OsP26_adh-typeM-like_Chr12_806630-806852     Unknown                1    223    (0)  661  
+ 2216   13.2  0.0  0.3  chr12     806907 807239 (192761) + DTI_ORSgTEMT_725829_MITE                          Unknown                5    336    (1)  662  
+  538   18.0  7.2  6.1  chr12     808084 808278 (191722) C DTTm_OsT20_adh-tyleD_Chr2_4431428-4431714         Unknown             (58)    229     33  663 *
+ 1321    0.0  0.0  0.0  chr12     808113 808257 (191743) + DTTm_OsT20_adh-tyleD_Chr12_808113-808257          Unknown                1    145    (0)  664  
+ 1639   18.6  3.7  3.2  chr12     810815 811237 (188763) + DTI_MERMITE18E_DNA/DNA                            Unknown                3    415  (185)  665  
+  549   27.1  6.4  8.1  chr12     810849 811301 (188699) C DTI_MERMITE18B                                    Unknown              (0)   1306    861  666 *
+ 1984   20.6  4.7  4.8  chr12     811799 812420 (187580) + DTI_MERMITE18E_DNA/DNA                            Unknown              907   1527    (1)  665  
+  833    7.2  0.9  0.0  chr12     812683 812787 (187213) C DTHm_OsP78_Tourist-XI_Chr3_11641044-11641298      Unknown              (0)    255    150  667  
+  963   17.5  0.6  0.0  chr12     812788 812953 (187047) C DHH_OSTE15_DNA/DNA                                Unknown              (1)   1167   1001  668  
+  681   12.0  3.7  0.0  chr12     812974 813081 (186919) + DTMm_OsM92_Chr11_9844861-9845470                  Unknown              238    349  (261)  669  
+  799   18.6  7.5  0.1  chr12     813693 813879 (186121) + DHH_OSTE15_DNA/DNA                                Unknown              993   1164    (4)  670 *
+ 1173   10.1  3.4  0.5  chr12     813869 814047 (185953) C DTMm_OsM58_Chr12_1048602-1049401                  Unknown            (519)    281     98  671  
+ 2661   11.0  2.5  0.8  chr12     815525 816037 (183963) C RSU_SINE03_OS_SINE                                Unknown              (1)    370      3  672  
+  352   21.8  1.1  1.1  chr12     820019 820106 (179894) C RLC_RC/19_LTR/COPIA1                              Unknown           (1799)   3322   3235  673 *
+ 1307    0.0  0.0  0.0  chr12     820028 820168 (179832) + DTMm_OsM32_Oste19_Chr12_820028-820168             Unknown                1    141    (0)  674  
+ 3042    1.2  0.0  0.0  chr12     825098 825438 (174562) C DTI_ORSgTEMT00101397                              Unknown              (0)    677    337  675  
+  351   22.4  1.0  1.0  chr12     826678 826776 (173224) + DTMm_OsM69_Chr7_20586747-20587014                 Unknown               56    154  (114)  676 *
+  856   18.8  3.4  1.7  chr12     826702 826957 (173043) C DTTm_OsT35_adh-typeA-like_Chr1_567274-567534      Unknown              (0)    261      3  677  
+  319   18.6  1.7  0.0  chr12     827257 827315 (172685) + DTHm_OsP7_Ndna1tna-OS_Chr8_27631610-27631953      Unknown              130    189  (155)  678  
+27579    4.8  1.7  1.9  chr12     827828 831563 (168437) C DTA_ORSiTETNOOT00198                              Unknown              (0)   3843      1  679  
+  259   11.9  0.0  2.4  chr12     831645 831687 (168313) C DTAm_Osh20_Chr12_23460248-23460517                Unknown              (0)    270    229  680  
+  314   24.7  0.0  2.2  chr12     832040 832130 (167870) C DTAm_Osh20_Chr8_9391977-9392252                   Unknown            (182)     94      6  681  
+ 1494    7.6  8.4  1.8  chr12     832164 832377 (167623) + DTH_F569                                          Unknown                1    228    (0)  682  
+  531   21.7  0.0  0.0  chr12     834190 834304 (165696) + DTHm_OsP1_F770_Chr2_471723-471996                 Unknown                1    115  (159)  683  
+ 1796    5.5  0.5  0.0  chr12     834815 835031 (164969) + RLC_ORSiTERTOOT00341                              Unknown              952   1169 (4641)  684 *
+ 3445    6.6  2.5  0.7  chr12     835011 835454 (164546) + RLC_ORSiTERTOOT00341                              Unknown             1435   1886 (3924)  684  
+ 3097    0.0  0.0  0.0  chr12     836494 836828 (163172) + DTHm_OsP6_OLO24_Chr12_836494-836828               Unknown                1    335    (0)  685  
+  546   22.0  3.3  8.6  chr12     836669 836852 (163148) C DTH_Olo24_39643.Sorghum                           Unknown           (1211)   7161   6987  686 *
+  252    5.1  0.0 12.5  chr12     838104 838148 (161852) + DTHm_OsP3_Castaway-like_Chr2_18755315-18755913    Unknown              300    339    (0)  687 *
+ 1477   10.3  0.0  3.1  chr12     838119 838349 (161651) C DTHm_OsP22_Chr4_23378945-23379188                 Unknown              (0)    244     21  688  
+ 4061    0.5  0.0  0.0  chr12     838603 839037 (160963) + DTHm_OsP24_Ditail_Chr4_35236649-35237330          Unknown               36    470  (212)  689  
+ 1124    8.9  0.6  0.0  chr12     839363 839520 (160480) + DTTm_OsT22_stowaway8_OS_Chr6_14504566-14504826    Unknown                1    159  (102)  690  
+  732   20.7  0.0  2.0  chr12     839514 839666 (160334) + DTMm_OsM67_Chr12_15170112-15170906                Unknown              646    795    (0)  691 *
+  250   14.7 22.6  3.0  chr12     839880 839963 (160037) + DTC_EnSpm-11_OS                                   Unknown             6204   6303 (6823)  692  
+  633   12.5 12.4  0.7  chr12     840402 840522 (159478) C DTTm_OsT37_adh-typeB-like_Chr9_22490603-22490750  Unknown              (0)    148     14  693  
+  410    7.7  0.0  0.0  chr12     840518 840569 (159431) + DTHm_OsP22_Chr6_9228055-9228292                   Unknown              166    217   (21)  694 *
+ 1106   13.0  0.6  0.4  chr12     840658 840846 (159154) + DTTm_OsT39_stowaway49_OS_Chr12_18773858-18774101  Unknown               65    249    (0)  695  
+ 1049   23.2  5.2  1.2  chr12     840860 841169 (158831) C DTI_g_OSTE27_GLAt3_DNA/unclassified               Unknown              (0)    584    263  696  
+ 1498   11.1  2.5  2.1  chr12     841639 841877 (158123) C DTHm_OsP2_Wanderer-like_Chr5_8603787-8604026      Unknown              (0)    240      1  697  
+  344   25.7  7.4  2.6  chr12     842236 842383 (157617) + DTI_ORSiTETNOOT00111                              Unknown              104    258 (1651)  698  
+  597    4.0  0.0  6.6  chr12     843017 843097 (156903) C RSU_OsSN1_SINE                                    Unknown            (174)    119     44  699  
+ 1895    0.9  0.1  0.0  chr12     847774 848018 (151982) + DTTm_OsT38_adh-typeB-like_Chr12_847788-848018     Unknown                1    231    (0)  700  
+  683   11.9  0.0  3.7  chr12     848032 848144 (151856) C DTHm_Osh20_Chr2_34650703-34651274                 Unknown            (198)    374    266  701 *
+ 1019   14.2  0.6  0.0  chr12     848125 848300 (151700) C DTHm_Osh20_Chr2_34650703-34651274                 Unknown            (235)    337    161  702  
+  523   15.6  9.2  6.0  chr12     849089 849218 (150782) C DTTm_OsT37_adh-typeB-like_Chr9_20234763-20235017  Unknown             (77)    178     45  703 *
+  840    0.0  0.0  0.0  chr12     849092 849184 (150816) + DTTm_OsT44_TREP219_Chr12_849092-849184            Unknown                1     93    (0)  704  
+  372   14.5 12.0  3.7  chr12     849340 849439 (150561) C DTMm_OsM79_Chr8_28128465-28129172                 Unknown              (2)    706    599  705 *
+  908   21.8  9.1  3.7  chr12     849430 849760 (150240) + DTI_MERMITED_DNA/DNA                              Unknown               58    412 (1160)  706  
+ 7415    7.3  0.8  0.9  chr12     849767 850727 (149273) + RLC_Niv_SOLO51_LTR2042_LTR/COPIA2                 Unknown                1    960    (0)  707  
+  701   24.8  4.8  2.2  chr12     851521 851764 (148236) C DTI_MERMITED_DNA/DNA                              Unknown           (1064)    242      3  708  
+ 2095   13.2  0.9  0.6  chr12     852557 852885 (147115) C DTI_g_MITE392_MITE                                Unknown              (0)    330      1  709  
+  667   22.0  3.4  2.2  chr12     852727 852903 (147097) + DTC_EnSpm_Sb_39765_2.Sorghum                      Unknown              441    619  (959)  710 *
+ 3829    7.0  4.2  1.7  chr12     854410 854932 (145068) + DTMm_OsM87_Cloud6_Chr4_21638534-21639070          Unknown                2    537    (0)  711  
+ 1137   12.7  4.6  1.8  chr12     857371 857599 (142401) + DTI_g_MITE1063_MITE                               Unknown              195    408    (0)  712 *
+ 1187    7.3  1.9  0.0  chr12     857449 857614 (142386) C DTMm_OsM89_adh_typeG-like_Chr2_4169617-4170212    Unknown            (190)    406     76  713  
+  423    3.5  3.5  0.0  chr12     863798 863855 (136145) + SRR_U2_sat_Satellite_Ciona_savignyi               Unknown                6     65  (631)  714  
+  302   21.6  6.3  8.6  chr12     863827 863968 (136032) + RIL_L1-6_HM_LINE/L1                               Unknown             5060   5198  (222)  715 *
+  346   24.0  2.0  3.1  chr12     870137 870235 (129765) C DTI_MERMITE-17_DNA/DNA                            Unknown              (1)   2758   2661  716  
+  725   39.2  0.0  4.1  chr12     870714 870915 (129085) + RLG_O_Complete_WT2359_LTR/BAJIE                   Unknown             1568   1761 (4825)  717  
+  555   26.6  2.5 10.2  chr12     871257 871583 (128417) + RLG_O_Complete_WT2359_LTR/BAJIE                   Unknown             1783   2078 (4508)  718  
+ 1218   21.3  9.0  1.1  chr12     871950 872343 (127657) C DTI_MERMITED_DNA/DNA                              Unknown              (0)   1572    859  719  
+ 1019   18.9  3.1  1.2  chr12     872979 873256 (126744) C DTMm_OsM79_Chr8_22681956-22682555                 Unknown            (180)    420     71  720  
+ 1631    0.0  0.0  0.0  chr12     878013 878185 (121815) + DTAm_Osh48_Chr12_878013-878185                    Unknown                1    173    (0)  721  
+  295   10.0  0.0  0.0  chr12     879049 879088 (120912) + DTMm_OsM110_Chr3_35680940-35681121                Unknown                5     44  (138)  722  
+  268   26.2  1.2  1.2  chr12     879136 879216 (120784) C DTMm_OsM110_Chr3_35680940-35681121                Unknown            (101)     81      1  723  
+ 1078   26.6  5.2  2.9  chr12     879648 880054 (119946) C DTAm_Osh40_Ds-rice3N_Chr8_15396425-15396973       Unknown             (13)    536    121  724  
+ 1238   10.6  1.6  2.6  chr12     880251 880443 (119557) + DTHm_OsP17_Coward_Chr1_6353624-6353820            Unknown                1    191    (6)  725  
+ 1994    3.8  0.0  0.0  chr12     881808 882047 (117953) + DTI_g_MITE1613_MITE                               Unknown               75    314    (0)  726  
+  477   21.1  0.0  0.0  chr12     881973 882067 (117933) C DTTm_OsT38_adh-typeB-like_Chr4_23889547-23889916  Unknown            (140)    230    136  727 *
+  683   20.9  7.4  6.9  chr12     884922 885137 (114863) C DTMm_OsM31_Chr9_9692907-9693523                   Unknown              (0)    617    401  728  
+  725   25.9  9.0  4.8  chr12     885504 885860 (114140) C DTMm_OsM31_Chr9_9692907-9693523                   Unknown            (245)    372      2  728  
+ 5247    9.9  5.7  1.9  chr12     885889 886732 (113268) C RLC_ORSiTERTOOT00299                              Unknown              (0)   8920   8046  729  
+ 5437    7.2  1.1  2.3  chr12     886824 887565 (112435) C RLC_Bar_SOLO_WT141_LTR/Copia/D                    Unknown            (930)    733      1  730  
+  600   20.5  0.8  0.8  chr12     890121 890333 (109667) C DTTm_OsT44_TREP219_Chr12_18938491-18938721        Unknown             (19)    212      1  731  
+  899   20.7  8.1  5.0  chr12     890556 890938 (109062) + DTMm_OsM17_Chr2_7069555-7070353                   Unknown                3    415  (891)  732  
+  889   21.1 10.0  3.5  chr12     891830 892129 (107871) + DTI_MERMITE18B                                    Unknown              944   1262   (44)  732  
+  436   14.1  4.3  0.0  chr12     892448 892539 (107461) C DTI_g_MERMITE18D_GLAt_MITE                        Unknown              (0)    440    345  733  
+  869   12.5  0.0  0.0  chr12     892967 893102 (106898) + DTI_g_MERMITE18D_GLAt_MITE                        Unknown                1    136  (304)  734  
+  261   11.8  0.0  0.0  chr12     893317 893367 (106633) + DTI_g_MERMITE18D_GLAt_MITE                        Unknown              206    256  (184)  734 *
+  978    7.2  0.7  3.5  chr12     893367 893511 (106489) + DTI_ORSgTETNOOT_723332_DNA/unclassified           Unknown               74    214   (34)  735  
+  322    0.0  0.0  7.7  chr12     893523 893564 (106436) C DTMm_OsM17_Chr3_27449276-27449998                 Unknown            (684)     39      1  736  
+  674   19.9 10.1  1.6  chr12     897326 897494 (102506) + DTTm_OsT12_Stowaway48_OS_Chr2_17245386-17245646   Unknown               74    256    (5)  737  
+ 1704    8.8  0.8  0.0  chr12     897851 898099 (101901) C DTMm_OsM89_adh_typeG-like_Chr12_22695737-22696501 Unknown            (134)    631    381  738  
+ 1056   20.3  9.8  9.8  chr12     898110 898600 (101400) C DTHm_OsP19_Chr1_24890883-24891624                 Unknown              (0)    742    252  739  
+ 2034   15.0  4.8  6.3  chr12     898627 899124 (100876) C DTHm_OsP19_Chr1_24890883-24891624                 Unknown            (251)    491      1  740  
+  290    8.3  0.0  0.0  chr12     899839 899874 (100126) + DTI_Bar_MITE1504_MITE                             Unknown                1     36  (206)  741  
+ 2293    5.3  1.4  0.0  chr12     899875 900158  (99842) + DTHm_OsP52_ID-4_Chr1_26651045-26651332            Unknown                1    288    (0)  742  
+ 1450    9.2  0.5  0.0  chr12     900159 900365  (99635) C DTHm_OsP14_Ditto-like_Chr1_30538946-30539188      Unknown             (35)    208      1  743  
+  251   17.1  0.0  0.0  chr12     900333 900373  (99627) C DTI_BR_MITE990_MITE                               Unknown              (0)    235    195  744 *
+ 2832   20.5  0.3  4.8  chr12     900699 901307  (98693) C RLC_pun_Truncated_LTR_616_LTR/CopIa               Unknown             (11)    583      1  745  
+ 2765   17.8  7.3  6.7  chr12     901510 902366  (97634) + RLG_Niv_Truncated1217_LTR/Gypsy/J                 Unknown                1    862  (274)  746 *
+ 6428   23.2  6.6  6.7  chr12     902034 904733  (95267) C RLG_pun_Truncated_LTR_1938_LTR/Gypsy              Unknown            (157)   2699      1  747  
+  529   28.1  1.8  1.2  chr12     904944 905112  (94888) C RIL_LINE1-7_OS_LINE/L1                            Unknown           (5817)   1489   1320  748  
+  746    5.7  7.0  1.3  chr12     905119 905261  (94739) C DTA_HATN16_DR_DNA/hAT                             Unknown            (103)    841    691  749  
+  779    0.0  0.0  0.0  chr12     915407 915490  (84510) + BTN_Oryza_sativa_chr3.trna2-LeuCAA                Unknown                1     84    (0)  750  
+  305   16.1  0.0  0.0  chr12     915625 915680  (84320) C DTTm_OsT38_adh-typeB-like_Chr1_6158517-6158742    Unknown             (26)    200    145  751  
+  503   22.4  0.8  1.6  chr12     927141 927267  (72733) + DTI_g_OSTE27_GLAt3_DNA/unclassified               Unknown              278    403  (181)  752  
+ 3462    7.9  1.0  0.6  chr12     927391 927876  (72124) C DTI_g_DNATE_GLA_DNA                               Unknown             (62)    488      1  753 *
+ 3855    0.0  0.0  0.0  chr12     927470 927900  (72100) + DTI_ORSgOTOT00000040                              Unknown                1    431    (0)  754  
+  639    9.0  3.4  0.0  chr12     928158 928246  (71754) C RLC_pun_Complete_LTR_6_494_LTR/CopIa              Unknown            (230)   4940   4849  755  
+ 1233   21.5  5.8  7.1  chr12     928426 928884  (71116) + DTMm_OsM101_MDM2Chr5_19480316-19480972            Unknown                2    413  (244)  756  
+  767   25.9  7.4 10.3  chr12     928468 928997  (71003) C DTMm_OsM101_MDM2Chr6_26797506-26798232            Unknown              (1)    726    211  757 *
+ 1129   17.9  0.9  2.7  chr12     929245 929468  (70532) + DTMm_OsM101_MDM2Chr5_19480316-19480972            Unknown              438    657    (0)  756  
+ 1345    7.3  0.0  0.0  chr12     930678 930841  (69159) + RLC_g_SOLO63_LTR62_LTR/Copia                      Unknown                1    164  (826)  758 *
+ 4963    3.8  0.0  0.5  chr12     930839 931414  (68586) + RLC_ORSgTERT00100578                              Unknown              720   1292 (5186)  759  
+ 1620    6.7  1.0  0.1  chr12     934975 935201  (64799) + DTTm_OsT11_Stowaway18_OS_Chr5_24097574-24097794   Unknown                1    280    (8)  760  
+ 1500   12.0  1.2  1.1  chr12     936688 936946  (63054) + DTTm_OsT37_adh-typeB-like_Chr9_16636592-16636864  Unknown                9    343  (250)  761  
+ 1830    7.8  0.0  0.8  chr12     950015 950272  (49728) C DTI_g_MITE1613_MITE                               Unknown              (0)    314     59  762  
+  722   15.1  9.7  4.2  chr12     950546 950758  (49242) + DTHm_OsP18_Ditto-lake_Chr2_24131148-24131526      Unknown                1    307   (72)  763 *
+  739   13.3  4.9  2.6  chr12     950549 950712  (49288) C DTI_ORSgTEMT_650765_MITE                          Unknown             (76)    149      3  764  
+  267   13.9  0.0  0.0  chr12     950721 950763  (49237) C DTTm_OsT35_adh-typeA-like_Chr10_18671279-18671537 Unknown              (2)    257    215  765  
+ 3303    9.8  0.0  0.0  chr12     951332 951768  (48232) C RLG_Niv_SOLO50_LTR1952_LTR/RIRE2                  Unknown              (0)    437      1  766  
+  440   11.4  0.0  0.0  chr12     952343 952412  (47588) + BTN_Oryza_sativa_chr3.trna44-AlaCGC               Unknown                1     70    (1)  767  
+  283   28.7  2.1  2.1  chr12     955033 955128  (44872) C DTMm_OsM87_Cloud6_Chr2_19949876-19950183          Unknown            (113)    195    100  768  
+  319   19.7 14.4  4.5  chr12     955129 955309  (44691) C DTMm_OsM53_Chr8_24529977-24530235                 Unknown             (60)    199      2  769  
+ 1028   17.9  6.1  9.8  chr12     955980 956307  (43693) + DTMm_OsM84_Amy_LTP-like_Chr5_4631422-4631769      Unknown               28    344    (4)  770  
+ 1849    0.0  0.0  0.0  chr12     957529 957740  (42260) + DTTm_OsT43_Snabo-like_Chr12_957529-957740         Unknown                1    212    (0)  771  
+  252   12.3  0.0  7.3  chr12     957916 957959  (42041) C DTMm_OsM14_Chr7_10032543-10032696                 Unknown            (113)     41      1  772 *
+  305   12.1  8.6  0.0  chr12     957930 957987  (42013) C DTTm_OsT20_adh-tyleD_Chr6_28526144-28526419       Unknown            (166)    110     48  773  
+  251   15.2 11.9  0.0  chr12     958377 958435  (41565) + DTI_ORSgTEMT_642773_MITE                          Unknown               25     90   (94)  774 *
+ 7641   12.2  0.7  1.6  chr12     958434 959614  (40386) C RLC_pun_Truncated_LTR_701_LTR/CopIa               Unknown              (6)   1170      1  775  
+ 6258    0.0  0.0  0.0  chr12     959678 960354  (39646) + DTHm_OsP33_Chr12_959678-960354                    Unknown                1    677    (0)  776  
+ 1089    0.0  0.0  0.0  chr12     960785 960908  (39092) + DTTm_OsT36_Chr12_960785-960908                    Unknown                1    124    (0)  777  
+  665   15.8 12.0  3.4  chr12     960908 961149  (38851) + DTTm_OsT9_stowaway45_OS_Chr4_2699423-2699701      Unknown               18    279    (0)  778 *
+  942   13.7  1.1  0.0  chr12     961581 961757  (38243) + DTAm_Osh62_Chr7_14769457-14770251                 Unknown              135    301  (494)  779 *
+ 1060    7.5  0.7  0.0  chr12     961600 961746  (38254) C DTI_ORSgTEMT00501414                              Unknown            (152)    148      1  780  
+ 2220    7.2  0.0  0.0  chr12     963119 963397  (36603) C DTHm_OsP39_Susu-like_Chr8_11881037-11881598       Unknown            (165)    397    119  781  
+ 1175    7.3  0.0  1.6  chr12     964093 964266  (35734) C DTI_ORSgTEMT_717204_MITE                          Unknown             (70)    301     74  782  
+  283    8.6  7.7  0.7  chr12     970601 970724  (29276) + RIL_R5-1_SM_NeSL_Schmidtea_mediterranea           Unknown             2427   2535  (316)  783 *
+  357    0.0  0.0  0.0  chr12     970629 970710  (29290) C DTC_LIN4b_SMNeSLSchmidmed_LINE/LINE               Unknown            (685)   4839   4758  784  
+ 5705    4.3  3.3  0.9  chr12     972353 973108  (26892) C DTMm_OsM83_Mudrn1_OS_Chr5_19959924-19960697       Unknown              (0)    774      1  785  
+  251   14.9  0.0  0.0  chr12     976003 976049  (23951) C RLG_Gypsy10-LTR_SP_LTR/Gypsy                      Unknown           (1136)   1294   1248  786  
+15549   23.0  2.0  2.5  chr12     976588 981464  (18536) + RLC_ORSiTERT00100077                              Unknown                1   5031  (115)  787  
+ 1386    3.2  0.0  2.1  chr12     983184 983364  (16636) + DTI_ORSgTEMT_618164_MITE                          Unknown                1    245  (112)  788  
+ 1619   19.0  5.3  4.2  chr12     985027 985458  (14542) C DTI_MERMITE18B                                    Unknown              (0)   1306    941  789  
+  414   29.4  7.0  8.3  chr12     985890 986401  (13599) + DTI_MERMITE18E_DNA/DNA                            Unknown             1023   1528    (0)  790 *
+ 1581   18.3  9.6  1.7  chr12     986016 986399  (13601) C DTI_MERMITE18B                                    Unknown            (892)    414      1  789  
+ 1993    0.0  0.0  0.0  chr12     986519 986741  (13259) + DTMm_OsM43_adh-9-likeChr12_986519-986741          Unknown                1    223    (0)  791  
+  873    3.2  1.2  0.0  chr12     995460 995571   (4429) + DTTm_OsT37_adh-typeB-like_Chr12_995475-995569     Unknown                1    222  (108)  792 *
+ 1023   20.6  5.2  3.1  chr12     995568 995817   (4183) + DTHm_OsP81_Chr7_15321321-15321599                 Unknown               25    279    (0)  793  
+  760   25.7  8.4  2.5  chr12     996737 997071   (2929) C DTHm_OsP3_Castaway-like_Chr4_22618168-22618522    Unknown              (1)    354      1  794  

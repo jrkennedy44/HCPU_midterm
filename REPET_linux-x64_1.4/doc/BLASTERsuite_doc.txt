@@ -1,0 +1,290 @@
+
+===============================
+The BLASTER suite documentation
+===============================
+
+Hadi Quesneville
+Research Unit in Genomics and Bioinformatics
+http://urgi.versailles.inra.fr/
+
+
+The BLASTER suite gathers C++ programs developed for transposable element (TE) detection and annotation in large eukaryotic genomes.
+However we think these tools are generic enough to be used in other contexts.
+
+
+
+=======
+BLASTER
+=======
+
+Blaster is a wrapper for both NCBI-BLAST and WU-BLAST.
+It compares two sets of biological sequences, a query databank against a subject databank, by launching one of the BLAST programs (blastn, tblastn, blastx, tblastx, blastp, megablast) to search the subjects with the queries.
+
+Although it doesn't add anything to the core algorithms, it was implemented to ease the process of databank comparisons.
+First, Blaster directly takes fasta files as input and then formats them via formatdb (NCBI) or xdformat (WU).
+Second, to allow comparisons at the genome scale (in particular the genome with itself to detect repeats), Blaster starts by cutting long queries into batches of 50kb, and then launches the specified BLAST program on each batch sequentially.
+Finally, Blaster retrieves the high-scoring segments pairs (HSPs) of each batch and reassembles them in a unique, tabulated file called the "align" format (see below).
+
+The output of Blaster can then be treated by the Matcher and Grouper programs described below.
+Note that these two programs can also treat the results of other programs such as RepeatMasker, Censor and Pals, as long as their outputs are correctly formated in the "align" format.
+
+Although Blaster authorizes the user to change the default values of BLAST's scoring scheme, it displays a single parameter to tune BLAST's sensitivity.
+
+
+--------
+Commands
+--------
+
+usage: blaster [option]
+Options are:
+-q: query bank name, default=<not set>
+-s: subject bank name, default=<not set>
+-a: all_by_all, default=FALSE
+-W: use WU-BLAST, default=NCBI-BLAST
+-n: blast name, default=blastn
+-p: blast options, default=
+-l: fragment cutter length, default=50000
+-o: fragment cutter overlap, default=100
+-w: minimum cutter word, default=11
+-e: extention of cutted file, default=_cut
+-S: sensitivity, default=0 (4 levels for blastn, 4 being the most sensitive)
+-E: e-value filter, default=1e-10
+-I: identity filter, default=0
+-L: length filter, default=20
+-b: output filename prefix, default=<not set>
+-B: output filename prefix (no time stamp), default=<not set>
+-r: force re-run all, default=Off
+-P: only prepare the banks, default=Off
+-c: clean temporary files, default=Off
+-v: verbose, default=0
+
+
+-------
+Outputs
+-------
+
+Several files are produced by BLASTER:
+
+*.align : results of BLASTER in a tabular format. Columns are separated by tabulations.
+col1: query sequence name
+col2: match start coordinate on the query sequence
+col3: match end coordinate on the query sequence
+col4: subject sequence name
+col5: match start coordinate on the subject sequence
+col6: match end coordinate on the subject sequence
+col7: BLAST E-value
+col8: BLAST score
+col9: identity percentage
+
+*_cut : preprocessed file for use with BLAST (cut in chunk and remove N stretches)
+
+*_cut.nhr, *_cut.nin, *_cut.nsq, ... : bank preprocessed by the NCBI blast formatdb program
+
+*_cut.xnd, *_cut.xns, *_cut.xnt, ... : bank preprocessed by the WU blast xdformat program
+
+*.Nstretch.map : coordinates of the removed N stretches
+
+*.param : dump of the used parameters
+
+*.raw : raw BLAST results
+
+*.seq_treated: sequences treated by BLASTER. Used to restart in case of failure.
+
+* last_time_stamp.log: a file containing the last_time stamp number used.
+
+
+
+
+=======
+MATCHER
+=======
+
+Matcher was developed to tackle two issues commonly arising among matches returned by Blaster: different subjects overlap on the same query and long indels result in two HSPs.
+The former will be treated by the so-called "cleaning conflicts" procedure and the latter by the "join" procedure.
+
+When searching a query sequence against a subject databank, it may happen that two HSPs involving different subjects are overlapping on the same query.
+The "cleaning conflicts" procedure consists in keeping the one with the best score, the other being truncated such as only remains the non-overlapping part of the HSP.
+The score of the remaining, truncated HSP corresponds to the initial score updated according to the proportion that has been removed.
+As a result of this procedure, a HSP is totally removed only if it is included in a longer one with a better score; this way, nested TEs are kept.
+In the case where two HSPs involving the same subject overlap as it often happens with the two, distinct LTRs of the same retrotransposon, no HSP will be truncated.
+
+A gap in a pairwise alignment corresponds to one (or several) indel(s) that occurred during the divergence of the two sequences being aligned (query versus subject).
+The scoring scheme of BLAST is tuned by default to properly handle gaps corresponding to short indels, otherwise, with a large indel, it will return two HSPs.
+For this latter case, the "join" procedure was specifically implemented based on the assumption that short and large indels can be caused by distinct molecular mechanisms.
+First Matcher sorts all the HSPs by decreasing score.
+Then it connects HSPs by dynamic programming via an algorithm inspired from Gusfield but modified to make local alignments as follows:
+1. the score of two HSPs (or one HSP and a chain of others) is calculated by summing their respective scores and subtracting a penalty for the gap, proportional to its length, and a penalty for the mismatch, also proportional to its length (adapted from « sim2 »);
+2. a HSP is connected with a chain of others only if its score is less than the score of the resulting chain that links it;
+3. to identify other HSP chains, the best scoring chain previously found is removed, and the algorithm searches again for the next best HSP chain.
+These steps are done iteratively until no chain is found.
+Moreover, the algorithm is repeated independently for the HSPs matching on both strands, + and -, of the subjects (the query is always on strand +).
+
+A maximum of x% of overlap between the HSPs is authorized.
+
+Once all the matches have been tested for connection, the resulting chains are checked for conflicting, nested HSPs.
+For instance, a chain of two joined HSPs will be splitted if a third HSP with a lower identity, and thus estimated as older, is nested within the chain.
+A difference of 2% in the identity is tolerated.
+
+
+--------
+Commands
+--------
+
+usage: matcher [option]
+Options are:
+-m: matches text file (in BLASTER *.align format)
+-q: query bank name, default=<not set>
+-s: subject bank name, default=<not set>
+-j: join matches, default=false
+-i: identity tolerance to join matches, default=2
+-g: gap penalty to join matches, default=0.05
+-d: distance penalty to join matches, default=0.2
+-c: authorized overlap to join matches, default=20
+-E: e-value filter, default=1e-10
+-I: identity filter, default=0
+-L: length filter, default=20
+-b: output filename prefix, default=<not set>
+-B: output filename prefix (no time stamp), default=<not set>
+-a: all conflicting subjects default=FALSE
+-x: clean conflicts after join, default=FALSE
+-v: verbose, default=0
+
+
+-------
+Outputs
+-------
+
+*.clean_match.fa : sequences of the matching region. This is a concatenation of the joined fragments
+
+*.clean_match.map : coordinates of the whole matching region (boundaries of the joined fragments) on the query in the following tabulated format (the separator is a tabulation):
+col1: the subject sequence name
+col2: the query sequence name
+col3: start coordinate
+col4: end coordinate
+
+*.clean_match.param : dump of the used parameters for MATCHER
+
+*.clean_match.path : results of MATCHER in a tabular format. Columns are separated by tabulations.
+col1: path number. Joined fragments have the same path number
+col2: query sequence name
+col3: match start coordinate on the query sequence
+col4: match end coordinate on the query sequence
+col5: subject sequence name
+col6: match start coordinate on the subject sequence
+col7: match end coordinate on the subject sequence
+col8: BLAST E-value
+col9: BLAST score
+col10: identity percentage
+
+*.clean_match.tab : summary results of MATCHER in a tabular format. One line per joined fragment. Columns are separated by tabulations.
+col1: query sequence name
+col2: whole match start coordinate on the query sequence
+col3: whole match end coordinate on the query sequence
+col4: length on the query sequence
+col5: length in percentage of the query sequence
+col6: length on the query relative to the subject length in percentage
+col7: subject sequence name
+col8: whole match start coordinate on the subject sequence
+col9: whole match end coordinate on the subject sequence
+col10: length on the subject sequence
+col11: length in percentage of the subject sequence
+col12: BLAST E-value
+col13: BLAST score
+col14: identity percentage
+col15: path number
+
+
+
+
+=======
+GROUPER
+=======
+
+GROUPER has been developed to treat BLASTER results. It uses HSPs to gather similar sequences into groups by simple link clustering. An alignment belongs to a group if one of the two aligned sequences already belongs to this group over 95% of its length. Groups that share sequence locations are gathered into what we called a cluster. As a result of these procedures, each group contains sequences that are homogeneous in length. A given region may belong to several groups, but all of these groups belong to the same cluster.
+
+Grouper aims at reconstructing families of similar HSPs.
+First, if the "join" procedure described in Matcher above is invoqued, the HSPs are connected via dynamic programming.
+This allows for instance to recover the full copy from its fragments.
+Then Grouper takes the output from Blaster and gather similar sequences into what we call "groups" by simple link clustering.
+In this process, it starts by sorting the HSPs according to their score and builds the groups with a coverage constraint (default at 95%).
+An alignment belongs to a group if one of the two aligned sequences already belongs to this group over 95% of its length.
+As a result, each group contains sequences that are homogeneous in length.
+Moreover groups that share sequence locations on the query (minimum 100 bp coverage by default) are gathered into what we call a "cluster".
+A given region of the query may belong to several groups, but all of these groups belong to the same cluster.
+If the coverage is set at 0%, there will be as many clusters as groups.
+
+Grouper starts by loading the HSPs in the "align" format.
+Then it connects them with the "join" procedure via dynamic programming.
+Then it sorts the chains according to their length in decreasing order.
+Then, for each chain, it extracts the query, it searches in the already-inserted members those with which the query overlaps, and it determines if the coverage is above the threshold.
+If yes, it add the query to the existing group, otherwise it creates a new group.
+Then it does the same with the subject.
+
+
+--------
+Commands
+--------
+
+usage: grouper [option]
+Options are:
+-m: match text file(in BLASTER *.align format)
+-q: query bank name, default=<not set>
+-s: subject bank name, default=<not set>
+-j: join matches, default=false
+-i: identity tolerance to join matches, default=2
+-g: gap penalty to join matches, default=0.05
+-d: distance penalty to join matches, default=0.2
+-c: authorized overlap to join matches, default=20
+-E: e-value filter, default=1e-10
+-I: identity filter, default=0
+-L: length filter, default=20
+-b: output filename prefix, default=<not set>
+-B: output filename prefix (no time stamp), default=<not set>
+-G: min coverage length for connecting groups in a cluster,default=100
+-C: coverage for group construction default=0.95
+-Z: group size filter, default=1
+-X: keep groups where at least X members are not included in others, default=1
+-v: verbose, default=0
+
+
+-------
+Outputs
+-------
+
+Output files have the following prefix '*.align.group.c0.[0-9]+' . The number after '*.align.group.c' indicates the coverage threshold used.
+
+*.align.group.c0.95.fa: repeated sequences found in fasta format. Each repeated sequence is named according to the following nomenclature: Mb[SQ][09]+Gr[09]+Cl[09]+
+(i) "Mb" followed by "S"or "Q" according to the fact that this sequence was found in a query (Q) or a subject (S) sequence and a number identifying the sequence
+(ii) "Gr" followed by the group number
+(iii) "Cl" followed by the cluster number.
+After this name, follows the "fasta header" of the source sequence and the coordinates on it.
+
+*.align.group.c0.95.set: coordinates in set format, indicating connected fragments. Columns are separated by tabulations.
+col1: path number. Joined fragments have the same path number
+col2: name of the repeated sequence fragment (as for fasta)
+col3: query sequence name
+col4: start coordinate on the query sequence
+col5: end coordinate on the sequence
+
+*.align.group.c0.95.param : parameters used for grouper
+
+*.align.group.c0.95.txt: detailed description of the groups and clusters
+
+*.align.group.c0.95.cluster.dot: Graph representation of groups links within clusters in dot format (use the dot program of graphviz package to visualize)
+
+*.align.group.c0.95.overlap.dot: Graph representation of sequences links in dot format (useful only for small example)
+
+
+
+
+==========
+References
+==========
+
+Non-exhaustive list of publications using the BLASTER suite:
+
+Quesneville, H.; Nouaud, D. & Anxolabehere, D. (2006), 'Pelements and MITE relatives in the whole genome sequence of Anopheles gambiae', BMC Genomics 7, 214+.
+Drouaud, J.; Camilleri, C.; Bourguignon, P. Y.; Canaguier, A.; Berard, A.; Vezon, D.; Giancola, S.; Brunel, D.; Colot, V.; Prum, B.; Quesneville, H. & Mezard, C. (2006), 'Variation in crossing-over rates across chromosome 4 of Arabidopsis thaliana reveals the presence of meiotic recombination "hot spots".', Genome Res 16(1), 106--114.
+Quesneville, H.; Bergman, C. M.; Andrieu, O.; Autard, D.; Nouaud, D.; Ashburner, M. & Anxolabehere, D. (2005), 'Combined evidence annotation of transposable elements in genome sequences.', PLoS Computational Biology 1(2).
+Eiglmeier, K.; Wincker, P.; Cattolico, L.; Anthouard, V.; Holm, I.; Eckenberg, R.; Quesneville, H.; Jaillon, O.; Collins, F. H.; Weissenbach, J.; Brey, P. T. & Roth, C. W. (2005), 'Comparative analysis of BAC and whole genome shotgun sequences from an Anopheles gambiae region related to Plasmodium encapsulation.', Insect biochemistry and molecular biology 35(8), 799--814.
+Quesneville, H.; Nouaud, D. & Anxolabehere, D. (2003), 'Detection of new transposable element families in Drosophila melanogaster and Anopheles gambiae genomes.', Journal of Molecular Evolution 57 Suppl 1.

@@ -1,0 +1,17 @@
+=============================================
+JOIN parameter:
+-----------------
+Match input file: out_blaster-306396693.align
+Output prefix: out_matcher
+Subject bank: TE_protein_db_120822.fasta
+Query bank: genome.fasta
+e-value filter: 1e-10
+identity filter: 0
+length filter: 20
+No join fragments
+=============================================
+MATCHER parameter:
+-----------------
+Filter conflicting subjects before joining
+No Filtering of conflicting subjects after joining
+=============================================

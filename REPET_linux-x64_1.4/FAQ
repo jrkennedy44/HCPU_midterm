@@ -1,0 +1,117 @@
+"Frequently Asked Questions" about the REPET package
+
+
+
+# What does the following message mean « [programName] in permanent error (>3)  » ?
+
+Answer: The pipelines in the REPET package can launch jobs in parallel on a cluster.
+As it happens sometimes, some jobs may return an error.
+If the error is recognizable by the software, the pipeline will automatically re-launch the job in question.
+It can do this up to three times for a job in such case.
+In the case a job was re-launched already 3 times and is still returning an error, the pipeline exits so that the user can investigate the cause of this error.
+If the error is not recognizable by the software, the pipeline will detect after 1h that a job disappeared from SGE and will stop so that the user can investigate the cause of the problem.
+It may be due, for instance, to a problem when the job tries to connect to the MySQL table while being on a slave-node.
+Or it may be due to a job failure, or to a time-out on the queue you specified.
+After you have fixed the problem, to launch again the problematic step, you have to delete all entries in the MySQL table called "jobs".
+Only then you can re-launch the command of the given step of the pipeline.
+
+
+
+# The status of my job is « error ».  How can I see the error message?
+
+A: Jobs launched by the pipelines in the REPET package have two outputs, stdout and stderr, in two distinct files.
+The file of stdout is named [programNameX].o[jobid]. The file of stderr is named [programNameX].e[jobid].
+To see the error message, you need to look at both files. To find them, you first need to retrieve the jobid of the job in error by looking in the MySQL table called "job".
+Then, you will find the files in question in the directory created for the given step, usually called [projectName_stepName]/.
+
+
+
+# How to re-launch a job?
+
+A: Identify the jobid of the job and launch the script « ClusterLauncher_XXX.py » located in the directory of the given step.
+
+
+
+# REPET requires to use SGE as a batch-queuing system. But I am having problems installing and running it. Is there a way to configure REPET to just run things one at a time instead of in parallel?
+
+A: Sorry, but REPET needs SGE.
+
+
+
+# I don't have to specify a queue (we dont use it in our SGE, instead we only specify memory usage). So I do not have this in the TEdenovo.cfg file.
+
+A: In fact SGE always has a default queue. To show the available queues, use "qconf -sql" and indicate it in your configuration file.
+
+
+
+# I need to give resource parameters to SGE (for instance "qsub -q test.q -l test=TRUE"). Is it possible ?
+
+A: Yes. In your configuration file, beside "queue: ", write first the queue name and then the resource you need between simple quote, always in this order (in our case "queue: test.q 'test=TRUE'").
+
+
+
+# In TEdenovo, what does the following message mean « *** FATAL ERROR *** piler Cannot open [projectName].align.not_over.filtered.gff, File too large [27]  » ?
+
+A: It means that the parameters used for the step 1 allow to detect too many HSPs.
+We recommend to re-launch this step with more stringent parameters.
+For instance, instead of keeping matches longer than 100 bp, you could filter those shorter than 200 bp.
+
+
+
+# Why are the name of the chunks simplified?
+
+A: Before launching computations in parallel, pipelines from REPET split long sequences into chunks and put them into batch files.
+To increase code portability and robustness the headers of the chunks are renamed into "chunk00X".
+Indeed, some sequence headers contain forbidden symbols such as ";", "=", "|", ".".
+
+
+
+# It would be great if you could send the source code, so that I can compile it for my own system.
+
+A: Unfortunately we don't send yet the source code of our C++ programs.
+To be more precise, the BLASTER, GROUPER and MATCHER programs are not open-source although they may become in the future.
+The binaries are statically compiled and thus should work on any Linux-x64 platform.
+However, all Python libraries and programs are open-source under the CeCILL license.
+
+
+
+# I have this error message : "sh: trf: command not found". Why is trf not found?
+
+A: The program TRF (from G. Benson) like any other external program have to be in your path with the appropriate name, here 'trf'.
+You will find detailed information about this in the README file.
+
+
+
+# I launched the pipeline as explained in the tutorial but, as I disconnected, I killed the main process. What should I do?
+
+A: You should killed all the remaining jobs and processes launched by the pipeline, empty the "jobs" table in MySQL, and remove the directory just created by the pipeline.
+Then you should re-launch the pipeline using the "nohup" Unix program: "$ nohup TEdenovo.py -P ... >& run.txt &".
+
+
+
+# I don't have WU-blast because it has been replaced by AB-blast. Is NCBI-blast sufficient?
+
+A: The TEdenovo pipeline doesn't need WU-blast (in the configuration file "blast: ncbi").
+But step 2 of the TEannot pipeline still needs it when launched with high sensitivity for BLASTER (in the configuration file "BLR_sensitivity: 4").
+To launch blastn from WU-blast the command has to be "blastn ..." and to launch blastn from the ncbi-blast the command has to be "blastall -p blastn ..."
+So you need to install an old version of wu-blast.
+
+
+
+# What is the difference between a TE consensus classified as "category=NoCat" and a consensus classified as "category=?, confusedness=yes" at the end of TEdenovo step 5?
+
+A: A consensus "NoCat" has no evidence. It's particularly obvious in the file "*.classif" that you will find in the directory classifConsensus.
+On the other side, a consensus classified as "confused" has several evidences but at least both of them contradict each other.
+For example the best match for the consensus is a TEs known in Repbase as a LTR but we found TIR (terminal inverted repeats) at its extremities. 
+The file "*.classif" shows all evidences that we detected for each consensus.
+So we hope that this file is a good starting point for manual curation, especially the "confused" consensus.
+
+
+
+# Why are the SSRs detected in the TEdenovo pipeline and also in the TEannot pipeline?
+
+A: In the TEdenovo pipeline (step 4), we detect SSRs in de novo consensus of repeated sequences previously built at step 3.
+The aim of this analysis is to discriminate between true TEs and SSRs.
+At the end of TEdenovo we advise to filter them with FilterClassifiedSequences.py (see the TEdenovo tutorial for more details).
+In the TEannot pipeline (step 4), we detect SSRs in the genome sequences.
+The aim here is to filter out what seems to be TE annotations but is completely covered by SSRs.

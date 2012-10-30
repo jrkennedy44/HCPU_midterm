@@ -1,0 +1,282 @@
+
+====================
+Tutorial for TEannot
+====================
+
+
+We advise to run first the TEdenovo pipeline but it is not compulsory.
+
+We suppose you begin by running the TEannot pipeline on the example provided in the directory "db/" rather than directly on your own genomic sequences.
+Thus, from now on, the project name is "DmelChr4".
+
+
+------------------------------
+Setup your working environment
+------------------------------
+
+If you already ran the TEdenovo pipeline, you won't have to do all the following tasks.
+
+* Go to your home directory and open the file containing your parameters (".profile" or ".bashrc") with your favorite text editor.
+cd $HOME/
+vi .profile
+
+* Add several new environment variables. REPET_PATH gives the absolute path to the directory in which REPET has been installed (e.g. "$HOME/src/repet_pipe/"). REPET_JOBS gives the way you chose to manage your jobs launched in parallel ("MySQL"). REPET_QUEUE gives the name of the program managing distributed computation ("SGE" or "PBS").
+export REPET_PATH=$HOME/src/repet_pipe/
+export REPET_JOBS=MySQL
+export REPET_QUEUE=SGE
+export PYTHONPATH=$REPET_PATH
+
+* Add the path towards REPET programs to your path:
+export PATH=$REPET_PATH/bin:...:$PATH
+
+* Source the file:
+. .profile
+
+* Create your project directory (for instance "DmelChr4_TEannot/") and go into it:
+cd $HOME/work/
+mkdir <name_of_your_project_directory>
+cd <name_of_your_project_directory>
+
+* Create a symbolic link to the input fasta file recording the genomic sequences (it has to be <project_name>.fa):
+ln -s <path_to_the_repet_pipe_directory>/db/DmelChr4.fa DmelChr4.fa
+
+Format your fasta file to have only 60 bps (or less) by line for each sequence.
+Concerning the sequence headers, it is highly advised to write them like this : ">XX_i" with XX standing for letters and i standing for numbers.
+Please, avoid space (" ") or symbols such as "=", ";", ":", "|"...
+
+* If you already ran the TEdenovo pipeline, retrieve the output fasta file with the classified consensus and rename it:
+ln -s $HOME/work/project_directory_of_TEdenovo/DmelChr4_denovoLibTEs.fa DmelChr4_refTEs.fa
+
+Otherwise, copy your own fasta file of known TEs (it has to be named <project_name>_refTEs.fa):
+ln -s <your_own_TE_library> <project_name>_refTEs.fa
+
+* Copy the configuration file:
+cp <path_to_the_repet_pipe_directory>/config/TEannot.cfg TEannot.cfg
+
+* Edit the configuration file "TEannot.cfg" in order to adapt it to your personal situation:
+vi TEannot.cfg
+
+In the section "repet_env", indicate:
+- the host name of your MySQL database (ask your system administrator)
+- your MySQL login (ask your system administrator)
+- your MySQL password (ask your system administrator)
+- the name of your MySQL database (ask your system administrator)
+
+In the section "project", indicate:
+- the name of your project (here: DmelChr4)
+- the absolute path to your project directory (here: $HOME/work/DmelChr4_TEannot)
+
+To speed up the process, jobs are launched in parallel. In "parallelized_jobs" section of configuration file, you can set option:
+- resources (optional): according to your data, you may need some specific resources (e.g. "mem_free=8G" if you need 8G of memory per job).
+- tmpDir (optional): according to the cluster, give the name of the temporary directory of nodes (e.g. "/scratch").
+
+
+
+----------------
+Run the pipeline
+----------------
+
+The standard output is rather self-explaining.
+The programs from REPET almost always begin with the sentence "beginning of ..." and ends with the sentence "... finished successfully".
+Each program launching another one goes on only when EXIT_SUCCESS (usually "0") is returned.
+Otherwise the sentence "*** Error: ... returned ..." is written and the whole program stops.
+Moreover, you will also find '*.log' files giving more details about some specific steps.
+
+To avoid killing the main process of the pipeline by disconnecting from your session, it is highly advised to use the Unix command "nohup".
+This program runs a command even if the session is disconnected or the user logs out.
+To have more details, read the manual ("$ man nohup").
+Here is an example:
+$ nohup TEannot.py -P ... -S 1 >& step1.txt &
+
+
+
+*** STEP 1:
+
+The first step prepares all the data banks required in the next steps.
+- cut the the input genomic sequences into chunks and load them in MySQL tables ("DmelChr4_chr_seq", "DmelChr4_chk_seq" and "DmelChr4_chk_map")
+- randomize the chunks (shuffle but preserve both mono- and di-symbol composition) and load them in a MySQL table
+- rename the headers of the reference TEs, load the reference TE library (e.g. from the TEdenovo pipeline) in a MySQL table ("DmelChr4_refTEs_seq") and prepare it for Blaster (blastn)
+- load the Repbase data bank in a MySQL table ("DmelChr4_Repbase_nt_seq") and prepare it for Blaster (tblastx)
+
+Edit the configuration file "TEannot.cfg" if you need to change the default parameters.
+The input genomic sequences are cut into chunks (threshold at 200kb with a 10kb overlap) but only if their length is below the threshold, i.e. a chunk will never be a concatenation of two different input sequences. In the case you have a very high number of small sequences (e.g. 70000 input sequences of mean size 100kb), it is still advised to keep the threshold at 200kb, the possibility of putting several chunks into the same batch (the batches being launched on parallel) allowing to have a reasonable number of jobs.
+- length threshold ("chunk_length: 200000")
+- overlap length ("chunk_overlap: 10000")
+- number of chunks per batch launched in parallel ("nb_seq_per_batch: 10")
+
+In order to remove false positives, we apply an empirical statistical filter by comparing the reference TE library with the genomic sequences that have been randomized. But you still have the right not to use this filter and use your own filtering values at step 3 (see below).
+- make_random_chunks: yes
+
+If you don't have WU-BLAST installed (or don't want to use it), change the configuration file in section "align_refTEs_with_genome" from "BLR_blast: wu" to "BLR_blast: ncbi", and from "RM_engine: wu" to "RM_engine: cm".
+
+The reference TE library usually comes from the TEdenovo pipeline (i.e. formatted as "Name_category-order-completeness", e.g. "DmelChr4-B-R12-Map3_classI-LTR-incomp").
+If not, no sequence header should be longer than 50 letters.
+
+When you are ready, launch the following command:
+TEannot.py -P DmelChr4 -C TEannot.cfg -S 1
+
+It creates a directory "DmelChr4_db/" in which you can find all the prepared data among which two directories "batches/" and "batches_rnd/".
+It also creates MySQL tables called "DmelChr4_chr_seq", "DmelChr4_chk_seq", "DmelChr4_chk_map", "DmelChr4_refTEs_seq" and "DmelChr4_refTEs_map".
+
+
+
+*** STEP 2:
+
+The second step aligns the reference TE sequences on each genomic chunk via BLASTER (with BLAST and high sensitivity, followed by MATCHER), REPEATMASKER (with BLAST, cutoff at 200) and CENSOR (high sensitivity).
+For each program, you can do the same on the randomized chunks (option "-r").
+
+If you want to use BLASTER with WU-BLAST, write in the configuration file "BLR_blast: wu".
+If you want to use BLASTER with NCBI-BLAST, write in the configuration file "BLR_blast: ncbi".
+If the genome under study is large (>400 Mb), you may want to decrease the sensitivity of BLASTER in the configuration file from "BLR_sensitivity: 4" to "BLR_sensitivity: 3".
+
+If you want to use REPEATMASKER with WU-BLAST, write in the configuration file "RM_engine: wu".
+If you want to use REPEATMASKER with CROSS_MATCH, write in the configuration file "RM_engine: cm".
+If you are using CROSS_MATCH, you may want to decrease the sensitivity in the configuration file from "RM_sensitivity: s" to "RM_sensitivity: q" or even "RM_sensitivity: qq".
+If you don't specify any sensitivity ("RM_sensitivity: "), the default one will be used.
+
+All the jobs are launched in parallel with group IDs "DmelChr4_TEannot_BLR", "DmelChr4_TEannot_BLR_rnd", "DmelChr4_TEannot_RM", "DmelChr4_TEannot_RM_rnd", "DmelChr4_TEannot_CEN" and "DmelChr4_TEannot_CEN_rnd".
+
+This step generates lots of files (by 'lots' I mean up to dozens of Go, of course depending on the size of the input data bank).
+Thus it is advised to keep only useful files (option "clean: yes" in command-line).
+All files used to handle jobs launched in parallel will be removed.
+To see the differences, launch this step on the example with and without this option.
+
+When you are ready, launch the following command:
+TEannot.py -P DmelChr4 -C TEannot.cfg -S 2 -a BLR
+TEannot.py -P DmelChr4 -C TEannot.cfg -S 2 -a RM
+TEannot.py -P DmelChr4 -C TEannot.cfg -S 2 -a CEN
+
+To use the randomized chunks, add option "-r":
+TEannot.py -P DmelChr4 -C TEannot.cfg -S 2 -a BLR -r
+TEannot.py -P DmelChr4 -C TEannot.cfg -S 2 -a RM -r
+TEannot.py -P DmelChr4 -C TEannot.cfg -S 2 -a CEN -r
+
+Two directories are created, "DmelChr4_TEdetect/" and "DmelChr4_TEdetect_rnd/", containing three directories each (one per program).
+These directories store the results. Have a look on the file called "DmelChr4_TEdetect/BLR/DmelChr4_TEannot_BLR-xxxx.log".
+
+
+
+*** STEP 3:
+
+The third step filters and combines the HSPs obtained at step 2, i.e. the TE annotations.
+
+First, for each alignment program specified with option "-c" (by default, the 3 programs used at step 2), it determines the highest score obtained on the randomized chunks (of course, this requires the step 2 with option "-r" has been launched).
+More precisely, it uses the 95% quantile of the distribution of the highest scores obtained on each chunk.
+Then it filters the HSPs obtained on the "natural" chunks by keeping only the ones having a score higher than the threshold determined previously.
+For short input sequences, it may happen that a program (Blaster, Censor and/or RepeatMasker) doesn't find any HSP on the randomized chunks.
+In that case, a "Warning" is raised, a default value is given (from the configuration file) and the program "TEannot.py" goes on.
+If you don't want to use the filter values found on the randomized chunks, you can force the usage of your own values in the configuration file ("force_default_values: yes").
+
+Next, for each batch, the 3 files (each from a different program) are concatenated and MATCHER is used to remove overlapping HSPs and make connections with the "join" procedure.
+
+To keep only useful files, choose option "clean: yes" in command-line.
+All files used to handle jobs launched in parallel will be removed.
+To see the differences, launch this step on the example with and without this option.
+
+When you are ready, launch the following command:
+TEannot.py -P DmelChr4 -C TEannot.cfg -S 3 -c BLR+RM+CEN
+
+A directory "Comb/" is created in "DmelChr4_TEdetect/".
+This step also creates MySQL tables "DmelChr4_chk_allTEs_path" and "DmelChr4_chr_allTEs_path".
+
+
+
+*** STEP 4:
+
+The fourth step searches for satellites on the genomic sequences via TRF, Mreps and RepeatMasker (look only for simple repeats). The SSR annotations are loaded into a MySQL table.
+If you are not interested in satellites detection, you can skip STEP 4 and STEP 5. 
+All the jobs are launched in parallel with group IDs "DmelChr4_TEannot_TRF", "DmelChr4_TEannot_Mreps" and "DmelChr4_TEannot_RMSSR".
+
+To keep only useful files, choose option "clean: yes" in command-line.
+All files used to handle jobs launched in parallel will be removed.
+To see the differences, launch this step on the example with and without this option.
+
+When you are ready, launch the following command:
+TEannot.py -P DmelChr4 -C TEannot.cfg -S 4 -s TRF
+TEannot.py -P DmelChr4 -C TEannot.cfg -S 4 -s Mreps
+TEannot.py -P DmelChr4 -C TEannot.cfg -S 4 -s RMSSR
+
+A directory is created, "DmelChr4_SSRdetect/", containing three directories (one per program) with the results that are also loaded into MySQL tables called "DmelChr4_chk_TRF", "DmelChr4_chk_Mreps" and "DmelChr4_chk_RMSSR".
+Have a look on the file called "DmelChr4_SSRdetect/TRF/DmelChr4_TEannot_TRF-xxxx.log".
+
+
+
+*** STEP 5:
+
+This step merges the SSR annotations from the 3 programs used at the previous step. For instance, a SSR detected by TRF with coordinates (100,500) and another detected by Mreps with coordinates (80,450) are merged into a SSR with coordinates (80,500).
+
+When you are ready, launch the following command:
+TEannot.py -P DmelChr4 -C TEannot.cfg -S 5
+
+A new MySQL table is created, called "DmelChr4_chk_allSSRs_set".
+
+
+
+*** STEP 6:
+
+This step compares the Repbase data bank (nucleotides or amino-acids, fasta format, see the configuration file) with each input genomic sequence via BLASTER with tblastx or blastx, followed by MATCHER.
+Jobs are launched in parallel (group ID is "DmelChr4_TEannot_BLR(t)x").
+This step is optional; thus, as it usually takes a long time, you can write "no" in front of the "launch" option in the configuration file.
+
+To keep only useful files, choose option "clean: yes" in command-line.
+All files used to handle jobs launched in parallel will be removed.
+To see the differences, launch this step on the example with and without this option.
+
+When you are ready, launch the following command:
+TEannot.py -P DmelChr4 -C TEannot.cfg -S 6 -b tblastx
+
+And then:
+TEannot.py -P DmelChr4 -C TEannot.cfg -S 6 -b blastx
+
+A directory "bankBLR(t)x/" is created in "DmelChr4_TEdetect/", that contains the results, along with a MySQL table ("DmelChr4_chk_RepbaseBLR(t)Bx_path"). Have a look on the files called "DmelChr4_BLR(t)x-xxx.log" and "DmelChr4_Matcher-xxx.log".
+
+
+
+*** STEP 7:
+
+This step performs successive procedures on the MySQL tables such as removal of TE doublons, removal of SSR annotations included into TE annotations and "long join procedure" (described below).
+
+Because the input genomic sequences may contain large regions of heterochromatin, some TEs are expected to be nested. As a given copy can be interrupted by several other TEs inserted more recently, we expect to find distant fragments belonging to the same copies.
+MATCHER is used at step 3, not only to filter overlapping HSPs, but also to join them. However, it relies on a scoring scheme that, in some extreme cases (deep nesting, distant fragmentation), appears to be unsufficient. Therefore we implemented a "long join procedure" aimed at recovering the join of these fragments missed sometimes by MATCHER.
+Fragments involved in nesting patterns must respect the three following constraints: (i) be co-linear; (ii) have the same age, and (iii) be separated by younger TE insertions. The identity percentage with a reference consensus sequence is used to estimate the age of a copy . Consecutive fragments on both the genome and the same reference TE were automatically joined if they respect these constraints. We call them "nest join".
+Sometimes large non-TE sequence insertions can be observed in a TE copy. They are suspected to appear by gene conversion. In order to deal with these cases, we also join fragments if they are separated by an insert of less than 5kb and/or less than 500bp of mismatches, and have the same age. We call this a "simple join".
+Young copies are expected to keep longer fragments than old copies, because deletions accumulate with time. This is a final control of nested patterns based on a different assumption than consensus nucleotide identity percentage (see above). Thus, at the end, nested TEs are split if inner TE fragments are longer than outer joined fragments. They are reported as "split".
+Based on Drosophila Melanogaster genome (release 4), we took conservative parameters settings to join only unambiguous cases (Bergman et al., Genome Biology 2006,7:R112). A "deny long join" occurs when age of fragments differs by more than 2% ("join_id_tolerance" parameter). This rejection is frequent compared to other event highlighting the importance of this constraint (i.e. considering the age of the fragments to join). "Too long join" occurs when the fragments to be joined are distant by more than 100kb. This appears to be very marginal. A "deny nest join" occurs when either there is not an enough high TE coverage of the insert (>95%, "join_TEinsert_cov" parameter) or there is older TEs inserted. This appears to occur rarely. Some "simple join" are performed, but their number still remains low compared to the number of fragments treated. This is a consequence of MATCHER join efficiency, indicating that "simple join" is needed only rarely. The same conclusion can be drawn for "splits". One could have set parameters at less conservative value and thus obtained more "long join", but we felt that these cases could thus be too ambiguous and we preferred to leave our results conservative.
+
+Below an explanation of parameters values found in TEannot.cfg in "[annot_processing]" section :
+
+- min_size, default 20 : copies with length above "min_size" bp are removed.
+- join_max_gap_size, default 5000 : if distance between two fragments exceed "join_max_gap_size", fragments are not connected.
+- join_max_mismatch_size, default 500 : if mismatch length (bp) between two fragments (in dynamic programming algorithm, see Quesneville et al. 2005) exceed "join_max_mismatch_size", fragments are not connected.
+- join_id_tolerance, default 2 : if age between two fragments (identity percentage) exceed "join_id_tolerance", fragments are not connected.
+- join_TEinsert_cov, default 0.95 : if distance between two fragments exceed "join_max_gap_size" and if at least "join_TEinsert_cov" % of genome sequence between fragments is composed of younger TEs, fragments are connected.
+- join_overlap, default 15 : if size (bp) of overlap between two fragments exceed "join_overlap", fragment are not connected.
+- join_minlength_split, default 100 : if nested TE is older than flanking fragments but its size exceed "join_minlength_split", fragments are not connected.
+
+When you are ready, launch the following command:
+TEannot.py -P DmelChr4 -C TEannot.cfg -S 7
+
+Successive MySQL tables are created, "DmelChr4_chk_allTEs_nr_path", "DmelChr4_chk_allTEs_nr_noSSR_path" and finally "DmelChr4_chk_allTEs_nr_noSSR_join_path".
+
+
+
+*** STEP 8:
+
+This step allows to export annotations from the final MySQL table to gameXML or GFF3. These two annotation formats can be imported respectively in Apollo and GBrowse. Further details are available on the web:
+- gameXML: http://www.fruitfly.org/annot/gamexml.dtd.txt
+- GFF3: http://www.sequenceontology.org/gff3.shtml
+- Apollo: http://gmod.org/wiki/index.php/Apollo
+- GBrowse: http://gmod.org/wiki/index.php/Gbrowse
+
+Edit the configuration file "TEannot.cfg" if you need to change the default parameters.
+- choose to export the annotations on the input sequences ("sequences: chromosomes") or on the chunks ("sequences: chunks");
+- choose to add the SSR annotations as well as the annotations found via tblastx or blastx at step 6 (assuming you launched step 6).
+Moreover, in the field 'attributes' of the GFF3, the value after Target can have spaces ' ' or '+': put "gff3_chado: yes" for the latter.
+
+If you choose the option "clean: yes" in the command-line, be careful because all the MySQL tables will be deleted.
+Do it only if you are sure you don't need them anymore.
+
+When you are ready, launch the following command:
+TEannot.py -P DmelChr4 -C TEannot.cfg -S 8 -o gameXML
+
+A directory is created, "DmelChr4_gameXML" or "DmelChr4_GFF3", containing the annotations.

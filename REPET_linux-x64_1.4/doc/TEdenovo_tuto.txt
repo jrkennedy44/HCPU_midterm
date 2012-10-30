@@ -1,0 +1,309 @@
+
+=====================
+Tutorial for TEdenovo
+=====================
+
+
+We suppose you begin by running the TEdenovo pipeline on the example provided in the directory "db/" rather than directly on your own genomic sequences.
+Thus, from now on, the project name is "DmelChr4".
+
+
+------------------------------
+Setup your working environment
+------------------------------
+
+* Go to your home directory and open the file containing your parameters (".profile" or ".bashrc") with your favorite text editor.
+cd $HOME/
+vi .profile
+
+* Add several new environment variables. REPET_PATH gives the absolute path to the directory in which REPET has been installed (e.g. "$HOME/src/repet_pipe/").
+REPET_JOBS gives the way you chose to manage your jobs launched in parallel ("MySQL").
+REPET_QUEUE gives the name of the program managing distributed computation ("SGE" or "PBS").
+export REPET_PATH=$HOME/src/repet_pipe/
+export REPET_JOBS=MySQL
+export REPET_QUEUE=SGE
+export PYTHONPATH=$REPET_PATH
+
+* Add the path towards REPET programs to your path:
+export PATH=$REPET_PATH/bin:...:$PATH
+
+* Source the file:
+. .profile
+
+* Create your project directory (for instance "DmelChr4_TEdenovo/") and go into it:
+cd $HOME/work/
+mkdir <name_of_your_project_directory>
+cd <name_of_your_project_directory>
+
+* Copy the input fasta file recording the genomic sequences (it has to be named <project_name>.fa):
+ln -s <path_to_the_repet_pipe_directory>/db/DmelChr4.fa .
+
+Format your fasta file to have only 60 bps (or less) by line for each sequence.
+Concerning the sequence headers, it is highly advised to write them like this : ">XX_i" with XX standing for letters and i standing for numbers.
+Please, avoid space (" ") or symbols such as "=", ";", ":", "|"...
+
+* Copy the configuration file:
+cp <path_to_the_repet_pipe_directory>/config/TEdenovo.cfg .
+
+* Edit the configuration file "TEdenovo.cfg" in order to adapt it to your personal situation:
+vi TEdenovo.cfg
+
+Keep "rDNA_BLRn: no" in TEdenovo.cfg file, because these functionality is still in development.
+
+In the section "repet_env", indicate:
+- the host name of your MySQL database (ask your system administrator)
+- your MySQL login (ask your system administrator)
+- your MySQL password (ask your system administrator)
+- the name of your MySQL database (ask your system administrator)
+
+In the section "project", indicate:
+- the name of your project (here: DmelChr4)
+- the absolute path to your project directory (here: $HOME/work/DmelChr4_TEdenovo)
+
+
+
+----------------
+Run the pipeline
+----------------
+
+The standard output is rather self-explaining.
+The programs from REPET almost always begin with the sentence "beginning of ..." and ends with the sentence "... finished successfully".
+Each program launching another one goes on only when EXIT_SUCCESS (usually "0") is returned.
+Otherwise the sentence "*** Error: 'program X' returned 256" is written and the whole pipeline stops.
+Moreover, you will also find '*.log' files giving more details about some specific steps.
+
+To avoid killing the main process of the pipeline by disconnecting from your session, it is highly advised to use the Unix command "nohup".
+This program runs a command even if the session is disconnected or the user logs out.
+To have more details, read the manual ("$ man nohup").
+Here is an example:
+$ nohup TEdenovo.py -P ... -S 1 >& step1.txt &
+
+Your genomic sequence file has to contain simple headers (for instance ">name1").
+
+To speed up the process, jobs are launched in parallel. In each section of configuration file, you can set option:
+- resources (optional): according to your data, you may need some specific resources (e.g. "mem_free=8G" if you need 8G of memory per job).
+- tmpDir (optional): according to the cluster, give the name of the temporary directory of nodes (e.g. "/scratch").
+
+
+
+*** STEP 1:
+
+The first step aligns the genomic sequences of interest (in the example "DmelChr4.fa") with themselves in order to identify high-scoring segment pairs (HSPs) corresponding to repeats.
+Edit the configuration file "TEdenovo.cfg" if you need to change the default parameters.
+
+The program BLASTER is used with stringent parameters:
+- by default, NCBI-BLAST is used instead of WU-BLAST ("blast: ncbi" instead of "blast: wu").
+- BLAST returns only HSPs having an E-value below 1e-300
+- BLAST returns only HSPs having a length above 100 (bp)
+- BLAST returns only HSPs having an identity percentage above 90 (in %)
+
+For this, the input genomic sequences are cut into chunks (threshold at 200kb with a 10kb overlap) but only if their length is below the threshold, i.e. a chunk will never be a concatenation of two different input sequences.
+In the case you have a very high number of small sequences (e.g. 70000 input sequences of mean size 100kb), it is still advised to keep the threshold at 200kb, the possibility of putting several chunks into the same batch (the batches being launched on parallel) allowing to have a reasonable number of jobs.
+- length threshold ("chunk_length: 200000")
+- overlap length ("chunk_overlap: 10000")
+- number of chunks per batch launched in parallel ("nb_seq_per_batch: 5")
+
+After BLASTER ran, HSPs can be filtered ("filter_HSP: yes"). Even if threshold have already been defined above, you may want to be more stringent after the BLAST.
+Moreover, it is not possible during the BLAST, to filter a maximal HSP size (e.g. to remove matches corresponding to segmental duplications).
+- keep only HSPs having an E-value below 1e-300
+- keep only HSPs having an identity percentage above 90 (%)
+- keep only HSPs having a length below 100 (bp)
+- keep only HSPs having a length above 20000 (bp)
+
+The step 1 generates lots of files (by 'lots' I mean up to dozens of Go, of course depending on the size of the input data bank).
+Thus it is advised to keep only useful files ("clean: yes"). To see the differences, launch the step 1 on the example with and without this option.
+
+When you are ready, launch the following command:
+TEdenovo.py -P DmelChr4 -C TEdenovo.cfg -S 1 -s Blaster
+
+A directory is created (e.g. "DmelChr4_Blaster") in which all the results (list of HSPs) are stored, usually in a tabulated file called "DmelChr4.align.not_over.filtered" (HSPs due to chunk overlaps were removed, and filter applied).
+
+
+
+*** STEP 2:
+
+The second step clusters the HSPs from step 1 to form clusters of repetitions.
+Three clustering methods are available: GROUPER, RECON and PILER.
+It is better to launch the three in order to be able to combine the results afterwards.
+
+Edit the configuration file "TEdenovo.cfg" if you need to change the default parameters.
+- define the coverage used to add a sequence into a group (for GROUPER only, "coverage: 0.95")
+- keep only the group with a minimal number of sequences in it ("minNbSeqPerGroup: 3") to avoid most of the segmental duplications
+- keep only the longest sequences when a group gather lots of sequences ("nbLongestSeqPerGroup: 20")
+- keep only the sequences below a given length, in bp ("maxSeqLength: 20000")
+
+When using Grouper, you can also specify a parameter concerning the outputs of the 'join' procedure:
+- ignore the sequences (connected HSPs only) where the join spans over a given threshold, in bp ("Grouper_maxJoinLength: 30000")
+
+This step is not parallelized. It means you have to launch three times the same command, one for Grouper, one for Recon and one for Piler.
+As these programs have different running time, it allows you to launch the next step as soon as one program is finished.
+This is especially useful as Recon (and sometimes Grouper also) is usually much longer than Piler. 
+But still, as the clustering programs usually require large resources, they will be launched on a cluster node within the pipeline (group ID is "DmelChr4_TEdenovo_Grouper" for instance).
+
+For Grouper clustering program, parameters are:
+- Grouper_coverage, default 0.95 : coverage between all sequences in a group is at least "Grouper_coverage". 
+- Grouper_join, default yes: join fragments before clustering.
+- Grouper_include, default 2 : keep groups where at least "Grouper_include" members are not included in other groups.
+- Grouper_maxJoinLength, default 30000 : maximum length of a join. If distance between 2 TEs is above "Grouper_maxJoinLength", TEs will not be joined.
+
+For all clustering programs (Grouper, Recon and Piler), parameters are:
+- minNbSeqPerGroup, default 3 : minimum number of sequences per group.
+- nbLongestSeqPerGroup, default 20 : select the "nbLongestSeqPerGroup" longest sequences of each group.
+- maxSeqLength, default 20000 : max sequence length (bp) in groups.
+ 
+When you are ready, launch the following commands:
+TEdenovo.py -P DmelChr4 -C TEdenovo.cfg -S 2 -s Blaster -c Grouper
+TEdenovo.py -P DmelChr4 -C TEdenovo.cfg -S 2 -s Blaster -c Recon
+TEdenovo.py -P DmelChr4 -C TEdenovo.cfg -S 2 -s Blaster -c Piler
+
+For each clustering method, a directory "DmelChr4_Blaster_<method>" is created and contains several files including "DmelChr4<XX>_filtered.log" that records some statistics about this step, and "DmelChr4_Blaster_<method_name>_<3>elem_<20>seq.fa" that contains the sequences.
+In this latter file, the sequence headers indicate to which cluster the sequence belong.
+
+
+
+*** STEP 3:
+
+The third step makes a multiple alignment for each cluster.
+Several multiple sequence alignment (MSA) programs are available though Map is advised.
+Indeed this program implements a global multiple alignment algorithm that specifically takes into account long gaps.
+Thus it always runs on clusters from Recon whereas sometimes MUSCLE can never end.
+Moreover, it seems to give better alignment compare to MAFFT.
+CLUSTAL-W and PRANK are also available but they are slower.
+Note that, if the Map algorithm described in Huang (1994) remains unchanged, the program has been slightly improved to managed fasta files with several sequences more efficiently.
+Thus, in command-line, it is now called "rpt_map" instead of "map".
+Launch the command "TEdenovo.py -h" to know how to give a MSA program in the command line.
+Once the MSA is built, a consensus is derived by taking the most frequent base at each site.
+At each site, if the most frequent base is present is less than 50% of the aligned sequences, it is replaced by a 'N'.
+Moreover, if only one sequence has a base at a specific site all the other having a gap (case of a unique insertion for instance), then the site is not taken into account for the consensus (the minimal number of bases to edit a consensus is a parameter in the configuration file).
+
+When you are ready, launch the following command:
+TEdenovo.py -P DmelChr4 -C TEdenovo.cfg -S 3 -s Blaster  -c Grouper -m Map
+TEdenovo.py -P DmelChr4 -C TEdenovo.cfg -S 3 -s Blaster -c Recon -m Map
+TEdenovo.py -P DmelChr4 -C TEdenovo.cfg -S 3 -s Blaster -c Piler -m Map
+
+For each clustering method, a directory "DmelChr4_Blaster_<method>_Map" is created with the file containing the consensus inside (e.g. "DmelChr4_Blaster_Grouper_Map_consensus.fa").
+
+
+
+*** STEP 4:
+
+Then, we launch the first step of the TEclassifier, i.e. the detection of features on the consensus. Edit the configuration file "TEdenovo.cfg" if you need to change the default parameters.
+
+Several programs can be launched to look for terminal repeats with TRsearch ("term_rep: yes"), tandem repeats with TRF ("tand_rep: yes"), open reading frames with dbORF.py ("orf: yes") and poly-A tails with polyAtail ("polyA: yes").
+TEclassifier also looks for matches between the consensus and known TEs from the Repbase databank. Repbase is a famous databank of know repeats. To use it, you will have to register on "www.girinst.org". Once you are registered, you can download a compressed archive with Repbase specifically formatted for REPET.
+The archive contains two fasta files, one with nucleotide sequences given to BLASTER with tblastx ("TE_BLRtx: yes") and the other with aminoacid sequences given to BLASTER with blastx ("TE_BLRx: yes").
+If you have your own databank of know repeats, you can use it instead of Repbase or concatenate it at the end of Repbase. Take care of the way the sequence headers are formatted.
+Furthermore, if you can provide a data bank with cDNA from the host genome ("HG_BLRn: yes"), it is possible to compare them with the consensus via BLASTER with blastn.
+Make sure you put the databanks (2 for Repbase, 1 for host cDNA) in your root project directory (copy or soft link) and indicate the name of each data bank in the configuration file.
+Don't pay attention to the options about rDNA in the configuration file, this option is still under development.
+
+These programs listed above are launched in parallel. It can launch up to 1500 jobs (if there are 15000 consensus, each job will deal with 100 consensus).
+
+When you are ready, launch the following command:
+TEdenovo.py -P DmelChr4 -C TEdenovo.cfg -S 4 -s Blaster -c GrpRecPil -m Map
+
+A directory "DmelChr4_Blaster_GrpRecPil_Map_TEclassif/detectFeatures" is created containing output files from the different programs that have been launched. Several MySQL tables have also been created and will be used in the next step.
+
+
+
+*** STEP 5:
+
+This step classifies the consensus according to their features detected previously (step 4). The classification follows a decision tree: for instance, if a consensus has LTRs and matches with a known LTR retrotransposon from Repbase, it will be classified as class I - LTR retrotransposon. Then, to avoid redundant consensus, if a consensus is aligned with another one with more than 95% identity on more than 98% of its length, it will be removed.
+
+The decision tree (described downwards) aims at assigning to each consensus the following attributes: [ category, order, completeness, comments, confusedness ]
+- category: 'classI' or 'classII' for the TEs, 'SSR', 'HostGene', 'NoCat' or '?' for the other
+- order: 'LTR'/'LARD'/'LINE'/'SINE'/'TIR'/'MITE'/'Helitron'/'Polinton' for the TEs, 'NA' or '?' for the other categories
+- completeness: 'yes', 'no', 'NA' or '?'
+- comments: to briefly explain the classification
+- confusedness: 'yes' or 'no'
+
+For each consensus, the program begins by retrieving its features from the MySQL tables: "structural" features (LTR, TIR, polyA tails, SSR-like tails) and "coding" features (matches with known TEs or host genes). In the case of terminal repeats, it can happen that a sequence has long LTRs and short TIRs as a LTR has small inverted repeats at its extremities. In such a case, only the LTRs are kept for the following.
+Then it applies two filters:
+- the consensus is classified as "SSR" if it is too short (<100bp, see the configuration file), or if its SSR coverage is too high (>0.95, see the configuration file), or if it only has SSRs as features or if its SSRs form a tail including its other terminal repeats.
+- the consensus is classified as "HostGene" if it has matches with host genes such that identity and length are higher than the given threshold (see the configuration file).
+
+For the remaining consensus:
++ if the consensus has no feature, it is classified as "NoCat";
++ otherwise (if the consensus has at least one feature):
+  ++ if the consensus has several contradictory "structural" features (e.g. LTR and TIR), with or without "coding" features, it is classified as "confused".
+  ++ if the consensus has no "structural" features:
+     we classify it according to its "coding" features (if any), by taking also into account the length parameters (see the configuration file)
+     +++ if it has "coding" features, we combine matches via tblastx and those via blastx if any, and classify the consensus
+     +++ if not, it is classified as "NoCat".
+  ++ if the consensus has only one "structural feature":
+     we begin by checking if it is a MITE or SINE (not the LARD as it is ambiguous between a LARD and an incomplete LTR)
+     +++ if it is short (see the configuration file), it is one of them
+     +++ if it has "coding" features then it is "confused"
+     if not, we make a first classification according to its "structural feature"
+     +++ if it has no "coding" features:
+	 we make the final classification by taking into account only the first classification and the length parameters
+     +++ if it has "coding" features:
+	 we make a second classification based on them and we combine the two classification by also taking into account the length parameters
+
+When dealing with 2 preliminary classifications (e.g. from tblastx and blastx, or from structural and coding features), we combine them like this:
++ if same category
+  ++ if the category is unknown -> "confused"
+  ++ if the category is known
+     +++ if same order
+	 ++++ if the order is known -> keep the category and the order
+	 ++++ else -> "confused"
+     +++ if different orders
+	 ++++ if one order is unknown (the other being known) -> keep the category and the known order
+	 ++++ if both orders are known (but different) -> "confused"
++ if different categories
+  ++ if one category is unknown (the other being known) -> keep the known category and look at the order, if unknown -> "confused"
+  ++ if both categories are known but different -> "confused"
+
+When all the consensus have been classified, a procedure to remove redundancy starts using Blaster+Matcher. Sequences included in others are discarded.
+To prevent the loss of well-classified sequences, the procedure compares, for instance, sequences classified as 'incomplete LTR' in queries with sequences classified as 'complete LTR' in subjects, given that only a sequence in query can be removed.
+
+Edit the configuration file "TEdenovo.cfg" if you need to change the default parameters.
+These are defined from our experience with Drosophila melanogaster genome and from the paper "A unified classification system for eukaryotic transposable elements", Wicker et al., Nat.Rev.Genet., 2007.
+
+Keep "TE_hmmer: no", "rDNA_BLRn: no" and "TEclass: no" in TEdenovo.cfg file, because these functionalities are still in development.
+
+When you are ready, launch the following command:
+TEdenovo.py -P DmelChr4 -C TEdenovo.cfg -S 5 -s Blaster -c GrpRecPil -m Map
+
+A directory "DmelChr4_Blaster_GrpRecPil_Map_TEclassif/classifConsensus" is created containing output files. Details about the classification are in "DmelChr4_Blaster_GrpRecPil_Map_uniq_TEclassifier.classif_stats.txt" and "DmelChr4_Blaster_GrpRecPil_Map_uniq_TEclassifier.classif". MySQL tables were also created along the way. However, you may be mainly interested in the library of denovo consensus: it is available in the root project directory under the name "DmelChr4_denovoLibTEs.fa".
+
+Be aware that, when using the default parameters for the TE lengths, consensus can be classified as "class I;LTR;confused" only because of their length (slightly too long compare to the default parameters). Thus, you can keep these consensus for the following, or re-run the 5th step with slightly different parameters.
+
+The fasta file "DmelChr4_denovoLibTEs.fa" can be used directly in the TEannot pipeline as the library of "reference TEs".
+Before using the TEannot pipeline, please read the file "TEannot_tuto.txt".
+
+
+
+*** STEP 6:
+
+This step filters the SSR and the consensus classified as "NoCat" only when they were built from less than 10 sequences.
+
+In fact, before using the consensus data-bank in the TEannot pipeline, you may want to filter the consensus sequences.
+For instance you may want to remove the consensus classified as SSR, HostGene, confused and NoCat.
+To filter the consensus classified as "NoCat" only when they were built from less than 10 sequences, we use the "MSA program number". This number, in the header of each consensus after the name of the MSA program used at step 3, corresponds to the number of sequences belonging to the multiple alignment from which the consensus was derived. 
+
+Edit the configuration file "TEdenovo.cfg" if you need to change the default parameters.
+
+When you are ready, launch the following command:
+TEdenovo.py -P DmelChr4 -C TEdenovo.cfg -S 6 -s Blaster -c GrpRecPil -m Map
+
+A directory "DmelChr4_Blaster_GrpRecPil_Map_TEclassif_Filtered" is created containing the output file "DmelChr4_denovoLibTEs_filtered.fa", which can be directly used in the TEannot pipeline.
+
+But if you want to change other filtering options (as the length below which a SSR is filtered, or the minimum number of sequences in the MSA from which the NoCat consensus has been built), you can use straight the script "FilterClassifiedSequences.py". But you will have to enter in the directory "DmelChr4_Blaster_GrpRecPil_TEclassif/classifConsensus/", and then use the file "DmelChr4_Blaster_GrpRecPil_Map_uniq_TEclassifier.fa".
+Be aware that the output file "DmelChr4_Blaster_GrpRecPil_Map_uniq_TEclassifier.fa.filtered" can't be used in the TEannot pipeline. You have to shorten the sequence headers and remove the forbidden symbols:
+shortenHeaderClassif.py -i DmelChr4_Blaster_GrpRecPil_Map_uniq_TEclassifier.fa.filtered -c -v 1
+Only then, you can use the output file "DmelChr4_Blaster_GrpRecPil_Map_uniq_TEclassifier.fa.filtered.shortH" as the library of "reference TEs" in the TEannot pipeline, or launch the 7th step (replace "DmelChr4_denovoLibTEs_filtered.fa" by this new file).
+
+
+
+*** STEP 7:
+
+For the last step, it is useful to investigate the relationships among the de novo consensus that have been built, by grouping them into clusters (i.e. "TE families").
+This step launch the first step of "ClusterConsensus.py", which is used to facilitate the manual curation of TE consensus. For more information about this script, please read the "README_ClusterConsensus.txt". You can find it in <path_to_the_repet_pipe_directory>/doc.
+
+Edit the configuration file "TEdenovo.cfg" if you need to change the default parameters.
+
+When you are ready, launch the following command:
+TEdenovo.py -P DmelChr4 -C TEdenovo.cfg -S 7 -s Blaster -c GrpRecPil -m Map
+
+A directory "DmelChr4_Blaster_GrpRecPil_Map_TEclassif_Filtered_Clustered" is created containing the output file "DmelChr4_denovoLibTEs_filtered_clustered.fa". This file can be use as the library of "reference TEs" in the TEannot pipeline.

@@ -1,0 +1,22 @@
+=============================================
+BLASTER parameter:
+-----------------
+Blaster output prefix: out_blaster
+Subject bank: TE_protein_db_120822.fasta
+Query bank: genome.fasta
+all_by_all: FALSE
+NCBI-BLAST
+Blast name: blastx
+Blast parameter: 
+Nb concurrent processes: 1
+Cutter bank:	length=50000
+	 	 over=100
+	 	 word=11
+	 	 extention=_cut
+Bank cut: TE_protein_db_120822.fasta_cut
+Query cut : genome.fasta_cut
+sensitivity level: 0
+e-value filter: 1e-10
+identity filter: 0
+length filter: 20
+=============================================

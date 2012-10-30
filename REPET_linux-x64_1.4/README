@@ -1,0 +1,170 @@
+
+===========
+DESCRIPTION
+===========
+
+The REPET package is a package integrating bioinformatics programs in order to tackle biological issues at the genomic scale.
+Its two main pipelines, TEdenovo and TEannot, are dedicated to the detection, annotation and analysis of repeats in genomic sequences, specifically designed for transposable elements (TEs).
+
+* TEdenovo: this pipeline starts by comparing the genome with itself using BLASTER.
+Then it cluster matches with GROUPER, RECON and PILER, clustering programs specific for interspersed repeats.
+For each cluster, it builds a multiple alignment from which a consensus sequence is derived.
+Finally these consensus are classified according to TE features and redundancy is removed.
+At the end we obtain a library of classified, non-redundant consensus sequences.
+
+* TEannot: this pipeline mines a genome with a library of TE sequences, for instance the one produced by the TEdenovo pipeline, using BLASTER, RepeatMasker and CENSOR.
+An empirical statistical filter is applied to discard false-positive matches.
+Short simple repeats (SSRs) are annotated along the way with TRF, RepeatMasker and MREPS.
+Then the pipeline chains, with MATCHER via dynamic programming, TE fragments belonging to the same, disrupted copy.
+A "long join" procedure is subsequently applied to connect distant fragments.
+Finally annotations are exported into GFF3 and gameXML files.
+
+The REPET package is distributed under the CeCILL license (see http://www.cecill.info/index.en.html). Please, read the text file LICENSE.
+It has been deposited to the Agence de Protection des Programmes (APP) under the Inter Deposit Digital Number FR 001 480007 000 R P 2008 000 31 235.
+
+http://urgi.versailles.inra.fr/index.php/urgi/Tools/REPET
+
+
+-------------------------------------------------------------------------------
+
+============
+DEPENDENCIES
+============
+
+The full usage of the pipelines from the REPET package requires from the user to install external programs.
+Below is specified a quick description of the program, the name under which it is known, the version under which it has been tested, the name under which it should be found in the user PATH, and the URL to download it.
+For each of these programs, it is much advised to read carefully their respective installation procedure as possible bugs may come, not from REPET but from bad installation of external programs.
+
+programming language, Python, v >= 2.5, python
+Python module, MySQLdb (if you are using a computer cluster, this module has to be reachable from the slave nodes)
+Python module, logging
+database management system, MySQL, v >= 5.0, mysql
+programming language, Awk, GNU version 3.1.5, gawk
+batch-queuing system, SGE, v 6.1u5, qsub
+
+pairwise alignment, NCBI-BLAST, ftp://ftp.ncbi.nih.gov/blast/executables/LATEST
+pairwise alignment, WU-BLAST, http://blast.wustl.edu/
+HSP clustering, RECON, v = 1.06, recon.pl, http://www.repeatmasker.org/ (v1.05 has bugs when compiled on x64 architecture)
+HSP clustering, PILER, v = 1.0, piler, http://www.drive5.com/piler/
+repeat masking, CENSOR, v = 4.1, censor, http://www.girinst.org/censor/download.php
+repeat masking, RepeatMasker, v = 3.2.5, RepeatMasker, http://www.repeatmasker.org/RMDownload.html
+SSR detection program, TRF, v = 4.00, trf, http://tandem.bu.edu/trf/trf.download.html
+SSR detection, MREPS, v = 2.5, mreps, http://bioinfo.lifl.fr/mreps/
+randomized sequence generation, Shuffle, v = 2.2 (in HMMER, squid), shuffle, or esl-shuffle in hmmer3 package http://hmmer.janelia.org/
+
+Some multiple alignment programs, though not required, may also be of some interest:
+MAFFT, v = 6.240, mafft, http://align.bmr.kyushu-u.ac.jp/mafft/software/
+CLUSTAL-W, v = 1.83, clustalw,  http://www.ebi.ac.uk/Tools/clustalw/
+MUSCLE, v = 3.41, muscle, http://www.drive5.com/muscle/
+T-COFFEE, v = 5.31, t_coffee, http://www.tcoffee.org/Projects_home_page/t_coffee_home_page.html
+PRANK, v = 091016, prank, http://www.ebi.ac.uk/goldman-srv/prank/
+
+Warning:
+* MATCHER (which is part of the BLASTER suite distributed with REPET) is also an EMBOSS program. Possible name conflicts.
+* Optional but recommended for the full usage of the pipelines, you will need Repbase, the well-known data-bank of known repeats. To obtain it, go to http://www.girinst.org/repbase/index.html. 
+* Optional: if you want to search for protein domains by HMM profiles in your TE consensus you need to have hmmpfam (from package hmmer2) or hmmpress and hmmscan (from package hmmer3) and an appropriate bank of HMM profiles. 
+
+-------------------------------------------------------------------------------
+
+=======
+INSTALL
+=======
+
+
+Most parts of the REPET package are written in Python, a programming language that does not require compilation, while some are written in C++ and therefore require compilation.
+* If the archive already contains a directory named "bin/", it means that you don't need to compile anything: the C++ programs are given as executables.
+* If the archive does not contain any directory named "bin/", it means that you do need a compilation step: run "make compile" and then "make install".
+
+Before smoothly using the programs from the REPET package, you will have to do a few more steps:
+* go to your home directory and open the file containing your parameters (".profile" or ".bashrc") with your favorite text editor
+* add several environment variables:
+export REPET_PATH=$HOME/src/repet_pipe/
+export REPET_JOBS=MySQL
+export REPET_QUEUE=SGE
+export PYTHONPATH=$REPET_PATH
+* add the path to the "bin/" directory to your own PATH:
+export PATH=$REPET_PATH/bin:...:$PATH
+* source the file: ". ~/.profile" or "source ~/.profile"
+
+However, before using the TEdenovo and TEannot pipelines, you are HIGHLY ADVISED to read the tutorials in the "doc/" directory.
+
+
+-------------------------------------------------------------------------------
+
+=============
+DOCUMENTATION
+=============
+
+The files "TEdenovo_tuto.txt" and "TEannot_tuto.txt" are short tutorials on respectively the TEdenovo pipeline and the TEannot pipeline.
+The file "BLASTERsuite_doc.txt" gives more details about the programs BLASTER, MATCHER and GROUPER.
+
+
+-------------------------------------------------------------------------------
+
+=====================
+PARALLEL COMPUTATIONS
+=====================
+
+Nowadays, it is common to work with large amounts of data. Hence, whenever possible, we parallelized our pipelines to save computer time and reduce software memory requirements.
+The REPET package works with SGE (Sun Grid Engine), a free batch-queuing system.
+In this aim, we developed a specific Python module managing these tasks: launching the jobs in parallel, tracking the errors and re-launching each job in error up to three times. Errors can be due to power break, no more disk space...
+All the details are stored in a MySQL table named "jobs". For this, if you use REPET on a computer cluster, the Python package "MySQLdb" has to be reachable from the slave nodes and not from the master node only.
+
+Beside "qstat" (utility from SGE), you can use directly the "jobs" table, here are the kind of MySQL commands you may need:
+mysql> DESCRIBE jobs;
+mysql> SELECT DISTINCT groupid FROM jobs;
+mysql> SELECT status, count(*) FROM jobs WHERE groupid="exRepet_Blaster_Piler_Map" GROUP BY status;
+mysql> UPDATE jobs SET status="error" WHERE groupid="exRepet_Blaster_Piler_Map" AND status="waiting";
+mysql> DELETE FROM jobs WHERE groupid="exRepet_Blaster_Piler_Map";
+
+
+-------------------------------------------------------------------------------
+
+======================
+AUTHORS & CONTRIBUTORS
+======================
+
+(in alphabetical order)
+Francoise Alfama
+Sandie Arnoux
+Delphine Autard
+Benoit Bely
+Marc Bras
+Elodie Duprat
+Gael Faroux
+Timothee Flutre
+Claire Hoede
+Olivier Inizan
+Hadi Quesneville
+Dorothee Valdenaire
+
+http://urgi.versailles.inra.fr
+
+
+-------------------------------------------------------------------------------
+
+==========
+REFERENCES
+==========
+
+Flutre T, Duprat E, Feuillet C, Quesneville H (2011)
+Considering transposable element diversification in de novo annotation approaches.
+PLoS ONE 6(1): e16526. doi:10.1371/journal.pone.0016526
+
+Quesneville H, Bergman C, Andrieu O, Autard D, Nouaud D, Ashburner M, Anxolabehere D (2005)
+Combined evidence annotation of transposable elements in genome sequences.
+PLoS Comput Biol 1(2): e22. doi:10.1371/journal.pcbi.0010022
+
+Below is a non-exhaustive list of publications related to the REPET package and the programs it integrates:
+* BLASTER, GROUPER, MATCHER: Quesneville, H.; Bergman, C. M.; Andrieu, O.; Autard, D.; Nouaud, D.; Ashburner, M. & Anxolabéhère, D. (2005), 'Combined idence annotation of transposable elements in genome sequences.', PLoS Computational Biology 1(2).
+* RECON: Bao, Z. & Eddy, S. R. (2002), 'Automated de novo identification of repeat sequence families in sequenced genomes.', Genome Research 12(8), 1269--1276.
+* PILER: Edgar, R. C. & Myers, E. W. (2005), 'PILER: identification and classification of genomic repeats.', Bioinformatics 21 Suppl 1.
+* MAP: Huang, X. (1994), 'On global sequence alignment.', Comput Appl Biosci 10(3), 227--235.
+* REPBASE: Jurka, J.; Kapitonov, V. V.; Pavlicek, A.; Klonowski, P.; Kohany, O. & Walichiewicz, J. (2005), 'Repbase Update, a database of eukaryotic repetitive elements.', Cytogenet Genome Res 110(1-4), 462--467.
+* CENSOR: Oleksiy K., Andrew J. G., Lukasz H., Jerzy, J. (2006). `Annotation, submission and screening of repetitive elements in Repbase: RepbaseSubmitter and Censor'. BMC Bioinformatics 7:474+.
+* REPEATMASKER: Smit, A. F. A.; Hubley, R. & Green, P. (1996-2004), RepeatMasker Open-3.0., <http://www.repeatmasker.org>.
+* TRF: Benson, G. (1999), 'Tandem repeats finder: a program to analyze DNA sequences.', Nucleic Acids Res 27(2), 573--580.
+* MREPS: Kolpakov, R.; Bana, G. & Kucherov, G. (2003), 'mreps: efficient and flexible detection of tandem repeats in DNA', Nucl. Acids Res. 31(13), 3672--3678.
+* MAFFT: Katoh, K.; Misawa, K.; Kuma, K. & Miyata, T. (2002), 'MAFFT: a novel method for rapid multiple sequence alignment based on fast Fourier transform.', Nucleic Acids Res 30(14), 3059--3066.
+* MUSCLE: Edgar, R. C. (2004), 'MUSCLE: a multiple sequence alignment method with reduced time and space complexity.', BMC Bioinformatics 5(1).
+* CLUSTAL-W: Thompson, J. D.; Higgins, D. G. & Gibson, T. J. (1994), 'CLUSTAL W: improving the sensitivity of progressive multiple sequence alignment through sequence weighting, position-specific gap penalties and weight matrix choice.', Nucleic Acids Res 22(22), 4673--4680.

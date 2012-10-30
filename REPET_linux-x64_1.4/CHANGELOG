@@ -1,0 +1,322 @@
+ChangeLog of REPET
+
+
+
+REPET release 1.4
+(release date 15/04/11)
+
+Bug fixes:
+- in TEannot, update NCBI-BLAST parameters (for blastall 2.2.21)
+- in configuration, "cluster" option isn't available anymore : pipelines can't be launched without a job scheduler (SGE)
+
+New features:
+- in configuration, change "queue" option to "resources" option (not mandatory) to set if specific resources are needed (memory or time)
+
+
+
+REPET release 1.3.13
+(not released)
+
+Bug fixes:
+- in TEdenovo and TEannot, job submission management
+- in TEdenovo and TEannot, when too many files are produced : change files management
+- in TEdenovo and TEannot, when too many files are produced : change jobs recording in database
+- in TEdenovo step 5, correction of headers formating, to allow project names containing "_"
+
+New features:
+- improvement of GiveInfoTEannot.py (script which compute statistics from the annotation results)
+- limit to 10000 the number of jobs in "waiting" status.
+- add step 6 for TEdenovo : filter of SSR and noCat consensus built from less than 10 fragments
+- add step 7 for TEdenovo : clustering of final consensus
+
+
+
+REPET release 1.3.12.1
+(release date 20/10/2010)
+
+Bug fix:
+- in TEdenovo and TEannot, handle MySQL timeout
+
+
+
+REPET release 1.3.12
+(release date 08/10/2010)
+
+Bug fixes:
+- in TEannot step 3, update all match scores when more than one alignment method is used to avoid fragmented matches in MATCHER
+- in TEannot step 7, manage DB connection
+
+New features:
+- in TEdenovo step 1, add support for megablast by BLASTER (for large genomes)
+- in TEdenovo step 2, add possibility to cluster in GROUPER by assessing overlaps in terms of number of nucleotides
+- in TEdenovo step 2, better handle identical members in GROUPER (likely to be palindromic repeats)
+- in TEdenovo step 4, adding the profile HMM search
+- in TEdenovo step 4 and 5, add support for 'TEclass' (Abrusan et al., 2009)
+- in both pipelines, improve management of job memory shortage, job timeout and node failure
+- in both pipelines, each step is run on cluster node(s)
+
+
+
+REPET release 1.3.11
+(release date 28/07/2010)
+
+Bug fixes:
+- in TEdenovo and TEannot, give summary of execution times with only one job
+- in TEannot, filter matches even if minimum score is given as a float
+- in TEannot, properly compute weighted identity for long joins when some matches are overlapping
+
+New features:
+- in TEannot, allow to decide what to clean thanks to an option in command-line
+- in TEannot, allow to launch RepeatMasker with default sensitivity
+- add several tools in the public releases
+
+
+
+REPET release 1.3.10
+(release date 06/07/2010)
+
+Bug fixes:
+- avoid to use "/tmp" when handling large data sets from MySQL tables
+
+New features:
+- in TEannot step 8, allow to delete MySQL tables once GFF3 or gameXML files have been made
+- in TEdenovo and TEannot, provide summary of execution times for jobs launched in parallel
+- in TEannot, add options to tune RepeatMasker options
+
+
+
+REPET release 1.3.9
+(release date 05/05/2010)
+
+Bug fixes:
+- in TEdenovo step 5, when setting "cluster: yes" in the configuration file
+- in TEdenovo step 4, handle WU-BLAST exceptions when using tblastx and blastx
+
+New features:
+- in TEdenovo step 4 and 5, use super-family information when available in Repbase formatted for REPET
+- in TEdenovo step 5, improve the host's gene filter
+
+
+
+REPET release 1.3.8
+(release date 06/04/2010)
+
+Bug fixes:
+- in TEannot step 1, take into account the kind of BLAST when preparing the banks
+
+New features:
+- in TEannot, add option in configuration file to specify BLAST (NCBI or WU)
+
+Development:
+- new package for data persistence called pyRepetUnit.commons.sql 
+
+
+
+REPET release 1.3.7
+(release date 26/02/2010)
+
+Bug fixes:
+- in TEdenovo step 5, properly remove redundancy within consensus of the same category
+
+New features:
+- in TEannot step 7, remove copies (chains of matches) shorter than a given length (20 bp by default)
+
+Development:
+- when launching jobs in parallel, free temporary directory in case of program error
+- new package for sequences manipulation called pyRepetUnit.commons.seq.
+
+Warning:
+- problem of portability on Solaris for Grouper (TEdenovo)
+
+
+
+REPET release 1.3.6
+(release date 29/01/2010)
+
+New features:
+- in TEdenovo step 1, remove redundant matches due to parallelized all-by-all
+- in TEdenovo step 2, for Grouper, set stringent behavior when merging
+- in TEdenovo step 5, use blastn results when classifying consensus
+- in TEannot, add comparison with an amino-acid data-bank via blastx
+- in TEdenovo & TEannot, add checks (binaries, input files, parameters and SGE)
+
+Development:
+- new package for coordinates manipulation called pyRepetUnit.commons.coord. 
+
+Warning:
+- problem of portability on Solaris for Grouper (TEdenovo)
+
+
+
+REPET release 1.3.5
+(release date 17/12/2009)
+
+New features:
+- none
+
+Development:
+- generation of super-agent output
+- multifasta parser only with SNP (length = 1)
+- in package coord, migration of SetUtils
+
+Warning:
+- problem of portability on Solaris for Grouper (TEdenovo)
+
+
+
+REPET release 1.3.4
+(release date 02/12/2009)
+
+New features:
+- in TEannot step 7, when trying to join two fragments, compute the weighted identity
+- when launching jobs in parallel, use a unique directory to avoid conflicts between users
+
+Development:
+- create utility classes for Path and Set objects (add a specific sort)
+
+Warning:
+- problem of portability on Solaris for Grouper (TEdenovo)
+
+
+
+REPET release 1.3.3.1
+(release date 10/11/2009)
+
+Patch:
+- fix erratic troubles in TEdenovo step 4 when launching tblastx
+
+New features:
+- when launching jobs in parallel, check there is at least 1Gb in temporary directory
+
+
+
+REPET release 1.3.3
+(release date 06/11/2009)
+
+New features:
+- allow to pass options to qsub via configuration file
+- in TEdenovo step 2, improve scalability on large, complex genomes
+
+Development:
+- "coord" API: 80% tested
+- "launcher" API: first template and implementations (Map, Mafft, RepeatMasker)
+
+Warning:
+- problem of portability on Solaris for Grouper (TEdenovo)
+- erratic troubles in TEdenovo step 4 when launching tblastx
+
+
+
+REPET release 1.3.2
+(release date 05/10/2009)
+
+New features:
+- improve redundancy removal in Grouper
+- clean temporary directory in pipelines
+
+Development:
+- choose Doxygen for documentation
+- document tools and APIs (see Makefile)
+
+Warning:
+- problem of portability on Solaris for Grouper (TEdenovo)
+
+
+
+REPET release 1.3.1
+(release date 08/09/2009)
+
+New features:
+- specify tmpDir for jobs execution in TEdenovo.cfg & TEannot.cfg
+
+Development:
+- continuous integration (unitary and functional tests)
+
+
+
+REPET release 1.3
+(release date 21/07/2009)
+
+New features
+- in TEdenovo, in step 2, options to launch the clustering programs on a cluster node from within the pipeline
+- in TEdenovo, in step 2, when launching Grouper, build only the groups and not the clusters which speeds up a lot
+- in TEannot, in step 3, when launching Matcher, do the cleaning procedure after joining the HSPs
+- in TEannot, in step 7, use the weighted identity to approximate the age of a chain of TE fragments
+
+Development:
+- new methodology: test-driven development (TDD)
+- add some code with Python unitary tests in both pipelines
+
+
+
+REPET release 1.2.3
+(release date 16/03/2009)
+
+New features:
+- in TEdenovo, options to filter HSPs after the clustering
+- in TEdenovo, option to choose the minimum number of bases to edit a consensus
+- in TEdenovo, speed up the step 4 to handle a larger number of consensus
+- in TEdenovo, option to launch the step 5 in parallel
+- in TEannot, option to compare the TE library on the randomized genomic sequences
+- in TEannot, option to force the usage of default values when filtering false positive
+
+Bug fixes:
+- in TEdenovo, correctly parse the joins made by GROUPER
+- in TEannot, update the connected fragments after the jobs were launched in parallel
+ 
+
+
+REPET release 1.2.2
+(release date 31/10/2008)
+
+New features:
+- in TEdenovo, add option for GROUPER in the configuration file
+- in TEannot, use C++ parsers in some time-limiting steps
+- in TEannot, add option for BLASTER's sensitivity in the configuration file
+- in TEannot, allow not to launch tblastx alignments
+- in both, verbose options have been added in all python scripts (not yet for the C++ programs)
+
+Bug fixes:
+- in TEannot, rename all sequence headers internally to prevent errors (also for GFF3 export)
+
+
+
+REPET release 1.2.1
+(release date 09/10/2008)
+
+Bug fixes:
+- in TEdenovo, for precaution, remove the space in sequence headers between "class" and "I" or "II" in the classification step
+- in TEannot, when necessary, take the default threshold from the configuration file
+- in TEannot, add option "join" in the step 3 when using MATCHER
+
+
+
+REPET release 1.2.0
+(release date 30/09/2008)
+
+New feature:
+- in TEannot, add option -c in step 3 to allow different combinations of alignment programs
+
+Bug fixes:
+- in TEannot, rename all headers of the reference TE library to prevent crashes of RepeatMasker when they are longer than 50 characters
+- in pyRepet, don't use Unix's sed anymore as some sequence headers can be interpreted as regular expression
+
+
+
+REPET release 1.1.0
+(release date 25/09/2008)
+
+New features:
+- in TEdenovo, increase BLASTER stringency to speed up the redundancy removal procedure
+- in TEdenovo, change the default redundancy removal procedure in the configuration file
+- in TEannot, manage IUPAC characters replacement before launching MREPS
+- in TEannot, decrease BLASTER sensitivity to speed up the computations
+
+Bug fixes:
+- in TEdenovo, fix problems when parsing outputs from RECON and PILER
+- in TEdenovo, keep N stretches when building chunks
+
+
+
+REPET release 1.0.0
+(release date 31/07/2008)

@@ -1,0 +1,59 @@
+==================================================
+file name: genome2.fasta            
+sequences:             1
+total length:    1000000 bp  (1000000 bp excl N/X-runs)
+GC level:         43.32 %
+bases masked:     298473 bp ( 29.85 %)
+==================================================
+                 number of      length   percentage
+                 elements*     occupied  of sequence
+--------------------------------------------------
+SINEs:                  0            0 bp    0.00 %
+
+LINEs:                  0            0 bp    0.00 %
+
+LTR elements:           2          616 bp    0.06 %
+      Copia             0            0 bp    0.00 %
+      Gypsy             0            0 bp    0.00 %
+      Unclassified	     2          616 bp    0.06 %
+
+DNA elements:           0            0 bp    0.00 %
+      MuDR              0            0 bp    0.00 %
+      ENSPM             0            0 bp    0.00 %
+      hAT               0            0 bp    0.00 %
+      Other Classes      0            0 bp    0.00 %
+      Unclassified      0            0 bp    0.00 %
+
+MITE                     0            0 bp    0.00 %
+
+HELITRON                 0           0 bp    0.00 %
+
+Unclassified:           1          246 bp    0.02 %
+
+
+Total interspersed repeats:         862 bp    0.09 %
+
+
+Centromeric             0           0 bp    0.00 %
+
+Ribosomal               0           0 bp    0.00 %
+
+Telomeric              0           0 bp    0.00 %
+
+Small RNA:              0            0 bp    0.00 %
+
+Satellites:             0            0 bp    0.00 %
+Simple repeats:         0            0 bp    0.00 %
+Low complexity:         0            0 bp    0.00 %
+==================================================
+
+* most repeats fragmented by insertions or deletions
+  have been counted as one element
+                                                      
+
+The query species was assumed to be homo          
+RepeatMasker version open-3.3.0 , rushjob mode
+                                   
+run with blastp version 2.0MP-WashU [04-May-2006] [linux26-x64-I32LPF64 2006-05-10T17:22:28]
+The query was compared to classified sequences in ".../PReDa_120829.fasta"
+RepBase Update 20110920, RM database version 20110920

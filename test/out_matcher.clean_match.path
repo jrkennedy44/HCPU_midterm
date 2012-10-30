@@ -1,0 +1,197 @@
+1	chr12	383621	384229	DTC_gi_77557013_gb_ABA99809.1transposon protein, putative, CACTA, En/Spm sub-class [Oryza sativa (japonica cultivar-group)]	1966	1764	7e-174	379	99.01
+2	chr12	510814	511422	DTC_gi_77557013_gb_ABA99809.1transposon protein, putative, CACTA, En/Spm sub-class [Oryza sativa (japonica cultivar-group)]	1764	1966	5e-168	375	98.03
+3	chr12	382565	382756	DTC_gi_77555493_gb_ABA98289.1transposon protein, putative, CACTA, En/Spm sub-class [Oryza sativa (japonica cultivar-group)]	2267	2201	6e-19	96	74.63
+4	chr12	382737	382880	DTC_gi_77555493_gb_ABA98289.1transposon protein, putative, CACTA, En/Spm sub-class [Oryza sativa (japonica cultivar-group)]	2236	2189	9e-177	76	66.67
+5	chr12	382975	383511	DTC_gi_77555493_gb_ABA98289.1transposon protein, putative, CACTA, En/Spm sub-class [Oryza sativa (japonica cultivar-group)]	2188	2070	9e-177	218	65.92
+6	chr12	384502	384729	DTC_gi_77555493_gb_ABA98289.1transposon protein, putative, CACTA, En/Spm sub-class [Oryza sativa (japonica cultivar-group)]	1775	1700	0	155	94.74
+7	chr12	384792	386216	DTC_gi_77555493_gb_ABA98289.1transposon protein, putative, CACTA, En/Spm sub-class [Oryza sativa (japonica cultivar-group)]	1703	1229	0	958	97.89
+8	chr12	389921	392110	DTC_gi_77555493_gb_ABA98289.1transposon protein, putative, CACTA, En/Spm sub-class [Oryza sativa (japonica cultivar-group)]	1229	500	0	1423	98.49
+9	chr12	392104	393204	DTC_gi_77555493_gb_ABA98289.1transposon protein, putative, CACTA, En/Spm sub-class [Oryza sativa (japonica cultivar-group)]	501	135	0	749	98.64
+10	chr12	503097	506381	DTC_gi_77555493_gb_ABA98289.1transposon protein, putative, CACTA, En/Spm sub-class [Oryza sativa (japonica cultivar-group)]	135	1229	0	2184	98.08
+11	chr12	508826	510250	DTC_gi_77555493_gb_ABA98289.1transposon protein, putative, CACTA, En/Spm sub-class [Oryza sativa (japonica cultivar-group)]	1229	1703	0	966	98.74
+12	chr12	510313	510540	DTC_gi_77555493_gb_ABA98289.1transposon protein, putative, CACTA, En/Spm sub-class [Oryza sativa (japonica cultivar-group)]	1700	1775	0	152	93.42
+13	chr12	511532	512068	DTC_gi_77555493_gb_ABA98289.1transposon protein, putative, CACTA, En/Spm sub-class [Oryza sativa (japonica cultivar-group)]	2070	2188	2e-169	198	64.8
+14	chr12	512163	512306	DTC_gi_77555493_gb_ABA98289.1transposon protein, putative, CACTA, En/Spm sub-class [Oryza sativa (japonica cultivar-group)]	2189	2236	2e-169	75	66.67
+15	chr12	512287	512478	DTC_gi_77555493_gb_ABA98289.1transposon protein, putative, CACTA, En/Spm sub-class [Oryza sativa (japonica cultivar-group)]	2201	2267	4e-19	96	74.63
+16	chr12	383600	383620	DTC_gi_78708584_gb_ABB47559.1transposon protein, putative, CACTA, En/Spm sub-class [Oryza sativa (japonica cultivar-group)]	1758	1752	6e-129	10	70.95
+17	chr12	511423	511443	DTC_gi_78708584_gb_ABB47559.1transposon protein, putative, CACTA, En/Spm sub-class [Oryza sativa (japonica cultivar-group)]	1752	1758	4e-123	9	70
+18	chr12	931100	931405	RLC_gi_24431600_gb_AAN61480.1Putative polyprotein from transposon TNT [Oryza sativa (japonica cultivar-group)]	1	102	4e-53	208	96.08
+19	chr12	125712	126566	RIL_gi_21686921_gb_AAK71569.2_AC087852_29 putative reverse transcriptase [Oryza sativa (japonica cultivar-group)]	1533	1802	2e-12	74	22.88
+20	chr12	126093	126842	RIL_gi_21686921_gb_AAK71569.2_AC087852_29 putative reverse transcriptase [Oryza sativa (japonica cultivar-group)]	1546	1788	2e-15	84	25.4
+21	chr12	126114	126968	RIL_gi_21686921_gb_AAK71569.2_AC087852_29 putative reverse transcriptase [Oryza sativa (japonica cultivar-group)]	1484	1762	5e-24	112	26.83
+22	chr12	537163	537825	RIL_gi_21686921_gb_AAK71569.2_AC087852_29 putative reverse transcriptase [Oryza sativa (japonica cultivar-group)]	1734	1516	1e-13	79	23.98
+23	chr12	73851	73949	RIL_gnl_PTREP_PTREP127 Retrotransposon, non-LTR, LINE "Nala_210J24-1" (TREP2314) 5' truncated polyprotein	1461	1430	3e-35	16	30.25
+24	chr12	183092	183265	RLG_gi_21672054_gb_AAM74416.1_AC120497_16 Putative retroelement [Oryza sativa (japonica cultivar-group)]	168	225	2e-51	91	68.97
+25	chr12	183262	183440	RLG_gi_21672054_gb_AAM74416.1_AC120497_16 Putative retroelement [Oryza sativa (japonica cultivar-group)]	225	284	2e-51	70	81.67
+26	chr12	188965	189003	RLG_POPGY1_gagpolLTRGypsy_161-5488_Populus_trichocarpa	1762	1774	6e-50	7	31.06
+27	chr12	714608	714691	DTM_gi_23617234_dbj_BAC20901.1contains ESTs C28952(C62945),AU166981(C62945)~similar to transposon protein [Oryza sativa (japonica cultivar-group)]	1752	1725	5e-13	64	100
+28	chr12	715285	716706	DTM_gi_23617234_dbj_BAC20901.1contains ESTs C28952(C62945),AU166981(C62945)~similar to transposon protein [Oryza sativa (japonica cultivar-group)]	1	474	0	902	97.05
+29	chr12	769081	769329	DTM_gi_23617234_dbj_BAC20901.1contains ESTs C28952(C62945),AU166981(C62945)~similar to transposon protein [Oryza sativa (japonica cultivar-group)]	1	83	9e-139	155	87.95
+30	chr12	769335	769991	DTM_gi_23617234_dbj_BAC20901.1contains ESTs C28952(C62945),AU166981(C62945)~similar to transposon protein [Oryza sativa (japonica cultivar-group)]	85	303	9e-139	361	78.08
+31	chr12	769988	770077	DTM_gi_23617234_dbj_BAC20901.1contains ESTs C28952(C62945),AU166981(C62945)~similar to transposon protein [Oryza sativa (japonica cultivar-group)]	1343	1372	5e-55	46	63.33
+32	chr12	770173	770850	DTM_gi_23617234_dbj_BAC20901.1contains ESTs C28952(C62945),AU166981(C62945)~similar to transposon protein [Oryza sativa (japonica cultivar-group)]	1374	1559	5e-55	191	56.39
+33	chr12	591447	593192	RLG_gi_15187182_gb_AAK91332.1_AC090441_14 Putative gag-pol polyprotein [Oryza sativa] gi_15217296_gb_AAK92640.1_AC079634_1 Putative retroelement [Oryza sativa]	147	747	9e-174	587	50.58
+34	chr12	401037	401219	RLC_gi_13937301_gb_AAK50132.1_AC087797_17 putative gag-pol polyprotein [Oryza sativa]	1700	1640	9e-26	118	93.44
+35	chr12	528956	529009	RIL_Q2QQV8_ORYSA	616	599	0	19	52.73
+36	chr12	979308	979439	RLC_Copia-132_SBLTRCopia_69-4734_via_tfasty_with_SBCopia1_4_frameshifts_and_6_stopcodons_Sorghum_bicolor	840	883	3e-126	39	48.84
+37	chr12	979574	979685	RLC_Copia-77_SBLTRCopia_2969-7580_via_tfasty_with_Copia-60_SB_1_frameshift_Sorghum_bicolor	954	990	0	23	26.32
+38	chr12	977787	979307	RLC_Copia-50_SBLTRCopia_85-4545_via_tfasty_with_Copia-60_SB_3_stopcodons_Sorghum_bicolor	290	811	0	634	62.29
+39	chr12	481292	481899	RLC_Copia-100_SBLTRCopia_34-4489_via_tfasty_with_Copia-53_ZM_1_frameshift_and_2_stopcodons_Sorghum_bicolor	1283	1485	9e-72	268	64.53
+40	chr12	520362	520757	RIL_gi_218186284_gb_EEC68711.1_	1345	1216	3e-66	123	60.61
+41	chr12	520768	521466	RIL_gi_218186284_gb_EEC68711.1_	1212	992	3e-66	151	43.35
+42	chr12	523321	524730	RIL_gi_218186284_gb_EEC68711.1_	1476	1007	0	758	99.79
+43	chr12	524689	525009	RIL_gi_218186284_gb_EEC68711.1_	1020	914	4e-51	201	100
+44	chr12	526009	527709	RIL_gi_218186284_gb_EEC68711.1_	925	352	0	1129	97.91
+45	chr12	528092	528955	RIL_gi_218186284_gb_EEC68711.1_	351	64	2e-162	546	98.96
+46	chr12	529167	529355	RIL_gi_218186284_gb_EEC68711.1_	63	1	2e-27	124	95.24
+47	chr12	477710	481288	RLC_Copia-30_SBLTRCopia_42-4423_via_tfasty_with_SC-4_1_frameshift_Sorghum_bicolor	87	1254	0	1172	53.55
+48	chr12	49100	49120	RLC_Copia2-PTRLTRCopia_141-4520_via_tfasty_with_ATCopia62_100-4614_3_frameshifts_and_4_stopcodons_Populus_trichocarpa	1455	1461	2e-157	4	32.19
+49	chr12	282824	285268	RLC_AAS07202.1	44	877	0	1314	82.54
+50	chr12	285250	287004	RLC_AAS07202.1	872	1456	0	1063	91.11
+51	chr12	477710	481291	RLC_CPSC4BLTRCopia_106-4455_Oryza_sativa	66	1240	0	1172	55.57
+52	chr12	977763	979304	RLC_Copia-45_ZMLTRCopia_2980-7303_via_tfasty_with_Copia-60_SB_1_frameshift_This_is_the_product_of_the_inner_Copia_element_of_Copia-45_ZM_which_is_inserted_in_a_Copia-60_SB-like_copia_in_the_opposite_orientation_Zea_mays	276	793	0	634	59.92
+53	chr12	481900	481923	RLC_Copia-4_BDLTRCopia_37-4348_via_tfasty_with_CPSC4B_3_frameshifts_and_2_stopcodons_Brachypodium_distachyon	1430	1437	0	10	59.72
+54	chr12	44813	44893	RLC_CPSC4ALTRCopia_38-4345_Oryza_sativa	1	27	0	39	74.38
+55	chr12	481900	481923	RLC_Copia-38_SBLTRCopia_49-4349_via_tfasty_with_Copia-9_SB_1_frameshift_Sorghum_bicolor	1427	1434	2e-179	10	56.54
+56	chr12	44894	49099	RLC_CPSC5LTRCopia_35-4303_via_tfasty_with_CPSC4A_38-4345_1_stopcodon_Oryza_sativa	33	1423	0	2160	77.95
+57	chr12	529356	529931	RIL_L1-11_Mad_polLINEL1 1548-5797_via_tfasty_with_ATLINE1_2_pol_1_frameshift_Malus_x_domestica	266	64	8e-15	67	27.52
+58	chr12	182117	183052	RLG_gi_21450448_gb_AAM54152.1_AC104616_11 Putative GAG-POL precursor [Oryza sativa (japonica cultivar-group)] gi_22725970_gb_AAN04970.1putative retrotransposon protein [Oryza sativa (japonica cultivar-group)]	24	335	4e-95	341	79.49
+59	chr12	525955	526008	RIL_AAG13524.1	1381	1364	0	10	32.92
+60	chr12	477648	477707	RLC_Copia-80_SBLTRCopia_20-4134_via_tfasty_with_Copia-74_SB_1_frameshift_and_2_stopcodons_Sorghum_bicolor	50	69	5e-19	31	50
+61	chr12	282626	282823	RLC_gi_13129472_gb_AAK13130.1_AC083945_5 Putative gag-pol polyprotein [Oryza sativa]	40	101	0	96	79.41
+62	chr12	288186	288641	RLC_gi_13129472_gb_AAK13130.1_AC083945_5 Putative gag-pol polyprotein [Oryza sativa]	40	183	2e-30	133	56.52
+63	chr12	288213	288407	RLC_gi_13129472_gb_AAK13130.1_AC083945_5 Putative gag-pol polyprotein [Oryza sativa]	1163	1236	7e-11	69	59.46
+64	chr12	930917	930970	RLC_gi_13129472_gb_AAK13130.1_AC083945_5 Putative gag-pol polyprotein [Oryza sativa]	138	152	6e-11	8	27.04
+65	chr12	614453	614842	RLC_gi_18542917_gb_AAL75752.1_AC037197_10 Putative copia-type polyprotein [Oryza sativa]	1231	1347	2e-16	87	36.3
+66	chr12	624509	624898	RLC_gi_18542917_gb_AAL75752.1_AC037197_10 Putative copia-type polyprotein [Oryza sativa]	1233	1347	4e-16	86	37.78
+67	chr12	148723	148768	RIL_gi_28269466_gb_AAO38009.1putative reverse transcriptase [Oryza sativa (japonica cultivar-group)] gi_28875978_gb_AAO59987.1putative reverse transcriptase [Oryza sativa (japonica cultivar-group)]	1152	1137	4e-19	6	30.92
+68	chr12	149241	149381	RIL_gi_28269466_gb_AAO38009.1putative reverse transcriptase [Oryza sativa (japonica cultivar-group)] gi_28875978_gb_AAO59987.1putative reverse transcriptase [Oryza sativa (japonica cultivar-group)]	1147	1097	4e-21	34	37.34
+69	chr12	148666	148722	RIL_gi_21326501_gb_AAM47629.1_AC122147_18 Putative non-LTR retroelement reverse transcriptase [Oryza sativa (japonica cultivar-group)]	1253	1233	7e-26	22	51.06
+70	chr12	148770	148892	RIL_gi_21326501_gb_AAM47629.1_AC122147_18 Putative non-LTR retroelement reverse transcriptase [Oryza sativa (japonica cultivar-group)]	1213	1173	7e-26	41	39.02
+71	chr12	472862	474079	RLC_COPI1LTRCopia_35-4003_35-4003_Oryza_sativa	1322	917	0	792	96.55
+72	chr12	474081	474830	RLC_COPI1LTRCopia_35-4003_35-4003_Oryza_sativa	916	667	0	500	97.6
+73	chr12	474732	476825	RLC_COPI1LTRCopia_35-4003_35-4003_Oryza_sativa	699	2	0	1244	97.13
+74	chr12	287005	287037	RLC_TONT2_PVLTRCopia_160-4075_via_tfasty_with_TONT1_LE_(1_frameshift)_Phaseolus_vulgaris	1295	1305	0	11	51.91
+75	chr12	382936	382974	DTC_gnl_PTREP_PTREP23 transposon, CACTA, "Caspar_TREP788" (TREP788) transposase protein	1253	1243	6e-21	4	23.5
+76	chr12	512069	512107	DTC_gnl_PTREP_PTREP23 transposon, CACTA, "Caspar_TREP788" (TREP788) transposase protein	1243	1253	6e-19	4	23
+77	chr12	481924	481944	RLC_Copia-90_Mad_polLTRCopia_1971-5597_Malus_x_domestica	1199	1205	1e-61	4	32.44
+78	chr12	503073	503096	DTC_EnSpm1_SB_p1DNAEn-Spm_1156-4779_Sorghum_bicolor	19	27	0	6	38.97
+79	chr12	931100	931405	RLC_gi_13937286_gb_AAK50117.1_AC087797_2 putative gag-pol polyprotein [Oryza sativa]	1	102	1e-53	208	96.08
+80	chr12	178032	180284	RIL_RILN8_OS_polLINEL1 1416-5008_via_tfasty_with_MIUSE1_TM_pol_3_frameshifts_Oryza_sativa	427	1198	0	754	50.13
+81	chr12	304736	305092	RIL_RILN8_OS_polLINEL1 1416-5008_via_tfasty_with_MIUSE1_TM_pol_3_frameshifts_Oryza_sativa	1169	1052	7e-31	134	52.94
+82	chr12	605	967	RIL_Q8H992_ORYSA	1072	1193	2e-27	123	45.9
+83	chr12	148226	148459	RIL_LINE1-4_SBiLINEL1 2950-6501_via_tfasty_with_L1-7_SBi_pol_11_frameshifts_Sorghum_bicolor	1150	1071	2e-14	43	31.25
+84	chr12	527710	527853	RIL_gi_14018103_gb_AAK52166.1_AC084831_20 putative reverse transcriptase [Oryza sativa]	592	547	0	58	57
+85	chr12	527858	528091	RIL_gi_14018103_gb_AAK52166.1_AC084831_20 putative reverse transcriptase [Oryza sativa]	545	477	0	88	61.1
+86	chr12	471694	471987	RIL_LINE-05_OS_polLINEL1 3047-6601_Oryza_sativa	1085	1182	6e-34	144	64.29
+87	chr12	149694	149750	RIL_gi_27452911_gb_AAO15295.1Putative reverse transcriptase [Oryza sativa (japonica cultivar-group)]	535	515	1e-12	12	32.37
+88	chr12	72998	73033	RIL_LINE1-8_SBiLINEL1 2968-6510_Sorghum_bicolor	1115	1104	3e-75	11	45.21
+89	chr12	148181	148225	RIL_LINE1-8_SBiLINEL1 2968-6510_Sorghum_bicolor	1172	1157	1e-15	9	26.32
+90	chr12	177621	178031	RIL_LINE1-8_SBiLINEL1 2968-6510_Sorghum_bicolor	305	441	5e-89	51	29.65
+91	chr12	187719	187841	RLG_gi_19570993_dbj_BAB86420.1putative retrotransposon polyprotein [Oryza sativa (japonica cultivar-group)]	765	805	0	75	89.85
+92	chr12	187831	188964	RLG_gi_19570993_dbj_BAB86420.1putative retrotransposon polyprotein [Oryza sativa (japonica cultivar-group)]	802	1179	0	724	92.33
+93	chr12	72815	72997	RIL_LINE-6_OS_polLINEL1 1217-4750_Oryza_sativa	1173	1113	2e-136	79	57.38
+94	chr12	73038	73850	RIL_LINE-6_OS_polLINEL1 1217-4750_Oryza_sativa	1099	829	2e-136	429	70.11
+95	chr12	149382	149693	RIL_LINE-6_OS_polLINEL1 1217-4750_Oryza_sativa	929	811	1e-23	110	46.67
+96	chr12	276556	278589	RIL_LINE-6_OS_polLINEL1 1217-4750_Oryza_sativa	214	891	0	1003	74.78
+97	chr12	278412	279431	RIL_LINE-6_OS_polLINEL1 1217-4750_Oryza_sativa	833	1173	4e-132	449	61
+98	chr12	183053	183091	RLG_gi_21671903_gb_AAM74265.1_AC083943_5 Putative retroelement [Oryza sativa (japonica cultivar-group)]	58	70	3e-130	16	70.21
+99	chr12	363244	363360	RLG_Atlantys-2_OS_p2LTRGypsy_ReverseORF_6707-10186_Rvia_tfasty_with_RETRO_2A_p2_2_frameshifts_and_1_stopcodon_Oryza_sativa	1128	1091	8e-85	40	48.72
+100	chr12	363356	365020	RLG_Atlantys-2_OS_p2LTRGypsy_ReverseORF_6707-10186_Rvia_tfasty_with_RETRO_2A_p2_2_frameshifts_and_1_stopcodon_Oryza_sativa	1091	516	8e-85	296	43.25
+101	chr12	365299	366150	RLG_Atlantys-2_OS_p2LTRGypsy_ReverseORF_6707-10186_Rvia_tfasty_with_RETRO_2A_p2_2_frameshifts_and_1_stopcodon_Oryza_sativa	452	157	4e-63	131	38.69
+102	chr12	399153	399356	RLG_Atlantys-2_OS_p2LTRGypsy_ReverseORF_6707-10186_Rvia_tfasty_with_RETRO_2A_p2_2_frameshifts_and_1_stopcodon_Oryza_sativa	647	580	5e-25	115	88.24
+103	chr12	399539	400441	RLG_Atlantys-2_OS_p2LTRGypsy_ReverseORF_6707-10186_Rvia_tfasty_with_RETRO_2A_p2_2_frameshifts_and_1_stopcodon_Oryza_sativa	301	1	3e-151	504	91.36
+104	chr12	393205	393231	DTC_EnSpm2_SB_p1DNAEn-Spm_1333-4740_Sorghum_bicolor	13	5	7e-158	13	65.45
+105	chr12	442995	443153	RIL_gi_8096424_dbj_BAA95894.1Similar to Arabidopsis thaliana chromosome2 BAC F13B15; putative non-LTR retroelement reverse transcriptase. (AC006300) [Oryza sativa (japonica cultivar-group)]	989	1041	1e-29	75	64.15
+106	chr12	443230	443418	RIL_gi_8096424_dbj_BAA95894.1Similar to Arabidopsis thaliana chromosome2 BAC F13B15; putative non-LTR retroelement reverse transcriptase. (AC006300) [Oryza sativa (japonica cultivar-group)]	1072	1134	1e-29	77	52.38
+107	chr12	276520	276555	RIL_gi_12957722_gb_AAK09240.1_AC084320_27 putative reverse transcriptase [Oryza sativa (japonica cultivar-group)]	298	309	7e-170	9	42.23
+108	chr12	979686	980252	RLC_gi_20160996_dbj_BAB89929.1putative gag/pol polyprotein [Oryza sativa (japonica cultivar-group)]	534	726	0	318	78.76
+109	chr12	980246	980716	RLC_gi_20160996_dbj_BAB89929.1putative gag/pol polyprotein [Oryza sativa (japonica cultivar-group)]	723	879	0	255	78.98
+110	chr12	980706	981329	RLC_gi_20160996_dbj_BAB89929.1putative gag/pol polyprotein [Oryza sativa (japonica cultivar-group)]	877	1084	0	372	84.13
+111	chr12	183441	184892	RLG_Atlantys_OS_gagLTRGypsy_434-3697_Oryza_sativa	349	831	0	848	86.98
+112	chr12	184883	185647	RLG_Atlantys_OS_gagLTRGypsy_434-3697_Oryza_sativa	829	1088	0	446	90
+113	chr12	366153	366488	RLG_gi_22758350_gb_AAN05554.1putative gypsy type transposon [Oryza sativa (japonica cultivar-group)]	163	52	1e-70	165	71.43
+114	chr12	43237	43608	RIL_gi_24417209_dbj_BAC22565.1similar to reverse transcriptase [Oryza sativa (japonica cultivar-group)]	1064	963	2e-27	123	52.42
+115	chr12	270741	270884	RIL_gi_24417209_dbj_BAC22565.1similar to reverse transcriptase [Oryza sativa (japonica cultivar-group)]	1003	1050	4e-19	92	85.42
+116	chr12	744479	744889	RIL_gi_24417209_dbj_BAC22565.1similar to reverse transcriptase [Oryza sativa (japonica cultivar-group)]	1065	920	6e-16	86	37.09
+117	chr12	930971	931099	RLC_gi_24899398_gb_AAN64998.1Putative gag-pol polyprotein [Oryza sativa (japonica cultivar-group)]	177	217	3e-31	73	82.28
+118	chr12	667786	668139	RLG_gi_20451049_gb_AAM22020.1_AC093178_15 Putative gag-pol polyprotein [Oryza sativa (japonica cultivar-group)]	581	696	9e-26	83	47.2
+119	chr12	667824	668054	RLG_gi_20451049_gb_AAM22020.1_AC093178_15 Putative gag-pol polyprotein [Oryza sativa (japonica cultivar-group)]	889	994	3e-22	106	53.77
+120	chr12	667824	668150	RLG_gi_20451049_gb_AAM22020.1_AC093178_15 Putative gag-pol polyprotein [Oryza sativa (japonica cultivar-group)]	622	759	5e-41	111	47.86
+121	chr12	667824	668150	RLG_gi_20451049_gb_AAM22020.1_AC093178_15 Putative gag-pol polyprotein [Oryza sativa (japonica cultivar-group)]	770	878	1e-52	155	67.89
+122	chr12	667827	668261	RLG_gi_20451049_gb_AAM22020.1_AC093178_15 Putative gag-pol polyprotein [Oryza sativa (japonica cultivar-group)]	534	677	9e-35	147	48.28
+123	chr12	667839	668150	RLG_gi_20451049_gb_AAM22020.1_AC093178_15 Putative gag-pol polyprotein [Oryza sativa (japonica cultivar-group)]	835	967	6e-25	115	48.12
+124	chr12	668123	668245	RLG_gi_20451049_gb_AAM22020.1_AC093178_15 Putative gag-pol polyprotein [Oryza sativa (japonica cultivar-group)]	810	850	3e-11	70	70.73
+125	chr12	668123	668269	RLG_gi_20451049_gb_AAM22020.1_AC093178_15 Putative gag-pol polyprotein [Oryza sativa (japonica cultivar-group)]	899	947	1e-52	74	63.27
+126	chr12	668123	668275	RLG_gi_20451049_gb_AAM22020.1_AC093178_15 Putative gag-pol polyprotein [Oryza sativa (japonica cultivar-group)]	543	593	3e-14	80	64.71
+127	chr12	668123	668275	RLG_gi_20451049_gb_AAM22020.1_AC093178_15 Putative gag-pol polyprotein [Oryza sativa (japonica cultivar-group)]	780	830	5e-41	79	64.71
+128	chr12	668159	668245	RLG_gi_20451049_gb_AAM22020.1_AC093178_15 Putative gag-pol polyprotein [Oryza sativa (japonica cultivar-group)]	703	731	9e-26	57	79.31
+129	chr12	669039	669623	RLG_gi_20451049_gb_AAM22020.1_AC093178_15 Putative gag-pol polyprotein [Oryza sativa (japonica cultivar-group)]	507	701	9e-64	239	56.44
+130	chr12	669090	669434	RLG_gi_20451049_gb_AAM22020.1_AC093178_15 Putative gag-pol polyprotein [Oryza sativa (japonica cultivar-group)]	880	994	5e-14	79	34.48
+131	chr12	669090	669533	RLG_gi_20451049_gb_AAM22020.1_AC093178_15 Putative gag-pol polyprotein [Oryza sativa (japonica cultivar-group)]	613	760	2e-34	145	51.66
+132	chr12	669103	669924	RLG_gi_20451049_gb_AAM22020.1_AC093178_15 Putative gag-pol polyprotein [Oryza sativa (japonica cultivar-group)]	736	994	2e-41	168	39.24
+133	chr12	669268	669948	RLG_gi_20451049_gb_AAM22020.1_AC093178_15 Putative gag-pol polyprotein [Oryza sativa (japonica cultivar-group)]	613	913	3e-48	190	40.32
+134	chr12	669434	669985	RLG_gi_20451049_gb_AAM22020.1_AC093178_15 Putative gag-pol polyprotein [Oryza sativa (japonica cultivar-group)]	520	688	2e-16	87	35.87
+135	chr12	149694	149753	RIL_gi_8570049_dbj_BAA96754.1unnamed protein product [Oryza sativa (japonica cultivar-group)] gi_9757674_dbj_BAB08193.1Similar to Arabidopsis thaliana chromosome II BAC F13B15; putative non-LTR retroelement reverse transcriptase (AC006300) [Oryza sativa (japonica cultivar-group)]	607	586	4e-13	12	34.29
+136	chr12	959008	959211	RLC_gi_13129444_gb_AAK13102.1_AC078839_18 Similar to Zea mays chromosome 422kDazein-associated intercluster region,copia-typepolpolyprotein [Oryza sativa]	105	38	1e-27	124	85.29
+137	chr12	382936	382974	DTC_gnl_PTREP_PTREP29 transposon, CACTA, "Caspar_AF427791-1" (TREP748) protein	946	936	1e-19	4	23.5
+138	chr12	512069	512107	DTC_gnl_PTREP_PTREP29 transposon, CACTA, "Caspar_AF427791-1" (TREP748) protein	936	946	9e-18	4	23
+139	chr12	716707	716742	DTM_MuDR2_OSDNAMuDR_595-3336_Oryza_sativa	479	490	1e-179	14	61.17
+140	chr12	904746	905048	RIL_LINE1-7_OS_gagLINEL1 664-3400_via_tfasty_with_LINE-05_OS_gag_1_frameshift_and_4_stopcodons_Oryza_sativa	338	241	4e-17	77	41.51
+141	chr12	905045	905113	RIL_LINE1-7_OS_gagLINEL1 664-3400_via_tfasty_with_LINE-05_OS_gag_1_frameshift_and_4_stopcodons_Oryza_sativa	241	219	4e-17	34	60.87
+142	chr12	716707	716742	DTM_MuDR3_OSDNAMuDR_658-3387_Oryza_sativa	475	486	4e-177	14	60.24
+143	chr12	925324	925350	RLG_gi_19551090_gb_AAL91595.1_AC099400_1 Putative polyprotein [Oryza sativa (japonica cultivar-group)]	375	368	2e-48	5	40.14
+144	chr12	925839	926297	RLG_gi_19551090_gb_AAL91595.1_AC099400_1 Putative polyprotein [Oryza sativa (japonica cultivar-group)]	247	89	2e-48	144	48.43
+145	chr12	472754	472861	RLC_gi_18057154_gb_AAL58177.1_AC093181_23 putative polyprotein [Oryza sativa (japonica cultivar-group)]	443	409	3e-32	15	29.08
+146	chr12	20766	20909	DTA_gi_8096417_dbj_BAA95887.1Similar to Antirrhinum majus transposon Tam3 gene; transposase. (AB013982) [Oryza sativa (japonica cultivar-group)]	233	186	8e-13	75	77.08
+147	chr12	442995	443153	RIL_gi_62733693_gb_AAX95804.1retrotransposon protein, putative, unclassified [Oryza sativa (japonica cultivar-group)]	778	830	1e-12	75	62.26
+148	chr12	189308	189493	RLG_gi_20177621_gb_AAM14676.1_AC097446_5 Unknown protein [Oryza sativa (japonica cultivar-group)] gi_22725916_gb_AAN04926.1Putative retroelement [Oryza sativa]	840	779	1e-95	104	83.87
+149	chr12	190375	190454	RLG_gi_20177621_gb_AAM14676.1_AC097446_5 Unknown protein [Oryza sativa (japonica cultivar-group)] gi_22725916_gb_AAN04926.1Putative retroelement [Oryza sativa]	592	567	5e-40	30	78.72
+150	chr12	190989	192335	RLG_gi_20177621_gb_AAM14676.1_AC097446_5 Unknown protein [Oryza sativa (japonica cultivar-group)] gi_22725916_gb_AAN04926.1Putative retroelement [Oryza sativa]	452	22	0	755	81.96
+151	chr12	389876	389920	DTC_gi_20303614_gb_AAM19041.1_AC099774_3 putative transposon-like protein RIM2 [Oryza sativa (japonica cultivar-group)]	833	819	3e-153	29	91.19
+152	chr12	506382	506426	DTC_gi_20303614_gb_AAM19041.1_AC099774_3 putative transposon-like protein RIM2 [Oryza sativa (japonica cultivar-group)]	819	833	7e-152	28	90.8
+153	chr12	382565	382702	DTC_gi_110288589_gb_AAP52064.2transposon protein, putative, CACTA, En/Spm sub-class [Oryza sativa (japonica cultivar-group)]	815	770	3e-19	96	97.83
+154	chr12	512341	512478	DTC_gi_110288589_gb_AAP52064.2transposon protein, putative, CACTA, En/Spm sub-class [Oryza sativa (japonica cultivar-group)]	770	815	3e-19	96	97.83
+155	chr12	185658	187718	RLG_Q2QYW9_ORYSA	1	687	0	1388	100
+156	chr12	183053	183091	RLG_gi_18425242_gb_AAL69420.1_AC098565_2 Putative gag-pol polyprotein [Oryza sativa]	235	247	0	16	73.33
+157	chr12	189496	190191	RLG_gi_19881665_gb_AAM01066.1_AC092748_4 Hypothetical protein with similarity to putative retroelement [Oryza sativa] gi_21672088_gb_AAM74450.1_AC124213_8 Hypothetical protein similar to putative retroelements [Oryza sativa (japonica cultivar-group)]	757	552	1e-104	299	69.96
+158	chr12	73851	73892	RIL_gi_22093759_dbj_BAC07051.1putative reverse transcriptase [Oryza sativa (japonica cultivar-group)]	490	477	7e-94	16	55.23
+159	chr12	148462	148665	RIL_gi_22093759_dbj_BAC07051.1putative reverse transcriptase [Oryza sativa (japonica cultivar-group)]	736	669	2e-20	100	63.24
+160	chr12	384756	384791	DTC_gi_218187043_gb_EEC69470.1_	390	379	9e-67	7	35.1
+161	chr12	510251	510286	DTC_gi_218187043_gb_EEC69470.1_	379	390	3e-68	7	35.1
+162	chr12	366489	366515	RLG_gi_22535679_dbj_BAC10853.1similar to gypsy-type retrotransposon protein [Oryza sativa (japonica cultivar-group)]	45	37	4e-12	6	37.29
+163	chr12	189308	189495	RLG_gi_20042992_gb_AAM08800.1_AC090486_10 Hypothetical protein with similarity to putative retroelements [Oryza sativa]	760	698	1e-100	104	83.08
+164	chr12	190239	190304	RLG_gi_20042992_gb_AAM08800.1_AC090486_10 Hypothetical protein with similarity to putative retroelements [Oryza sativa]	514	493	1e-100	43	90.91
+165	chr12	156855	159032	DTA_TWIFBIG_tpDNAhAT-Ac_668-2846_One_frameshift_in_RepBase_entry_Estwised_with_several_hAT_transposases_Oryza_sativa	726	1	0	1347	99.31
+166	chr12	828518	830650	DTA_TWIFB1_tpDNAhAT-Ac_914-3046_2_stopcodons_so_may_be_poor_quality_Oryza_sativa	711	1	0	1295	98.59
+167	chr12	365021	365074	RLG_gi_77555034_gb_ABA97830.1_	407	391	4e-23	7	35.23
+168	chr12	365220	365285	RLG_gi_77555034_gb_ABA97830.1_	353	332	8e-48	22	31.82
+169	chr12	769015	769080	DTM_gi_28209482_gb_AAO37500.1putative transposon protein [Oryza sativa (japonica cultivar-group)]	62	82	2e-26	22	42.62
+170	chr12	976935	977570	RLC_gi_27764668_gb_AAO23093.1putative polyprotein [Oryza sativa (japonica cultivar-group)]	25	236	7e-119	389	91.98
+171	chr12	925324	925350	RLG_gi_23617004_dbj_BAC20700.1similar to polyprotein [Oryza sativa (japonica cultivar-group)]	370	362	9e-47	5	38.73
+172	chr12	190455	192029	RLG_Atlantys_OS_p2LTRGypsy_ReverseORF_8498-10072_R)_Oryza_sativa	524	1	0	755	71.35
+173	chr12	725707	725832	DTM_MuDR-12_SBi_p2DNAMuDR_4011-5638_via_genewise_and_tfasty_with_MuDR-9_SBi_p2_1_intron_(4665_4753)_and_1_stopcodon_Sorghum_bicolor	506	465	1e-14	34	43.88
+174	chr12	200386	200475	RLG_gi_19881646_gb_AAM01047.1_AC091735_20 putative pol polyprotein [Oryza sativa]	194	165	9e-11	48	76.67
+175	chr12	200595	200672	RLG_gi_19881646_gb_AAM01047.1_AC091735_20 putative pol polyprotein [Oryza sativa]	164	139	9e-11	35	69.23
+176	chr12	370323	370460	RLC_gi_14702038_gb_AAK72288.1_AC084767_28 putative gag-pol protein [Oryza sativa (japonica cultivar-group)]	326	371	3e-16	85	89.13
+177	chr12	589081	589209	RLG_gi_20161702_dbj_BAB90619.1putative gag-pol polyprotein [Oryza sativa (japonica cultivar-group)]	378	420	7e-17	87	95.35
+178	chr12	593193	593339	RLG_gi_20161702_dbj_BAB90619.1putative gag-pol polyprotein [Oryza sativa (japonica cultivar-group)]	372	420	5e-32	76	91.76
+179	chr12	925324	925350	RLG_gi_23617009_dbj_BAC20705.1polyprotein-like protein [Oryza sativa (japonica cultivar-group)]	386	378	9e-47	5	37.76
+180	chr12	181014	181217	RLG_gi_22725937_gb_AAN04947.1Putative retroelement [Oryza sativa (japonica cultivar-group)]	1	69	4e-17	86	72.46
+181	chr12	181784	182116	RLG_gi_22725937_gb_AAN04947.1Putative retroelement [Oryza sativa (japonica cultivar-group)]	1	91	1e-86	76	44.87
+182	chr12	197265	197468	RLG_gi_22725937_gb_AAN04947.1Putative retroelement [Oryza sativa (japonica cultivar-group)]	69	1	2e-15	81	68.12
+183	chr12	199265	199375	RLG_gi_22725937_gb_AAN04947.1Putative retroelement [Oryza sativa (japonica cultivar-group)]	69	32	1e-13	48	68.42
+184	chr12	199372	199467	RLG_gi_22725937_gb_AAN04947.1Putative retroelement [Oryza sativa (japonica cultivar-group)]	32	1	1e-13	50	81.25
+185	chr12	272187	272378	RLG_gi_22725937_gb_AAN04947.1Putative retroelement [Oryza sativa (japonica cultivar-group)]	1	66	3e-13	74	68.18
+186	chr12	292873	293016	RLG_gi_22725937_gb_AAN04947.1Putative retroelement [Oryza sativa (japonica cultivar-group)]	1	51	2e-11	62	66.67
+187	chr12	177115	177303	RLG_gi_22138486_gb_AAM93470.1putative polyprotein [Oryza sativa (japonica cultivar-group)]	257	319	2e-15	80	66.67
+188	chr12	397983	398213	RLG_gi_22138486_gb_AAM93470.1putative polyprotein [Oryza sativa (japonica cultivar-group)]	319	243	2e-22	101	77.92
+189	chr12	925351	925737	RLG_gi_24899445_gb_AAN65015.1putative retrotransposon protein [Oryza sativa (japonica cultivar-group)]	313	201	1e-28	75	42.64
+190	chr12	397496	397609	RLG_gi_22655765_gb_AAN04182.1Putative retroelement [Oryza sativa (japonica cultivar-group)]	263	226	1e-11	69	86.84
+191	chr12	370160	370231	RLG_gi_22725910_gb_AAN04920.1Putative retroelement [Oryza sativa]	224	247	6e-11	45	83.33
+192	chr12	591045	591446	RLG_gi_27552559_gb_AAO19382.1putative gag-pol polyprotein [Oryza sativa (japonica cultivar-group)]	1	106	4e-109	163	74.39
+193	chr12	118026	118190	DTC_gnl_PTREP_PTREP80 transposon, CACTA, "TAT-1_231A16-1" (TREP1241) hypothetical protein	209	155	6e-11	66	63.64
+194	chr12	192336	192422	RLG_gi_18652525_gb_AAL77158.1_AC091732_9 Putative polyprotein [Oryza sativa]	59	32	3e-94	46	77.08
+195	chr12	725833	726000	DTM_MDR2_p2DNAMuDR_Oryza_sativa	210	155	7e-17	82	64.29
+196	chr12	831036	831494	DTA_TWIFB1_p1DNAhAT-Ac_14-529_Doubtfully_translated_Oryza_sativa	172	18	2e-86	279	90.32
+197	chr12	831188	831550	DTA_TWIFB1_p1DNAhAT-Ac_14-529_Doubtfully_translated_Oryza_sativa	124	1	4e-22	96	49.19

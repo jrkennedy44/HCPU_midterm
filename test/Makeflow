@@ -1,0 +1,2 @@
+japonica_bx.gff: blaster matcher2.25 script.sh test_japonica.fasta test_prot.fasta TE_protein_db_121015.fasta
+        ./script.sh

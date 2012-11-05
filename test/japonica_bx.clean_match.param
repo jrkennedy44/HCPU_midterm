@@ -1,0 +1,17 @@
+=============================================
+JOIN parameter:
+-----------------
+Match input file: test_japonica.align
+Output prefix: japonica_bx
+Subject bank: TE_protein_db_121015.fasta
+Query bank: test_japonica.fasta
+e-value filter: 1e-10
+identity filter: 0
+length filter: 20
+No join fragments
+=============================================
+MATCHER parameter:
+-----------------
+Filter conflicting subjects before joining
+No Filtering of conflicting subjects after joining
+=============================================

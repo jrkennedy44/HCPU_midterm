@@ -1,0 +1,22 @@
+=============================================
+BLASTER parameter:
+-----------------
+Blaster output prefix: test_japonica
+Subject bank: test_prot.fasta
+Query bank: test_japonica.fasta
+all_by_all: FALSE
+NCBI-BLAST
+Blast name: blastx
+Blast parameter: 
+Nb concurrent processes: 1
+Cutter bank:	length=50000
+	 	 over=100
+	 	 word=11
+	 	 extention=_cut
+Bank cut: test_prot.fasta_cut
+Query cut : test_japonica.fasta_cut
+sensitivity level: 0
+e-value filter: 1e-10
+identity filter: 0
+length filter: 20
+=============================================

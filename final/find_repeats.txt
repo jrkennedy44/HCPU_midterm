@@ -1,0 +1,94 @@
+##===========================================##
+## Shell commands for identifying repeats    ##
+## in genome.fasta using both the nucleotide ##
+## and protein repeat libraries              ##
+##===========================================##
+
+## Load Blat  module 
+source /usr/share/Modules/init/csh
+module load blat/34
+
+## Change to working directory
+cd ~/ACIC2012/allin3
+setenv PATH ${PATH}:${HOME}/opt/blast-2.2.22/bin
+
+### First we run Blaster/Matcher to benchmark THEIR method
+### for protein repeat identification
+# Run Blaster
+echo Blaster/Matcher Original
+echo
+date
+~/REPET_linux-x64_1.4/bin/blaster -q ./sequences/Genomes/genome.fasta -s ./sequences/TE_protein_db_121015.fasta -n blastx -B ./protein/test_japonica 
+
+## Run Matcher
+~/REPET_linux-x64_1.4/bin/matcher2.25  -q ./sequences/Genomes/genome.fasta -s ./sequences/TE_protein_db_121015.fasta -m ./protein/test_japonica.align -b ./protein/test_japonica_bx
+
+## Get desired .gff file output
+awk 'NR > 1' ./protein/test_japonica_bx.clean_match.tab | awk 'col="repeat", x="."{if ($9 > $8) s = "+"; else s = "-"; printf "%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n",$1,col,substr($7,1,3),$2,$3,$14,s,x,$7}' |sort -k 1,1 -k 4,4 > ./protein/japonica_bx.gff
+date
+echo
+echo
+
+### Now we run BLAT to benchmark OUR method for protein
+### repeat identification
+## Run Blat
+echo BLAT --- Protein
+echo
+date
+## Note we switch the chromosome to the database and the 
+## protein library to the query object
+blat ./sequences/Genomes/genome.fasta ./sequences/TE_protein_db_121015.fasta ./protein/test_pro.psl -t=dnax -q=prot -out=blast8
+
+## Get desired .gff file output (modified to match their format)
+awk 'NR > 0' ./protein/test_pro.psl | awk 'col="repeat", x="."{if ($8 > $7) s = "+"; else s = "-"; printf "%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n",$2,col,substr($1,1,3),$9,$10,$3,s,x,$1}' |sort -k 1,1 -k 4,4 > ./protein/test_pro.gff
+date
+echo
+echo
+
+## Housekeeping: move and name results
+cp ./protein/japonica_bx.gff ./results/protein_them.gff
+cp ./protein/test_pro.gff ./results/protein_us.gff
+
+### Now we run BLAT to benchmark OUR method for nucleotide
+### repeat identification
+### Note we didn't run RepeatMasker to compare because BLAT
+### is fast and consolidating to one method simplifies the process
+## Run Blat
+echo BLAT --- Nucleotide
+echo
+date
+## Note we switch the chromosome to the database and the 
+## nucleotide library to the query object
+blat ./sequences/Genomes/genome.fasta ./sequences/PReDa_120829.fasta ./nucleotide/test_nuc.psl -t=dna -q=dna -out=blast8
+
+## Get desired .gff file output (modified to match their format)
+awk 'NR > 0' ./nucleotide/test_nuc.psl | awk 'col="repeat", x="."{if ($8 > $7) s = "+"; else s = "-"; printf "%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n",$2,col,substr($1,1,3),$9,$10,$3,s,x,$1}' |sort -k 1,1 -k 4,4 > ./nucleotide/test_nuc.gff
+date
+echo
+echo
+
+## Housekeeping: move and name result
+cp ./nucleotide/test_nuc.gff ./results/nucleotide_us.gff
+
+
+### Using the clients perl script we now merge conflicts 
+### in our protein and nucleotide output. This gets rid 
+### of duplicates and overlapping regions in the BLAT results
+module load perl/5.14.2
+
+# Cleanup proteins
+cat ~/ACIC2012/allin3/results/protein_us.gff | perl merge_conflicts_not_overlapping_AGI.pl genome.length > prot_us_merged.gff
+mv prot_us_merged.gff ./results
+
+# Cleanup nucleotides
+cat ~/ACIC2012/allin3/results/nucleotide_us.gff | perl merge_conflicts_not_overlapping_AGI.pl genome.length > nuc_us_merged.gff
+mv nuc_us_merged.gff ./results
+
+
+### We now have two files (prot_us_merged.gff and nuc_us_merged.gff)
+### that contain start and end points for regions that need to be masked
+### in the genome.fasta file. In other words, these are the places we 
+### must switch the nucleotides to lower case letters
+
+### We use the R/Bioconductor package Biostrings to do the masking
+### see genome_masker.R

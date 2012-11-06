@@ -1,0 +1,29 @@
+
+
+Blaster/Matcher Original
+
+Mon Nov  5 14:52:11 MST 2012
+
+Beginning Blaster (version 2.25)
+empty output
+End Blaster (version 2.25)
+Beginning Matcher (version 2.25)
+End Matcher (version 2.25)
+
+Mon Nov  5 14:54:37 MST 2012
+
+
+BLAT --- Protein
+
+Mon Nov  5 14:54:37 MST 2012
+Loaded 1000000 letters in 1 sequences
+Blatx 1 sequences in database, 1 files in query
+Mon Nov  5 14:54:45 MST 2012
+
+
+BLAT --- Nucleotide
+
+Mon Nov  5 14:54:45 MST 2012
+Loaded 1000000 letters in 1 sequences
+Searched 61985380 bases in 64806 sequences
+Mon Nov  5 14:57:25 MST 2012

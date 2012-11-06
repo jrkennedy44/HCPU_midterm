@@ -43,8 +43,7 @@
   <body>
     <img src="GitHub/HCPU_midterm/doc/flowchart_1.PNG" />
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1351788922387" ID="ID_855488947" MODIFIED="1351788940476">
 <richcontent TYPE="NODE"><html>
@@ -54,14 +53,13 @@
   <body>
     <img src="GitHub/HCPU_midterm/doc/flowchart_2.PNG" />
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1351789165179" ID="ID_241065602" MODIFIED="1351789388924" POSITION="right" TEXT="Repeat annotation">
 <icon BUILTIN="full-3"/>
 </node>
-<node CREATED="1351789232576" FOLDED="true" ID="ID_819545990" MODIFIED="1351802427211" POSITION="left" TEXT="Summary of probem">
+<node CREATED="1351789232576" FOLDED="true" ID="ID_819545990" MODIFIED="1351829948474" POSITION="left" TEXT="Summary of probem">
 <node CREATED="1351789241750" ID="ID_1375109841" MODIFIED="1351789303324" TEXT="We have a long string of letters collected by a DNA sequencing machine."/>
 <node CREATED="1351789306236" ID="ID_1746838136" MODIFIED="1351789332073" TEXT="We want to analyze that data, but it&apos;s really big and there&apos;s a lot of it we&apos;re not interested in."/>
 <node CREATED="1351789336243" ID="ID_1776854725" MODIFIED="1351790457997" TEXT="The first step is to mask out all of the data we&apos;re not interested in, by comparing our new data to a reference database."/>
